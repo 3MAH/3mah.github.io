@@ -84,10 +84,10 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an amazing person."
-  location         : "Somewhere"
+  name             : "Yves Chemisky"
+  avatar           : "/assets/images/IvO_logo.jpg"
+  bio              : "Enthousiast developper of open source simulation softwares"
+  location         : "Grenoble, France"
   email            :
   uri              :
   home             : # null (default), "absolute or relative url to link to author home"
