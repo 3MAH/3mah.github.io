@@ -14,7 +14,7 @@ title_separator          : "-"
 name                     : "Yves Chemisky"
 description              : "A website that describe the simcoon project."
 url                      : "https://simcoon.github.io"
-baseurl                  : "/about"
+baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "simcoon/simcoon.github.io"
 teaser                   : "/assets/images/simcoon_logo.png"
 # breadcrumbs            : false # true, false (default)
