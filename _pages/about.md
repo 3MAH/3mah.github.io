@@ -3,14 +3,14 @@ permalink: /about/
 title: "About"
 excerpt: "Simcoon is a scientific library built to facilitate the analysis of mechanics of materials. It is built on the top of Armadillo, a high quality C++ linear algebra library. It integrates several algorithms for the analysis of heterogeneous materials Enjoy!"
 layouts_gallery:
-  - url: /assets/images/DIC_map.png
-    image_path: /assets/images/DIC_map.png
-    alt: "splash layout example"
+  - url: /assets/images/feature1_index.png
+    image_path: /assets/images/feature1_index.png
+    alt: "Coupled constitutive models"
   - url: /assets/images/mm-layout-single-meta.png
     image_path: /assets/images/mm-layout-single-meta.png
     alt: "single layout with comments and related posts"
   - url: /assets/images/mm-layout-archive.png
-    image_path: /assets/images/mm-layout-archive.png
+    image_path: /assets/images/DIC_map.png
     alt: "archive layout example"
 last_modified_at: 2018-01-10T11:22:24-05:00
 toc: true
@@ -27,4 +27,4 @@ Several institutions have contributed to the development of Simcoon:
 * CNRS : National French Center for scientific research. The LEM3 laboratory is labelled from the CNRS.
 * Texas A&M University : Top University in Texas, USA.
 
-{% include gallery id="layouts_gallery" caption="Examples of included layouts `splash`, `single`, and `archive`." %}
+{% include gallery id="layouts_gallery" caption="Main features of the simcoon library `Constitutive models`, `Multi-scale models`, and `Identification and analyses`." %}
