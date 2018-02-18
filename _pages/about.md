@@ -3,6 +3,7 @@ permalink: /about/
 title: "About"
 excerpt: "Simcoon is a scientific library built to facilitate the analysis of mechanics of materials. It is built on the top of Armadillo, a high quality C++ linear algebra library. It integrates several algorithms for the analysis of heterogeneous materials Enjoy!"
 intro:
+- image_path: /assets/images/simcoon_logo.png
 - excerpt: 'Simcoon is a C++ library with emphasis on speed and ease-of-use. Its principle focus is to provide tools to facilitate the implementation of up-to-date constitutive model for materials in Finite Element Analysis Packages. This is done by providing a C++ API to generate user material subroutine based on a library of functions. Also, SMART+ provides tools to analyse the behavior of material, considering loading at the material point level.'
 layouts_gallery:
   - url: /assets/images/feature1_index.png
@@ -18,7 +19,7 @@ last_modified_at: 2018-01-10T11:22:24-05:00
 toc: true
 ---
 
-{% include feature_row id="intro" type="center" %}
+{% include feature_row id="intro" type="left" %}
 
 
 Simcoon is mainly developed by Yves Chemisky, currently appointed scientist at the CNRS and by contributors from the staff and students of Arts et Métiers ParisTech, that are members of the LEM3 laboratory. It is released under the GNU General Public License: GPL, version 3.
