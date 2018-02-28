@@ -21,14 +21,13 @@ toc: true
 
 {% include feature_row id="intro" type="left" %}
 
+* Simcoon consists in an Application Programming Interface (API) developped in C++ and exposed in Python. 
 
-Simcoon is mainly developed by Yves Chemisky, currently appointed scientist at the CNRS and by contributors from the staff and students of Arts et Métiers ParisTech, that are members of the LEM3 laboratory. It is released under the GNU General Public License: GPL, version 3.
+* It relies on the high quality linear algebra library C++ library Armadillo. This provides a perfect balance between speed and ease of use 
+ 
+* It can be used as a standalone solver tool for the numerical simulation of material's thermomechanical response, or coupled to Finite Element Analysis (FEA) packages for the simulation of complex structures 
 
-Several institutions have contributed to the development of Simcoon:
-* Arts et Métiers ParisTech : Top French school of engineers, focused on technology and applications.
-* LEM3: Laboratory devoted to the study of Microstructures and Mechanics of Materials in Metz, France.
-* TIMC-IMAG : Medical Engineering laboratory in Grenoble, France
-* CNRS : National French Center for scientific research. The LEM3 laboratory is labelled from the CNRS.
-* Texas A&M University : Top University in Texas, USA.
+* Provide efficient material constitutive law for anisotropic elasticity, plasticity, viscoélasticity, phase transformation
+
 
 {% include gallery id="layouts_gallery" caption="Main features of the simcoon library `Constitutive models`, `Multi-scale models`, and `Identification and analyses`." %}
