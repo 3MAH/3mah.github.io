@@ -2,8 +2,8 @@
 main:
   - title: "About"
     url: /about/
-  - title: "Home"
-    url: /home/
+  - title: "Authors"
+    url: /autors/
   # - title: "Sample Collections"
   #   url: /collection-archive/
   # - title: "Sitemap"
