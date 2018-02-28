@@ -8,7 +8,7 @@ header:
   cta_url: "https://github.com/simcoon/simcoon/"
 excerpt: "A scientific library that render simulation in mechanics of materials and multiphysics easy. Open source, it is perfect to conduct research in the field of mechanics and mechanobiology of materials, composites and smart materials."
 intro: 
-- excerpt: 'Simcoon expands the possibilities of the simulation in Mechanics of Materials and merge education, research and industrial requirements with a new, interactive approach. Discover some of the simcoon capabilities below
+- excerpt: 'Simcoon expands the possibilities of the simulation in Mechanics of Materials and merge education, research and industrial requirements with a new, interactive approach. Discover some of the simcoon capabilities below'
 feature_row:
   - image_path: assets/images/unsplash-gallery-image-1-th.jpg
     alt: "placeholder image 1"
