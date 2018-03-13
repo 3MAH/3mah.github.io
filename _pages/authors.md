@@ -4,7 +4,7 @@ permalink: /authors/
 excerpt: "Simcoon is a collaborative effort."
 layouts_gallery:
   - url: /assets/images/logo_intstitutions/ENSAM_logo.png
-    image_path: /assets/images/logo_intstitutions/ENSAM_logo.png
+    image_path: /assets/images/logo_intstitutions/ENSAM_logo_med.png
     alt: "Arts et Métiers"
     title: "Arts et Métiers"
   - url: /assets/images/logo_intstitutions/TU_Bergakademie_Freiberg_logo.png
