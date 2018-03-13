@@ -10,7 +10,7 @@ layouts_gallery:
   - url: /assets/images/logo_intstitutions/TU_Bergakademie_Freiberg_logo.png
     image_path: /assets/images/TU_Bergakademie_Freiberg_logo_th.png
     alt: "TU Bergakademie Freiberg"
-    title: "U Bergakademie Freiberg"
+    title: "TU Bergakademie Freiberg"
   - url: /assets/images/logo_intstitutions/CNRS_logo.jpg
     image_path: /assets/images/logo_intstitutions/CNRS_logo_th.jpg
     alt: "CNRS"
