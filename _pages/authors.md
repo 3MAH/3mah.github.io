@@ -1,6 +1,7 @@
 ---
 title: "Authors"
 permalink: /authors/
+layout: single
 excerpt: "Simcoon is a collaborative effort."
 layouts_gallery:
   - url: /assets/images/logo_intstitutions/ENSAM_logo.png
