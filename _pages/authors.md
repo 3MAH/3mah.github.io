@@ -8,7 +8,7 @@ layouts_gallery:
     alt: "Arts et Métiers"
     title: "Arts et Métiers"
   - url: /assets/images/logo_intstitutions/TU_Bergakademie_Freiberg_logo.png
-    image_path: /assets/images/TU_Bergakademie_Freiberg_logo_med.png
+    image_path: /assets/images/logo_intstitutions/TU_Bergakademie_Freiberg_logo_med.png
     alt: "TU Bergakademie Freiberg"
     title: "TU Bergakademie Freiberg"
   - url: /assets/images/logo_intstitutions/CNRS_logo.jpg
@@ -16,6 +16,7 @@ layouts_gallery:
     alt: "CNRS"
     title: "Centre National de la Recherche Scientifique"
 toc: true
+author_profile: true
 ---
 
 ## Lead developper
