@@ -16,7 +16,7 @@ layouts_gallery:
     image_path: /assets/images/logo_intstitutions/CNRS_logo_med.png
     alt: "CNRS"
     title: "Centre National de la Recherche Scientifique"
-toc: true
+toc: false
 author_profile: true
 ---
 
