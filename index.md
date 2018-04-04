@@ -3,7 +3,7 @@ layout: splash
 header:
 #  overlay_color: "#000"
 #  overlay_filter: "0.5"
-  overlay_image: /assets/images/layout_index.jpg
+  overlay_image: /assets/images/layout_index.png
   cta_label: "Download"
   cta_url: "https://github.com/simcoon/simcoon/"
 excerpt: "A scientific library that render simulation in mechanics of materials and multiphysics easy. Open source, it is perfect to conduct research in the field of mechanics and mechanobiology of materials, composites and smart materials."
