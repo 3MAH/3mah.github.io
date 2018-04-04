@@ -28,6 +28,9 @@ feature_row:
     alt: "Identification"
     title: "Identification"
     excerpt: "Get **material parameters** using optimization algorithms."
+    url: "#test-link"
+    btn_label: "Read More"
+    btn_class: "btn--primary"
 feature_row2:
   - image_path: /assets/images/unsplash-gallery-image-2-th.jpg
     alt: "placeholder image 2"
