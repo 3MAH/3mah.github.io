@@ -9,8 +9,8 @@ layouts_gallery:
   - url: /assets/images/about/coupled_cons_models.png
     image_path: /assets/images/about/coupled_cons_models.png
     alt: "Coupled constitutive models"
-  - url: /assets/images/micromechanics.png
-    image_path: /assets/images/micromechanics.png
+  - url: /assets/images/about/micromechanics.png
+    image_path: /assets/images/about/micromechanics.png
     alt: "micromechanial (Mori-Tanaka) scheme for the analysis of composites response"
   - url: /assets/images/about/DIC_map.png
     image_path: /assets/images/about/DIC_map.png
