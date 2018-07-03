@@ -6,15 +6,15 @@ intro:
   - image_path: /assets/images/simcoon_logo_small.png
     excerpt: 'Simcoon is a C++ library with emphasis on speed and ease-of-use. Its principle focus is to provide tools to facilitate the implementation of up-to-date constitutive model for materials in Finite Element Analysis Packages. This is done by providing a C++ API to generate user material subroutine based on a library of functions. Also, SMART+ provides tools to analyse the behavior of material, considering loading at the material point level.'
 layouts_gallery:
-  - url: /assets/images/feature1_index.png
-    image_path: /assets/images/feature1_index.png
+  - url: /assets/images/about/coupled_cons_models.png
+    image_path: /assets/images/about/coupled_cons_models.png
     alt: "Coupled constitutive models"
-  - url: /assets/images/mm-layout-single-meta.png
-    image_path: /assets/images/mm-layout-single-meta.png
-    alt: "single layout with comments and related posts"
-  - url: /assets/images/mm-layout-archive.png
-    image_path: /assets/images/DIC_map.png
-    alt: "archive layout example"
+  - url: /assets/images/micromechanics.png
+    image_path: /assets/images/micromechanics.png
+    alt: "micromechanial (Mori-Tanaka) scheme for the analysis of composites response"
+  - url: /assets/images/about/DIC_map.png
+    image_path: /assets/images/about/DIC_map.png
+    alt: "Digital Image Correlation - multiaxial strain field"
 last_modified_at: 2018-01-10T11:22:24-05:00
 toc: true
 ---
