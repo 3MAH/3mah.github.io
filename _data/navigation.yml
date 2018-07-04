@@ -4,6 +4,8 @@ main:
     url: /about/
   - title: "Authors"
     url: /authors/
+  - title: "Documentation"
+    url: /documentation/
   - title: "Gallery"
     url: /gallery/
   # - title: "Sample Collections"
