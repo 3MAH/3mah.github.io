@@ -1,9 +1,15 @@
 ---
-permalink: /documentation/
 title: "About"
+layout: single
+permalink: /documentation/
 last_modified_at: 2018-01-10T11:22:24-05:00
 toc: true
 ---
+
+## Online documentation
+
+The documentation of simcoon can be found here:
+
 
 ## History of API of simcoon
 
