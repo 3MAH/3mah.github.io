@@ -1,6 +1,7 @@
 ---
-permalink: /about/
 title: "About"
+layout: single
+permalink: /about/
 excerpt: "Simcoon is a scientific library built to facilitate the analysis of mechanics of materials. It is built on the top of Armadillo, a high quality C++ linear algebra library. It integrates several algorithms for the analysis of heterogeneous materials Enjoy!"
 intro:
   - image_path: /assets/images/logo_simcoon/simcoon_logo_small.png
