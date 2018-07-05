@@ -1,15 +1,13 @@
 ---
-title: "About"
+title: "Documentation"
 layout: single
 permalink: /documentation/
 last_modified_at: 2018-01-10T11:22:24-05:00
 toc: true
 ---
 
-## Online documentation
-
-The documentation of simcoon can be found here:
-
+The documentation of simcoon can be found here: 
+ <a href="https://simcoon.readthedocs.io/en/latest/">Simcoon documentation</a>.
 
 ## History of API of simcoon
 
