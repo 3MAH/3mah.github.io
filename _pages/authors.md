@@ -18,6 +18,7 @@ layouts_gallery:
     title: "Centre National de la Recherche Scientifique"
 toc: false
 author_profile: true
+classes: wide
 ---
 
 ## Lead developper

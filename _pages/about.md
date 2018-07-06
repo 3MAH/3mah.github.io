@@ -18,6 +18,7 @@ layouts_gallery:
     alt: "Digital Image Correlation - multiaxial strain field"
 last_modified_at: 2018-01-10T11:22:24-05:00
 toc: false
+classes: wide
 ---
 
 {% include feature_row id="intro" type="left" %}
