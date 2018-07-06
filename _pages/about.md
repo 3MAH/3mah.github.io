@@ -17,7 +17,7 @@ layouts_gallery:
     image_path: /assets/images/about/DIC_map.png
     alt: "Digital Image Correlation - multiaxial strain field"
 last_modified_at: 2018-01-10T11:22:24-05:00
-toc: true
+toc: false
 ---
 
 {% include feature_row id="intro" type="left" %}
