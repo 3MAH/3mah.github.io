@@ -4,16 +4,16 @@ permalink: /authors/
 layout: single
 excerpt: "Simcoon is a collaborative effort."
 layouts_gallery:
-  - url: /assets/images/logo_intstitutions/ENSAM_logo.png
-    image_path: /assets/images/logo_intstitutions/ENSAM_logo_med.png
+  - url: /assets/images/logo_institutions/ENSAM_logo.png
+    image_path: /assets/images/logo_institutions/ENSAM_logo_med.png
     alt: "Arts et Métiers"
     title: "Arts et Métiers"
-  - url: /assets/images/logo_intstitutions/TU_Bergakademie_Freiberg_logo.png
-    image_path: /assets/images/logo_intstitutions/TU_Bergakademie_Freiberg_logo_med.png
+  - url: /assets/images/logo_institutions/TU_Bergakademie_Freiberg_logo.png
+    image_path: /assets/images/logo_institutions/TU_Bergakademie_Freiberg_logo_med.png
     alt: "TU Bergakademie Freiberg"
     title: "TU Bergakademie Freiberg"
-  - url: /assets/images/logo_intstitutions/CNRS_logo.jpg
-    image_path: /assets/images/logo_intstitutions/CNRS_logo_med.png
+  - url: /assets/images/logo_institutions/CNRS_logo.jpg
+    image_path: /assets/images/logo_institutions/CNRS_logo_med.png
     alt: "CNRS"
     title: "Centre National de la Recherche Scientifique"
 toc: false
