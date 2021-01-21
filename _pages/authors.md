@@ -2,6 +2,7 @@
 title: "Authors"
 permalink: /authors/
 layout: single
+author: Yves Chemisky
 author: Etienne Pruliere
 excerpt: "Simcoon is a collaborative effort."
 layouts_gallery:
