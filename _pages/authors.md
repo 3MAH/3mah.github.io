@@ -23,7 +23,8 @@ classes: wide
 
 ## Lead developper
 
-Simcoon is mainly developed and maintained by Yves Chemisky, currently appointed scientist at the CNRS and by contributors from the staff and students of Arts et Métiers ParisTech, that are members of the LEM3 laboratory. It is released under the GNU General Public License: GPL, version 3.
+Simcoon is mainly developed and maintained by the 3MAH Team of the I2M laboratory in Bordeaux. 
+Yves Chemisky is currently full professor at the University of Bordeaux. Etienne Prulière is currently Associate professor at Arts et Métiers, Bordeaux. It is released under the GNU General Public License: GPL, version 3.
 
 ## Institutions 
 
