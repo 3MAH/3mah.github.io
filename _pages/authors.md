@@ -2,6 +2,7 @@
 title: "Authors"
 permalink: /authors/
 layout: single
+author: Etienne Pruliere
 excerpt: "Simcoon is a collaborative effort."
 layouts_gallery:
   - url: /assets/images/logo_institutions/ENSAM_logo.png
