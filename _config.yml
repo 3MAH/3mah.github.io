@@ -15,7 +15,7 @@ name                     : "Yves Chemisky"
 description              : "A website that describe the simcoon project."
 url                      : "https://3MAH.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : "/site"
+repository               : "https://github.com/3MAH/3mah.github.io"
 teaser                   : "/assets/images/logo_simcoon/simcoon_logo.png"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
