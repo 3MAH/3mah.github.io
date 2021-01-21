@@ -13,9 +13,9 @@ title                    : "Simcoon"
 title_separator          : "-"
 name                     : "Yves Chemisky"
 description              : "A website that describe the simcoon project."
-url                      : "https://simcoon.github.io"
+url                      : "https://3MAH.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : "simcoon/simcoon.github.io"
+repository               : "/site"
 teaser                   : "/assets/images/logo_simcoon/simcoon_logo.png"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
