@@ -5,8 +5,7 @@ permalink: /gallery/
 toc: false
 classes: wide
 author_profile: true
-#author : Yves Chemisky
-author : Etienne Pruliere
+author : Yves Chemisky
 ---
 
 ## Functional fatigue analysis of an SMA actuator
