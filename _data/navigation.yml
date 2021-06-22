@@ -1,9 +1,11 @@
 # main links
 main:
-  - title: "About"
-    url: /about/
-  - title: "Authors"
-    url: /authors/
+  - title: "Simcoon"
+    url: /simcoon/
+  - title: "fedOO"
+    url: /fedoo/
+  - title: "Team"
+    url: /team/
   - title: "Documentation"
     url: /documentation/
   - title: "Gallery"
