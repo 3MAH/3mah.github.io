@@ -63,7 +63,7 @@
 
 .page__lead {
   font-family: $global-font-family;
-  font-size: $type-size-4;
+  font-size: $type-size-5;
 }
 
 .page__content {
@@ -151,20 +151,33 @@
     }
 
     .wrapper {
-      padding-left: 1em;
+      padding-left: 2em;
       padding-right: 1em;
 
+      @include breakpoint($small) {
+        padding-left: 12em;
+      }
+      @include breakpoint($medium) {
+        padding-left: 24em;
+      }
       @include breakpoint($x-large) {
         max-width: $x-large;
       }
+
+
+      
     }
 
     .page__title,
     .page__meta,
-    .page__lead,
-    .btn {
+    .page__lead {
       color: #fff;
       text-shadow: 1px 1px 4px rgba(#000, 0.5);
+    }
+
+    .btn {
+      background-color: #fff;
+      color: $primary-color
     }
 
     .page__lead {
@@ -175,7 +188,7 @@
       font-size: $type-size-2;
 
       @include breakpoint($small) {
-        font-size: $type-size-1;
+        font-size: $type-size-2;
       }
     }
   }

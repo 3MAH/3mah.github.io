@@ -285,7 +285,7 @@
     }
 
     @include breakpoint($small) {
-      text-align: center;
+      text-align: justify;
 
       .archive__item-teaser {
         margin: 0 auto;
