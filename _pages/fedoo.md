@@ -35,4 +35,4 @@ Static and Dynamics poblems
 * Geometrical non linearities
 * And many other....
 
-{% include gallery id="layouts_gallery" caption="Main features of the simcoon library `Constitutive models`, `Multi-scale models`, and `Identification and analyses`." %}
+{% include gallery id="layouts_gallery" caption="Examples of Finite Element simulations using fedoo : `Beam network`, `damage in composites`, and `architectured materials`." %}
