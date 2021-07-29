@@ -7,15 +7,15 @@ intro:
   - image_path: /assets/images/logo_fedoo/fedoo_logo.png
     excerpt: 'fedOO is a Python library for Finite Elements, highy tunable with emphasis on model reduction (PGD, AI-based models). It has a designed balance between speed and ease-of-use. fedOO integrates a non-linear sover, and tools to faciitate integration of homogenization techniques and multiscale modelling.'
 layouts_gallery:
-  - url: /assets/images/about/coupled_cons_models.png
-    image_path: /assets/images/about/coupled_cons_models.png
-    alt: "Coupled constitutive models"
-  - url: /assets/images/about/micromechanics.png
-    image_path: /assets/images/about/micromechanics.png
-    alt: "micromechanial (Mori-Tanaka) scheme for the analysis of composites response"
-  - url: /assets/images/about/DIC_map.png
-    image_path: /assets/images/about/DIC_map.png
-    alt: "Digital Image Correlation - multiaxial strain field"
+  - url: /assets/images/about/fedooBeams.png
+    image_path: /assets/images/about/fedooBeams.png
+    alt: "Simulation of an assembly of beams"
+  - url: /assets/images/about/sigxyyarns.png
+    image_path: /assets/images/about/sigxyyarns.png
+    alt: "Simulation of damage in composite materials (yarns shown) using Periodic boundary conditions and PGD model reduction"
+  - url: /assets/images/about/shearPerio.png
+    image_path: /assets/images/about/shearPerio.png
+    alt: "Simulation of periodic architectured materials response using Periodic boundary conditions"
 last_modified_at: 2018-01-10T11:22:24-05:00
 toc: false
 classes: wide
