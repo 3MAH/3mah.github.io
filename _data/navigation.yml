@@ -4,6 +4,8 @@ main:
     url: /simcoon/
   - title: "fedOO"
     url: /fedoo/
+  - title: "microgen"
+    url: /microgen/
   - title: "Team"
     url: /team/
   - title: "Documentation"
