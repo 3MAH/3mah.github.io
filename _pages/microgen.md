@@ -7,15 +7,15 @@ intro:
   - image_path: /assets/images/logo_microgen/microgen_logo.png
     excerpt: 'Microgen is a simple python libraries that helps to generate and mesh Representative Unit Cells.'
 layouts_gallery:
-  - url: /assets/images/about/coupled_cons_models.png
-    image_path: /assets/images/about/coupled_cons_models.png
-    alt: "Coupled constitutive models"
-  - url: /assets/images/about/micromechanics.png
-    image_path: /assets/images/about/micromechanics.png
-    alt: "micromechanial (Mori-Tanaka) scheme for the analysis of composites response"
-  - url: /assets/images/about/DIC_map.png
-    image_path: /assets/images/about/DIC_map.png
-    alt: "Digital Image Correlation - multiaxial strain field"
+  - url: /assets/images/about/neovius_sheet.png
+    image_path: /assets/images/about/neovius_sheet.png
+    alt: "Neovius triply periodic minimal surface (sheet part)"
+  - url: /assets/images/about/voronoi500.png
+    image_path: /assets/images/about/voronoi500.png
+    alt: "Random polycrystalline texture (500 polyhedral grain, Voronoi tesselation)"
+  - url: /assets/images/about/gyroid_points.png
+    image_path: /assets/images/about/gyroid_points.png
+    alt: "Gyroid triply periodic minimal surfaces : definition of surfaces"
 last_modified_at: 2018-01-10T11:22:24-05:00
 toc: false
 classes: wide
@@ -30,4 +30,4 @@ Here are the main features:
 * Three-dimensional Voronoi tessellation rallons to simulate the response granular materials and polycrystalline metals
 * Regular mesh and periodic mesh is implemented using gmsh
 
-{% include gallery id="layouts_gallery" caption="Main features of the simcoon library `Constitutive models`, `Multi-scale models`, and `Identification and analyses`." %}
+{% include gallery id="layouts_gallery" caption="Main microstructures obtained using the microgen library `Neovius TPMS`, `Voronoi tessellation of polycristals`, and `Gyroid surfaces`." %}
