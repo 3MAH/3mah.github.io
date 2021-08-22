@@ -6,6 +6,33 @@ last_modified_at: 2018-01-10T11:22:24-05:00
 toc: true
 ---
 
+## How to install Simcoon
+
+The easiest way to install simcoon is to create a *conda* environnement: You can utilize the Anaconda GUI or type:
+(for the installation of an environment called "scientific")
+
+{% highlight sh %}
+
+conda create --name scientific
+
+{% endhighlight %}
+
+To activate the environment: 
+
+{% highlight sh %}
+
+conda activate scientific
+
+{% endhighlight %}
+
+The next step is to install the required packages:
+
+{% highlight sh %}
+
+conda install -c conda-forge armadillo conda install -c conda-forge boost conda install -c conda-forge cgal conda install -c conda-forge numpy
+
+{% endhighlight %}
+
 The documentation of the latest version of simcoon can be found here: 
  <a href="https://simcoon.readthedocs.io/en/latest/">Simcoon documentation</a>.
 
