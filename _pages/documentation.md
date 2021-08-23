@@ -33,6 +33,24 @@ conda install -c conda-forge armadillo conda install -c conda-forge boost conda 
 
 {% endhighlight %}
 
+Next, after downloading the simcoon sources in the github repository of [Simcoon](https://github.com/3MAH/simcoon). Unzip the content in a folder and modify the Install.sh source file to look after you conda environnement path:
+
+anacondaloc=/path/to/anaconda/anaconda3/envs/scientific
+
+The last step is to run the installation script:
+
+{% highlight sh %}
+
+sh Install.sh
+
+{% endhighlight %}
+
+##Simcoon tutorial
+
+Proabbly the first thing you would like to do with Simcoon is to simulate the mechanical response corresponding of a simple tension test, considering an elastic material:
+
+
+
 The documentation of the latest version of simcoon can be found here: 
  <a href="https://simcoon.readthedocs.io/en/latest/">Simcoon documentation</a>.
 
