@@ -45,9 +45,42 @@ sh Install.sh
 
 {% endhighlight %}
 
+##Simcoon first steps
+
+We first import *simmit* (the python simulation module of simcoon) and *numpy* 
+
+{% highlight python %}
+import numpy as np
+from simcoon import simmit as sim
+{% endhighlight %}
+
+Then, suppose we would like to compute the stiffness tensor (in the form of a 6x6 matrix) of a linear elastic material, providing the Young's modulus $$ E $$ and the Poisson's ratio $$ \nu $$:
+
+{% highlight python %}
+E = 70000.0
+nu = 0.3
+L = sim.L_iso(E,nu,"Enu")
+print np.array_str(L, precision=4, suppress_small=True)
+{% endhighlight %}
+
+Conversely, one can ask Simcoon to output he material properties, providing s stiffness tensor:
+
+{% highlight python %}
+x = sim.L_iso_props(L)
+print(x)
+{% endhighlight %}
+
+Simcoon can also check the symetries of a provided stiffness tensor and ouput the set of material parameter, if a specific symmetry has been found:
+
+{% highlight python %}
+d = sim.check_symetries(L)
+print(d['umat_type'])
+print(d['props'])
+{% endhighlight %}
+
 ##Simcoon tutorial
 
-Proabbly the first thing you would like to do with Simcoon is to simulate the mechanical response corresponding of a simple tension test, considering an elastic isotropic material:
+Probably the first thing you would like to do with Simcoon is to simulate the mechanical response corresponding of a simple tension test, considering an elastic isotropic material:
 
 We first import *simmit* (the python simulation module of simcoon) and *numpy* 
 
