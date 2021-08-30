@@ -23,7 +23,7 @@ classes: wide
 
 {% include feature_row id="intro" type="left" %}
 
-* Simcoon consists in an Application Programming Interface (API) developped in C++ and exposed in Python $$\alpha = 1$$. 
+* Simcoon consists in an Application Programming Interface (API) developped in C++ and exposed in Python. 
 
 * It relies on the high quality linear algebra library C++ library Armadillo. This provides a perfect balance between speed and ease of use 
  
