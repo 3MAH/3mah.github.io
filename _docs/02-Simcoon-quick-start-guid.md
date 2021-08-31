@@ -5,7 +5,6 @@ excerpt: "How to quickly get started with Simcoon."
 last_modified_at: 2021-06-07T08:48:05-04:00
 redirect_from:
   - /theme-setup/
-toc: true
 ---
 
 Simcoon has been developed as a API platform to help engineers and researchers in mechanics to develop constitutive models and numerical simulations. You could go the the [**Gallery** page]({{ "/gallery/" | relative_url }}) to see some examples of how Simcoon is utilized.
