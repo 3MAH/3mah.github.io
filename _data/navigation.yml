@@ -9,10 +9,21 @@ main:
   - title: "Team"
     url: /team/
   - title: "Documentation"
-    url: /documentation/
+    url: /docs/installation/
   - title: "Gallery"
     url: /gallery/
   # - title: "Sample Collections"
   #   url: /collection-archive/
   # - title: "Sitemap"
   #   url: /sitemap/
+
+# documentation links
+docs:
+- title: Simcoon
+  children:
+    - title: "Installation"
+      url: /docs/installation/
+    - title: "Quick-Start Guide"
+      url: /docs/quick-start-guide/
+    - title: "Tutorials"
+      url: /docs/tutorials/
