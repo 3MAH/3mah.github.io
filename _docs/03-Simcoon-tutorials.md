@@ -35,8 +35,8 @@ x = np.array([1, 2, 3, 4, 5],  dtype='float')
 In this tutorial we will study the evolution of the mechanical properties of a composite material considering spherical reinforcement. 
 Elastic prperties will be evaluated depending on the volume fraction of reinforcement (up to 50% volume fraction).
 
-The following elastic properties for the matrix is considered: $$E = 2250$$ MPa, $$\nu = 0.19
-The following elastic properties for the reinforcement is considered: $$E = 2250$$ MPa, $$\nu = 0.19
+The following elastic properties for the matrix is considered: $$E = 2250$$ MPa, $$\nu = 0.19$$
+The following elastic properties for the reinforcement is considered: $$E = 2250$$ MPa, $$\nu = 0.19$$
 
 The first thing we want to do is to add a file in a 'data' folder, named 'Nellipsoids0.dat'. This file can be downloaded here:
 
