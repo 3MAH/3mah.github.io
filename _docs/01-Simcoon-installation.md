@@ -28,13 +28,18 @@ The next step is to install the required packages:
 
 {% highlight sh %}
 
-conda install -c conda-forge armadillo conda install -c conda-forge boost conda install -c conda-forge cgal conda install -c conda-forge numpy
+conda install -c conda-forge armadillo boost cgal numpy
 
 {% endhighlight %}
 
 Next, after downloading the simcoon sources in the github repository of [Simcoon](https://github.com/3MAH/simcoon). Unzip the content in a folder and modify the Install.sh source file to look after you conda environnement path:
 
 anacondaloc=/path/to/anaconda/anaconda3/envs/scientific
+
+**Please note:** If you have installed *matplotlib* you shall delete the file
+/path/to/anaconda/anaconda3/envs/scientific/lib/python3.7/site-packages/matplotlib-3.4.3-py3.7-nspkg.pth
+{: .notice--info}
+
 
 The last step is to run the installation script:
 
