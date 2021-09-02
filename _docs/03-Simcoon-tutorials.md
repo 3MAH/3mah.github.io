@@ -38,7 +38,7 @@ Elastic prperties will be evaluated depending on the volume fraction of reinforc
 The following elastic properties for the matrix is considered: $$E = 2250$$ MPa, $$\nu = 0.19$$
 The following elastic properties for the reinforcement is considered: $$E = 2250$$ MPa, $$\nu = 0.19$$
 
-The first thing we want to do is to add a file in a 'data' folder, named 'Nellipsoids0.dat'. This file can be downloaded here:
+The first thing we want to do is to add a file in a 'data' folder, named 'Nellipsoids0.dat'. This file can be downloaded [here](https://raw.githubusercontent.com/3MAH/simcoon/blob/master/tutorials/01A-Composites/data/Nellipsoids0.dat):
 
 | Number | Coatingof | umat | save | c | psi_mat | theta_mat | phi_mat | a1 | a2 | a3 | psi_geom | theta_geom | phi_geom | nprops | nstatev | props
 |-------|--------|---------|-------|--------|---------|-------|--------|---------|-------|--------|---------|-------|--------|---------|-------|--------|
@@ -47,9 +47,60 @@ The first thing we want to do is to add a file in a 'data' folder, named 'Nellip
 
 {% highlight python %}
 
-import pandas as pd
-import matplotlib.pyplot as plt
+import numpy as np
 from simcoon import simmit as sim
-import os
 
 {% endhighlight %}
+
+Next we shall inform the number of internal state variables (if any) at the macroscopic level and the material properties:
+
+{% highlight python %}
+
+nstatev = 0 #None here
+
+nphases = 2 #The number of phases
+num_file = 0 #The num of the file that contains the subphases
+int1 = 50 #Number of integration points in the long axis
+int2 = 50 #Number of integration points in the lat axis
+n_matrix = 0 #phase number for the matrix
+
+props = np.array([nphases, num_file, int1, int2, n_matrix],  dtype='float')
+
+{% endhighlight %}
+
+There is a possibility to consider a misorientation between the test frame of reference and the composite material orientation, considering Euler angles with the z-x-z. The stiffness tensor will be returned in the test frame of reference. Also, we shall inform which micrmechanical scheme will be used. Enter umat_name = 'MIMTN' for a Mori-Tanaka scheme and umat_name = 'MISCN' for a self-consistent scheme
+
+{% highlight python %}
+
+psi_rve = 0.
+theta_rve = 0.
+phi_rve = 0.
+
+umat_name = 'MIMTN'
+
+{% endhighlight %}
+
+We are now ready to run the simulation, get the effective isotropic elastic properties (since both phases are isotropic and the reinforcements are spherical) and print them:
+
+{% highlight python %}
+
+L = sim.L_eff(umat_name, props, nstatev, psi_rve, theta_rve, phi_rve)
+p = sim.L_iso_props(L)
+print(p)
+
+{% endhighlight %}
+
+The result is a python numpy array containing the material parameters (here two, the Young's modulus and the Poisson ratio):
+
+{% highlight sh %}
+
+[3.29316019e+03 1.91800053e-01]
+
+{% endhighlight %}
+
+**Notice:** Note that despite the Poisson ratio is the same between the two materials, the stiffness mismatch between the two phases lead to a different effective Poisson ratio.
+{: .notice--info}
+
+
+
+
