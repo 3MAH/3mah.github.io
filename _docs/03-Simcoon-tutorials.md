@@ -8,6 +8,8 @@ last_modified_at: 2019-08-20T21:36:18-04:00
 **Please note:** Make sure you activate your environment before running any python code that invoke Simcoon.
 {: .notice--info}
 
+The python script and input files for this tutoial can be found [here]():
+
 {% highlight sh %}
 
 conda activate scientific
@@ -15,7 +17,6 @@ conda activate scientific
 {% endhighlight %}
 
 To be able to follow these tutorials it is much better to install the ipython environment and a few more libraries:
-
 
 {% highlight sh %}
 
@@ -32,13 +33,15 @@ conda install -c conda-forge matplolib matplotlib-inline pandas
 x = np.array([1, 2, 3, 4, 5],  dtype='float')
 {: .notice--info}
 
-In this tutorial we will study the evolution of the mechanical properties of a composite material considering spherical reinforcement. 
+In this tutorial we will study the evolution of the mechanical properties of a composite material considering spherical reinforcement (sew figure below)
+
+![alt]({{ site.url }}{{ site.baseurl }}/assets/images/tutorials/composite_spheres.png)
+
 Elastic prperties will be evaluated depending on the volume fraction of reinforcement (up to 50% volume fraction).
 
-The following elastic properties for the matrix is considered: $$E = 2250$$ MPa, $$\nu = 0.19$$
-The following elastic properties for the reinforcement is considered: $$E = 2250$$ MPa, $$\nu = 0.19$$
+The following elastic properties for the matrix is considered: $$E = 2250$$ MPa, $$\nu = 0.19$$. The following elastic properties for the reinforcement is considered: $$E = 2250$$ MPa, $$\nu = 0.19$$
 
-The first thing we want to do is to add a file in a 'data' folder, named 'Nellipsoids0.dat'. This file can be downloaded [here](https://raw.githubusercontent.com/3MAH/simcoon/blob/master/tutorials/01A-Composites/data/Nellipsoids0.dat):
+The first thing we want to do is to add a file in a 'data' folder, named 'Nellipsoids0.dat'. This file can be downloaded [here](https://raw.githubusercontent.com/3MAH/simcoon/master/tutorials/01A-Composites/data/Nellipsoids0.dat):
 
 | Number | Coatingof | umat | save | c | psi_mat | theta_mat | phi_mat | a1 | a2 | a3 | psi_geom | theta_geom | phi_geom | nprops | nstatev | props
 |-------|--------|---------|-------|--------|---------|-------|--------|---------|-------|--------|---------|-------|--------|---------|-------|--------|
