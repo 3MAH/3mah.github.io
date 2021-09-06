@@ -9,7 +9,7 @@ main:
   - title: "Team"
     url: /team/
   - title: "Documentation"
-    url: /docs/installation/
+    url: /docs/s-installation/
   - title: "Gallery"
     url: /gallery/
   # - title: "Sample Collections"
