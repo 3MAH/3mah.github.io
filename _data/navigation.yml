@@ -22,8 +22,12 @@ docs:
 - title: Simcoon
   children:
     - title: "Installation"
-      url: /docs/installation/
+      url: /docs/s-installation/
     - title: "Quick-Start Guide"
-      url: /docs/quick-start-guide/
+      url: /docs/s-quick-start-guide/
     - title: "Tutorials"
-      url: /docs/tutorials/
+      url: /docs/s-tutorials/
+- title: fedOO
+  children:
+    - title: "Tutorials"
+      url: /docs/f-tutorials/
