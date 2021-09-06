@@ -1,6 +1,6 @@
 ---
 title: "Quick-Start Guide"
-permalink: /docs/quick-start-guide/
+permalink: /docs/s-quick-start-guide/
 excerpt: "How to quickly get started with Simcoon."
 last_modified_at: 2021-06-07T08:48:05-04:00
 redirect_from:

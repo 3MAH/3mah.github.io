@@ -1,6 +1,6 @@
 ---
 title: "Installation"
-permalink: /docs/installation/
+permalink: /docs/s-installation/
 excerpt: "How to install Simcoon within a condo environment."
 last_modified_at: 2021-08-31T16:51:00-04:00
 ---

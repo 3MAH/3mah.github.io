@@ -1,6 +1,6 @@
 ---
 title: "Tutorials"
-permalink: /docs/tutorials/
+permalink: /docs/s-tutorials/
 excerpt: "Tutorials for the main Simcoon features."
 last_modified_at: 2019-08-20T21:36:18-04:00
 ---
@@ -37,9 +37,11 @@ In this tutorial we will study the evolution of the mechanical properties of a c
 
 ![alt]({{ site.url }}{{ site.baseurl }}/assets/images/tutorials/composite_spheres.png)
 
-Elastic prperties will be evaluated depending on the volume fraction of reinforcement (up to 50% volume fraction).
+Elastic properties will be evaluated depending on the volume fraction of reinforcement (up to 50% volume fraction).
 
 The following elastic properties for the matrix is considered: $$E = 2250$$ MPa, $$\nu = 0.19$$. The following elastic properties for the reinforcement is considered: $$E = 2250$$ MPa, $$\nu = 0.19$$
+
+### A: Effective properties of the composite with 20% of reinforcement
 
 The first thing we want to do is to add a file in a 'data' folder, named 'Nellipsoids0.dat'. This file can be downloaded [here](https://raw.githubusercontent.com/3MAH/simcoon/master/tutorials/01A-Composites/data/Nellipsoids0.dat):
 
@@ -104,6 +106,7 @@ The result is a python numpy array containing the material parameters (here two,
 **Notice:** Note that despite the Poisson ratio is the same between the two materials, the stiffness mismatch between the two phases lead to a different effective Poisson ratio.
 {: .notice--info}
 
+### B: Effective properties of the composite as a function of the reinforcements
 
 
 
