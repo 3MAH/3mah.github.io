@@ -19,6 +19,10 @@ main:
 
 # documentation links
 docs:
+- title: 3MAH
+  children:
+    - title: "Home"
+      url: /docs/3-Home/
 - title: Simcoon
   children:
     - title: "Installation"
