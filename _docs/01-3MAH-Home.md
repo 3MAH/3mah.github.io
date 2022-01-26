@@ -9,19 +9,19 @@ last_modified_at: 2022-01-26T16:51:00-04:00
 
 
 ## Simcoon
-[Installation][01-Simcoon-installation.md]
-[Quick start guide][02-Simcoon-quick-start-guid.md]
-[Tutorials][03-Simcoon-tutorials.md]
+[[Installation|01-Simcoon-installation.md]]
+[[Quick start guide|02-Simcoon-quick-start-guid.md]]
+[[Tutorials|03-Simcoon-tutorials.md]]
 
 
 ## FedOO
-[Tutorials][04-fedOO-tutorials.md]
+[[Tutorials|04-fedOO-tutorials.md]]
 
 
 
 ## How to install these softwares
 
-The fastest way to install the softwares shown above is to use *conda* package management system that is available with [Anaconda][https://docs.continuum.io/anaconda/install/] or [Miniconda][https://docs.conda.io/en/latest/miniconda.html] (Miniconda is sufficient as it comes with conda package management and environment management systems)
+The fastest way to install the softwares shown above is to use *conda* package management system that is available with [[Anaconda|https://docs.continuum.io/anaconda/install/]] or [[Miniconda|https://docs.conda.io/en/latest/miniconda.html]] (Miniconda is sufficient as it comes with conda package management and environment management systems)
 
 To avoid any conflicts between package dependencies it is safer to create a new conda environment:
 
