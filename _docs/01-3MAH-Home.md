@@ -8,6 +8,8 @@ last_modified_at: 2022-01-26T16:51:00-04:00
 ## Microgen
 - [Installation](/docs/m-installation/)
 
+- [Create conda package](/docs/m-create-package/)
+
 
 ## Simcoon
 - [Installation](/docs/s-installation/)
@@ -16,9 +18,13 @@ last_modified_at: 2022-01-26T16:51:00-04:00
 
 - [Tutorials](/docs/s-tutorials/)
 
+- [Create conda package](/docs/s-create-package/)
+
 
 ## FedOO
 - [Tutorials](/docs/f-tutorials/)
+
+- [Create conda package](/docs/f-create-package/)
 
 
 
