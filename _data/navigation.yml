@@ -27,6 +27,8 @@ docs:
   children:
     - title: "Installation"
       url: /docs/m-installation/
+    - title: "Create Conda package"
+      url: /docs/m-create-package/
 - title: Simcoon
   children:
     - title: "Installation"
@@ -35,7 +37,11 @@ docs:
       url: /docs/s-quick-start-guide/
     - title: "Tutorials"
       url: /docs/s-tutorials/
+    - title: "Create Conda package"
+      url: /docs/s-create-package/
 - title: fedOO
   children:
     - title: "Tutorials"
       url: /docs/f-tutorials/
+    - title: "Create Conda package"
+      url: /docs/f-create-package/
