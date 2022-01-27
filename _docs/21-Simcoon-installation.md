@@ -56,7 +56,7 @@ The last step is to run the installation script:
 {% highlight sh %}
 
 sh Install.sh # Linux or OSx
-.\Install.bat # Windows
+.\Install.bat # Windows (requires Visual Studio 2022)
 
 {% endhighlight %}
 
