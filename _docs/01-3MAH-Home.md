@@ -10,9 +10,11 @@ last_modified_at: 2022-01-26T16:51:00-04:00
 
 
 ## Simcoon
-[Installation](/docs/s-installation/)
-[Quick-start-guide](/docs/s-quick-start-guide/)
-[Tutorials](/docs/s-tutorials/)
+*[Installation](/docs/s-installation/)
+
+*[Quick-start-guide](/docs/s-quick-start-guide/)
+
+*[Tutorials](/docs/s-tutorials/)
 
 
 ## FedOO

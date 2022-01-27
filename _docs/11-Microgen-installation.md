@@ -2,7 +2,7 @@
 title: "Installation"
 permalink: /docs/m-installation/
 excerpt: "How to install Microgen within a conda environment."
-last_modified_at: 2021-08-31T16:51:00-04:00
+last_modified_at: 2022-01-27T16:51:00-04:00
 ---
 
 ## How to install Microgen

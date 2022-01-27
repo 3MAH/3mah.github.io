@@ -2,7 +2,7 @@
 title: "Installation"
 permalink: /docs/s-installation/
 excerpt: "How to install Simcoon within a conda environment."
-last_modified_at: 2021-08-31T16:51:00-04:00
+last_modified_at: 2022-01-27T16:51:00-04:00
 ---
 
 ## How to install Simcoon
