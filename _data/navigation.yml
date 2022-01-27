@@ -9,7 +9,7 @@ main:
   - title: "Team"
     url: /team/
   - title: "Documentation"
-    url: /docs/s-installation/
+    url: /docs/3-Home/
   - title: "Gallery"
     url: /gallery/
   # - title: "Sample Collections"
@@ -23,6 +23,10 @@ docs:
   children:
     - title: "Home"
       url: /docs/3-Home/
+- title: Microgen
+  children:
+    - title: "Installation"
+      url: /docs/m-installation/
 - title: Simcoon
   children:
     - title: "Installation"

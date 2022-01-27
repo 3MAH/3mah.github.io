@@ -6,6 +6,7 @@ last_modified_at: 2022-01-26T16:51:00-04:00
 ---
 
 ## Microgen
+[Installation](/docs/m-installation/)
 
 
 ## Simcoon
@@ -44,29 +45,5 @@ The next step is to install the desired package. If you want to install the thre
 {% highlight sh %}
 
 conda install -c conda-forge -c cadquery -c set3mah microgen simcoon fedoo
-
-{% endhighlight %}
-
-For Microgen only:
-
-{% highlight sh %}
-
-conda install -c conda-forge -c cadquery -c set3mah microgen
-
-{% endhighlight %}
-
-For Simcoon only:
-
-{% highlight sh %}
-
-conda install -c conda-forge -c set3mah simcoon
-
-{% endhighlight %}
-
-For fedOO only:
-
-{% highlight sh %}
-
-conda install -c conda-forge -c set3mah fedoo
 
 {% endhighlight %}

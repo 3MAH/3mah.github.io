@@ -9,7 +9,7 @@ redirect_from:
 
 Simcoon has been developed as a API platform to help engineers and researchers in mechanics to develop constitutive models and numerical simulations. You could go the the [**Gallery** page]({{ "/gallery/" | relative_url }}) to see some examples of how Simcoon is utilized.
 
-##Simcoon first steps
+## Simcoon first steps
 
 We first import *simmit* (the python simulation module of simcoon) and *numpy* 
 
@@ -42,7 +42,7 @@ print(d['umat_type'])
 print(d['props'])
 {% endhighlight %}
 
-##Simcoon tutorial
+## Simcoon tutorial
 
 Probably the first thing you would like to do with Simcoon is to simulate the mechanical response corresponding of a simple tension test, considering an elastic isotropic material:
 
