@@ -199,4 +199,3 @@ cbar.set_label(r'directional stiffness $E$', rotation=270)
 plt.show()
 {% endhighlight %}
 
-![alt]({{ site.url }}{{ site.baseurl }}/assets/images/tutorials/Dir_stiffness.png)
