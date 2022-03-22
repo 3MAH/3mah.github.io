@@ -5,7 +5,7 @@ permalink: /fedoo/
 excerpt: "Simcoon is a scientific library built to facilitate the analysis of mechanics of materials. It is built on the top of Armadillo, a high quality C++ linear algebra library. It integrates several algorithms for the analysis of heterogeneous materials Enjoy!"
 intro:
   - image_path: /assets/images/logo_fedoo/fedoo_logo.png
-    excerpt: 'fedOO is a Python library for Finite Elements, highy tunable with emphasis on model reduction (PGD, AI-based models). It has a designed balance between speed and ease-of-use. fedOO integrates a non-linear sover, and tools to faciitate integration of homogenization techniques and multiscale modelling.'
+    excerpt: 'fedOO is a Python library for Finite Elements, highly tunable with emphasis on model reduction (PGD, AI-based models). It has a designed balance between speed and ease-of-use. fedOO integrates a non-linear solver, and tools to faciitate integration of homogenization techniques and multiscale modelling.'
 layouts_gallery:
   - url: /assets/images/about/fedooBeams.png
     image_path: /assets/images/about/fedooBeams.png
