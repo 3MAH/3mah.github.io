@@ -51,7 +51,7 @@ feature_row3:
 
 {% include feature_row id="intro" type="center" %}
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/3MAH/CSMA2022/HEAD)
+[![Binder](https://mybinder.org/badge_logo.svg) =100x](https://mybinder.org/v2/gh/3MAH/CSMA2022/HEAD)
 
 {% include feature_row %}
 
