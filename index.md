@@ -52,6 +52,7 @@ feature_row3:
 {% include feature_row id="intro" type="center" %}
 
 <a href='https://mybinder.org/v2/gh/3MAH/CSMA2022/HEAD'> <img alt='binder' src='https://mybinder.org/badge_logo.svg' width='200' > </a>
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/3MAH/CSMA2022/HEAD)
 
 {% include feature_row %}
 
