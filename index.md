@@ -5,7 +5,7 @@ header:
 #  overlay_filter: "0.5"
   overlay_image: /assets/images/layout_index2.jpg
   cta_label: "Download"
-  cta_url: "https://github.com/simcoon/simcoon/"
+  cta_url: "https://github.com/3MAH/"
 excerpt: "A set of scientific tools that render simulation in mechanics of materials and multiphysics easy. Open source, it is perfect to conduct research in the field of mechanics, thermomechanics with a focus on non-linear response, homogeneization of heterogeneous materials, composites and smart materials."
 intro: 
 - excerpt: 'In the 3MAH set, Simcoon expands the possibilities of the simulation in Mechanics of Materials and merge education, research and industrial requirements with a new, interactive approach. fedOO is a lightweight finite element solver, primarily developped for  study of model reduction methods, and now include exciting features about non-linear finite transformation analysis and homogenization tools.'
