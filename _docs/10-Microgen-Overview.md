@@ -22,25 +22,25 @@ Microstructure generation tool based on [CadQuery](https://cadquery.readthedocs.
 ## Examples
 
 ### Basic shapes
-<a href='https://microgen.readthedocs.io/en/latest/basic_shapes.html#basic-shapes'> <img src='https://raw.githubusercontent.com/3MAH/microgen/tree/main/docs/_static/shapes.png' width='200px'></a>
+<a href='https://microgen.readthedocs.io/en/latest/basic_shapes.html#basic-shapes'> <img src='https://raw.githubusercontent.com/3MAH/microgen/main/docs/_static/shapes.png' width='200px'></a>
 
 ### Repeated cells
-<a href='https://microgen.readthedocs.io/en/latest/repeated_cells.html#octet-truss'> <img src='https://raw.githubusercontent.com/3MAH/microgen/tree/main/docs/_static/octettruss.png' width='200px'></a>
-<a href='https://microgen.readthedocs.io/en/latest/repeated_cells.html#honeycomb'> <img src='https://raw.githubusercontent.com/3MAH/microgen/tree/main/docs/_static/honeycomb.png' width='200px'></a>
+<a href='https://microgen.readthedocs.io/en/latest/repeated_cells.html#octet-truss'> <img src='https://raw.githubusercontent.com/3MAH/microgen/main/docs/_static/octettruss.png' width='200px'></a>
+<a href='https://microgen.readthedocs.io/en/latest/repeated_cells.html#honeycomb'> <img src='https://raw.githubusercontent.com/3MAH/microgen/main/docs/_static/honeycomb.png' width='200px'></a>
 
 ### Triply Periodic Minimal Surfaces (TPMS)
-<a href='https://microgen.readthedocs.io/en/latest/tpms.html#tpms-available'> <img src='https://raw.githubusercontent.com/3MAH/microgen/tree/main/docs/_static/tpms.png' width='200px'></a>
-<a href='https://microgen.readthedocs.io/en/latest/tpms.html#spherical-gyroid'> <img src='https://raw.githubusercontent.com/3MAH/microgen/tree/main/docs/_static/tpms_sphere.png' width='200px'></a>
-<a href='https://microgen.readthedocs.io/en/latest/tpms.html#shell'> <img src='https://raw.githubusercontent.com/3MAH/microgen/tree/main/docs/_static/tpms_shell.png' width='200px'></a>
+<a href='https://microgen.readthedocs.io/en/latest/tpms.html#tpms-available'> <img src='https://raw.githubusercontent.com/3MAH/microgen/main/docs/_static/tpms.png' width='200px'></a>
+<a href='https://microgen.readthedocs.io/en/latest/tpms.html#spherical-gyroid'> <img src='https://raw.githubusercontent.com/3MAH/microgen/main/docs/_static/tpms_sphere.png' width='200px'></a>
+<a href='https://microgen.readthedocs.io/en/latest/tpms.html#shell'> <img src='https://raw.githubusercontent.com/3MAH/microgen/main/docs/_static/tpms_shell.png' width='200px'></a>
 
 ### 3D operations
-<a href='https://microgen.readthedocs.io/en/latest/3d_operations.html#repeating-unit-geometry'> <img src='https://raw.githubusercontent.com/3MAH/microgen/tree/main/docs/_static/repeatedGyroid.png' width='200px'></a>
-<a href='https://microgen.readthedocs.io/en/latest/3d_operations.html#raster-ellipsoid'> <img src='https://raw.githubusercontent.com/3MAH/microgen/tree/main/docs/_static/raster.png' width='200px'></a>
-<a href='https://microgen.readthedocs.io/en/latest/3d_operations.html#voronoi'> <img src='https://raw.githubusercontent.com/3MAH/microgen/tree/main/docs/_static/Voronoi.png' width='200px'></a>
-<a href='https://microgen.readthedocs.io/en/latest/3d_operations.html#voronoi-gyroid'> <img src='https://raw.githubusercontent.com/3MAH/microgen/tree/main/docs/_static/voronoi_gyroid.png' width='200px'></a>
+<a href='https://microgen.readthedocs.io/en/latest/3d_operations.html#repeating-unit-geometry'> <img src='https://raw.githubusercontent.com/3MAH/microgen/main/docs/_static/repeatedGyroid.png' width='200px'></a>
+<a href='https://microgen.readthedocs.io/en/latest/3d_operations.html#raster-ellipsoid'> <img src='https://raw.githubusercontent.com/3MAH/microgen/main/docs/_static/raster.png' width='200px'></a>
+<a href='https://microgen.readthedocs.io/en/latest/3d_operations.html#voronoi'> <img src='https://raw.githubusercontent.com/3MAH/microgen/main/docs/_static/Voronoi.png' width='200px'></a>
+<a href='https://microgen.readthedocs.io/en/latest/3d_operations.html#voronoi-gyroid'> <img src='https://raw.githubusercontent.com/3MAH/microgen/main/docs/_static/voronoi_gyroid.png' width='200px'></a>
 
 ### Mesh
-<a href='https://microgen.readthedocs.io/en/latest/mesh.html#id1'> <img src='https://raw.githubusercontent.com/3MAH/microgen/tree/main/docs/_static/Mesh.png' width='200px'></a>
-<a href='https://microgen.readthedocs.io/en/latest/mesh.html#periodic-mesh'> <img src='https://raw.githubusercontent.com/3MAH/microgen/tree/main/docs/_static/meshPeriodic.png' width='200px'></a>
-<a href='https://microgen.readthedocs.io/en/latest/mesh.html#mmg'> <img src='https://raw.githubusercontent.com/3MAH/microgen/tree/main/docs/_static/mmg.png' width='200px'></a>
-<a href='https://microgen.readthedocs.io/en/latest/mesh.html#mmg-voronoi'> <img src='https://raw.githubusercontent.com/3MAH/microgen/tree/main/docs/_static/mmg-voro.png' width='200px'></a>
+<a href='https://microgen.readthedocs.io/en/latest/mesh.html#id1'> <img src='https://raw.githubusercontent.com/3MAH/microgen/main/docs/_static/Mesh.png' width='200px'></a>
+<a href='https://microgen.readthedocs.io/en/latest/mesh.html#periodic-mesh'> <img src='https://raw.githubusercontent.com/3MAH/microgen/main/docs/_static/meshPeriodic.png' width='200px'></a>
+<a href='https://microgen.readthedocs.io/en/latest/mesh.html#mmg'> <img src='https://raw.githubusercontent.com/3MAH/microgen/main/docs/_static/mmg.png' width='200px'></a>
+<a href='https://microgen.readthedocs.io/en/latest/mesh.html#mmg-voronoi'> <img src='https://raw.githubusercontent.com/3MAH/microgen/main/docs/_static/mmg-voro.png' width='200px'></a>
