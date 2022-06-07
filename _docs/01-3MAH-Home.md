@@ -6,7 +6,7 @@ last_modified_at: 2022-01-26T16:51:00-04:00
 ---
 
 ## Microgen
-- [Overview](/docs/m-overview)
+- [Overview](/docs/m-overview/)
 
 - [Installation](/docs/m-installation/)
 
