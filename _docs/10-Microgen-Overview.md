@@ -31,60 +31,47 @@ Click on the image to be redirected to the corresponding example on Microgen's d
 ### Repeated cells
 
 <a href="https://microgen.readthedocs.io/en/latest/repeated_cells.html#octet-truss"> 
-    {% imagesize image:img %}
     <img src="https://raw.githubusercontent.com/3MAH/microgen/main/docs/_static/octettruss.png" height="250">
 </a>
 
 <a href="https://microgen.readthedocs.io/en/latest/repeated_cells.html#honeycomb"> 
-    {% imagesize image:img %}
     <img src="https://raw.githubusercontent.com/3MAH/microgen/main/docs/_static/honeycomb.png" height="250">
 </a>
 
 ### Triply Periodic Minimal Surfaces (TPMS)
 <a href="https://microgen.readthedocs.io/en/latest/tpms.html#tpms-available">
-    {% imagesize image:img %}
     <img src="https://raw.githubusercontent.com/3MAH/microgen/main/docs/_static/tpms.png" height="250"></a>
 <a href="https://microgen.readthedocs.io/en/latest/tpms.html#spherical-gyroid">
-    {% imagesize image:img %}
     <img src="https://raw.githubusercontent.com/3MAH/microgen/main/docs/_static/tpms_sphere.png" height="250">
 </a>
 <a href="https://microgen.readthedocs.io/en/latest/tpms.html#shell">
-    {% imagesize image:img %}
     <img src="https://raw.githubusercontent.com/3MAH/microgen/main/docs/_static/tpms_shell.png" height="250">
 </a>
 
 ### 3D operations
 <a href="https://microgen.readthedocs.io/en/latest/3d_operations.html#repeating-unit-geometry">
-    {% imagesize image:img %}
     <img src="https://raw.githubusercontent.com/3MAH/microgen/main/docs/_static/repeatedGyroid.png" height="250">
 </a>
 <a href="https://microgen.readthedocs.io/en/latest/3d_operations.html#raster-ellipsoid">
-    {% imagesize image:img %}
     <img src="https://raw.githubusercontent.com/3MAH/microgen/main/docs/_static/raster.png" height="250">
 </a>
 <a href="https://microgen.readthedocs.io/en/latest/3d_operations.html#voronoi">
-    {% imagesize image:img %}
     <img src="https://raw.githubusercontent.com/3MAH/microgen/main/docs/_static/Voronoi.png" height="250">
 </a>
 <a href="https://microgen.readthedocs.io/en/latest/3d_operations.html#voronoi-gyroid">
-    {% imagesize image:img %}
     <img src="https://raw.githubusercontent.com/3MAH/microgen/main/docs/_static/voronoi_gyroid.png" height="250">
 </a>
 
 ### Mesh
 <a href="https://microgen.readthedocs.io/en/latest/mesh.html#id1">
-    {% imagesize image:img %}
     <img src="https://raw.githubusercontent.com/3MAH/microgen/main/docs/_static/Mesh.png" height="250">
 </a>
 <a href="https://microgen.readthedocs.io/en/latest/mesh.html#periodic-mesh">
-    {% imagesize image:img %}
     <img src="https://raw.githubusercontent.com/3MAH/microgen/main/docs/_static/meshPeriodic.png" height="250">
 </a>
 <a href="https://microgen.readthedocs.io/en/latest/mesh.html#mmg">
-    {% imagesize image:img %}
     <img src="https://raw.githubusercontent.com/3MAH/microgen/main/docs/_static/mmg.png" height="250">
 </a>
 <a href="https://microgen.readthedocs.io/en/latest/mesh.html#mmg-voronoi">
-    {% imagesize image:img %}
     <img src="https://raw.githubusercontent.com/3MAH/microgen/main/docs/_static/mmg-voro.png" height="250">
 </a>
