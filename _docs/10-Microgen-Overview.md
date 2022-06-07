@@ -24,7 +24,6 @@ Click on the image to be redirected to the corresponding example on Microgen's d
 
 ### Basic shapes
 <a href="https://microgen.readthedocs.io/en/latest/basic_shapes.html#basic-shapes"> 
-    {% imagesize image:img %}
     <img src="https://raw.githubusercontent.com/3MAH/microgen/main/docs/_static/shapes.png" height="250">
 </a>
 
