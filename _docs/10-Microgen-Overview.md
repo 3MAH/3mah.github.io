@@ -12,16 +12,11 @@ Microstructure generation tool based on [CadQuery](https://cadquery.readthedocs.
 
 
 
---------------|----------------
+:--------------:|:----------------:
 Read the Docs | [![Documentation Status](https://readthedocs.org/projects/microgen/badge/?version=latest)](https://microgen.readthedocs.io/en/latest/?badge=latest)
---------------|----------------
 [3MAH website](https://3mah.github.io/) | <a href='https://3mah.github.io'> <img alt='3MAH' src='https://3mah.github.io/assets/images/logo_3mah/3mah_logo_vsmall.png' width='50' > </a>
-
---------------|----------------
 [GitHub repository](https://github.com/3MAH/microgen) | <a href='https://github.com/3MAH/microgen'> <img alt='GitHub' src='https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png' width='50' > </a>
---------------|----------------
 [Conda package](https://conda.anaconda.org/set3mah/) | ![Conda package](https://anaconda.org/set3mah/microgen/badges/installer/conda.svg)
---------------|----------------
 [PyPI package](https://pypi.org/project/microgen/1.0/) | ![PyPI package](https://badge.fury.io/py/microgen.svg)
 
 
@@ -47,3 +42,5 @@ Examples
    - :ref:`RST tpms`
    - :ref:`RST 3Dop`
    - :ref:`RST Mesh` -->
+
+@@include[../examples/newExamples/shapes/shapes.py](https://github.com/3MAH/microgen/examples/newExamples/shapes/shapes.py)
