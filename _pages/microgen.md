@@ -37,6 +37,10 @@ Here are the main features:
 * Three-dimensional Voronoi tessellation rallons to simulate the response granular materials and polycrystalline metals
 * Regular mesh and periodic mesh are implemented using gmsh
 
-![TPMS](/assets/images/about/tpms.gif)
+
+<p align="center">
+  <img src="/assets/images/about/fischerKoch.gif" alt="TPMS"/>
+</p>
+
 
 {% include gallery id="layouts_gallery" caption="Main microstructures obtained using the microgen library `Neovius TPMS`, `Voronoi tessellation of polycristals`, and `Gyroid surfaces`." %}
