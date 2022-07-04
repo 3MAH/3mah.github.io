@@ -32,9 +32,11 @@ classes: wide
 
 Here are the main features:
 
-* microgen is entirely written in Python 3
-* It allows to generate simple reinforcement geometries (spheres, cylinder, ellipsoids) to generate virtual composites microstructures
+* microgen is entirely written in Python 3 and based on CadQuery and PyVista libraries
+* It allows to generate simple reinforcement geometries (spheres, cylinder, ellipsoids, ...) to generate virtual composites microstructures
 * Three-dimensional Voronoi tessellation rallons to simulate the response granular materials and polycrystalline metals
-* Regular mesh and periodic mesh is implemented using gmsh
+* Regular mesh and periodic mesh are implemented using gmsh
+
+![TPMS](/assets/images/about/tpms.gif)
 
 {% include gallery id="layouts_gallery" caption="Main microstructures obtained using the microgen library `Neovius TPMS`, `Voronoi tessellation of polycristals`, and `Gyroid surfaces`." %}
