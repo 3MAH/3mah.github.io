@@ -50,9 +50,9 @@ Microgen’s objective is to represent, with an easy-to-learn python scripting a
 
 <p style="text-align: justify;">
 Also, several geometrical operations are included (repetition, boolean, slicing, etc..). Microgen heavily relies on Cadquery (Python wrapper for Opencascade) and PyVista (python vtk visualisation library).
-Microgen facilitates the generation of meshes using GMSH, allowing periodic meshes if the geometry is periodic. It also wraps the very good [MMG remeshing software](https://www.mmgtools.org) developed at INRIA.</p>
+Microgen facilitates the generation of meshes using GMSH, allowing periodic meshes if the geometry is periodic. It also wraps the very good <a href="https://www.mmgtools.org">MMG remeshing software</a> developed at INRIA.</p>
 
-<p style="text-align: justify;">This software is totally compatible with our FEA software [FedOO](https://github.com/3MAH/fedoo), to perform non-linear (geometrical and material) homogenization for mechanical, thermal and very soon thermo-mechanical problems. It can also be utilised with other FEA solutions such as Abaqus, Ansys, Salome, Fenics, Zebulon, ...</p>
+<p style="text-align: justify;">This software is totally compatible with our FEA software <a href="https://github.com/3MAH/fedoo">FedOO</a>, to perform non-linear (geometrical and material) homogenization for mechanical, thermal and very soon thermo-mechanical problems. It can also be utilised with other FEA solutions such as Abaqus, Ansys, Salome, Fenics, Zebulon, ...</p>
 
 
 {% include gallery id="layouts_gallery" caption="Main microstructures obtained using the microgen library `Neovius TPMS`, `Voronoi tessellation of polycristals`, and `Gyroid surfaces`." %}
