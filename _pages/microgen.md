@@ -44,14 +44,15 @@ Here are the main features:
   <img src="/assets/images/about/fischerKoch.gif" alt="TPMS" width="49%"/>
 </p>
 
-
+<p>
 Microgen is dedicated to parametric geometrical definition of structures applied to mechanical simulations. It has a lot of exciting features! You can see below that triply periodic surfaces and volumes are very easy to represent for FEM simulation or 3D printing
-Microgen’s objective is to represent, with an easy-to-learn python scripting approach, any CAD-compatible surface and volume and be able to easy perform parametric analysis.
+Microgen’s objective is to represent, with an easy-to-learn python scripting approach, any CAD-compatible surface and volume and be able to easy perform parametric analysis.</p>
 
+<p>
 Also, several geometrical operations are included (repetition, boolean, slicing, etc..). Microgen heavily relies on Cadquery (Python wrapper for Opencascade) and PyVista (python vtk visualisation library).
-Microgen facilitates the generation of meshes using GMSH, allowing periodic meshes if the geometry is periodic. It also wraps the very good [MMG remeshing software](https://www.mmgtools.org) developed at INRIA.
+Microgen facilitates the generation of meshes using GMSH, allowing periodic meshes if the geometry is periodic. It also wraps the very good [MMG remeshing software](https://www.mmgtools.org) developed at INRIA.</p>
 
-This software is totally compatible with our FEA software [FedOO](https://github.com/3MAH/fedoo), to perform non-linear (geometrical and material) homogenization for mechanical, thermal and very soon thermo-mechanical problems. It can also be utilised with other FEA solutions such as Abaqus, Ansys, Salome, Fenics, Zebulon, ...
+<p>This software is totally compatible with our FEA software [FedOO](https://github.com/3MAH/fedoo), to perform non-linear (geometrical and material) homogenization for mechanical, thermal and very soon thermo-mechanical problems. It can also be utilised with other FEA solutions such as Abaqus, Ansys, Salome, Fenics, Zebulon, ...</p>
 
 
 {% include gallery id="layouts_gallery" caption="Main microstructures obtained using the microgen library `Neovius TPMS`, `Voronoi tessellation of polycristals`, and `Gyroid surfaces`." %}
