@@ -40,7 +40,7 @@ Here are the main features:
 
 
 <p align="center">
-  <img src="/assets/images/about/gyroid_small.gif" alt="Gyroid"/>
+  <img src="/assets/images/about/gyroid.gif" height=250alt="Gyroid"/>
 </p>
 
 <p align="center">
