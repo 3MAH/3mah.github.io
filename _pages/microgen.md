@@ -30,6 +30,7 @@ classes: wide
 [![PyPI version](https://badge.fury.io/py/microgen.svg)](https://pypi.org/project/microgen/1.0/)
 [![Documentation Status](https://readthedocs.org/projects/microgen/badge/?version=latest)](https://microgen.readthedocs.io/en/latest/?badge=latest)
 
+
 Here are the main features:
 
 * microgen is entirely written in Python 3 and based on CadQuery and PyVista libraries
@@ -39,8 +40,21 @@ Here are the main features:
 
 
 <p align="center">
+  <img src="/assets/images/about/gyroid_small.gif" alt="Gyroid"/>
+</p>
+
+<p align="center">
   <img src="/assets/images/about/fischerKoch.gif" alt="TPMS"/>
 </p>
+
+
+Microgen is dedicated to parametric geometrical definition of structures applied to mechanical simulations. It has a lot of exciting features! You can see below that triply periodic surfaces and volumes are very easy to represent for FEM simulation or 3D printing
+Microgen’s objective is to represent, with an easy-to-learn python scripting approach, any CAD-compatible surface and volume and be able to easy perform parametric analysis.
+
+Also, several geometrical operations are included (repetition, boolean, slicing, etc..). Microgen heavily relies on Cadquery (Python wrapper for Opencascade) and PyVista (python vtk visualisation library).
+Microgen facilitates the generation of meshes using GMSH, allowing periodic meshes if the geometry is periodic. It also wraps the very good [MMG remeshing software](https://www.mmgtools.org) developed at INRIA.
+
+This software is totally compatible with our FEA software [FedOO](https://github.com/3MAH/fedoo), to perform non-linear (geometrical and material) homogenization for mechanical, thermal and very soon thermo-mechanical problems. It can also be utilised with other FEA solutions such as Abaqus, Ansys, Salome, Fenics, Zebulon, ...
 
 
 {% include gallery id="layouts_gallery" caption="Main microstructures obtained using the microgen library `Neovius TPMS`, `Voronoi tessellation of polycristals`, and `Gyroid surfaces`." %}
