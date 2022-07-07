@@ -40,11 +40,8 @@ Here are the main features:
 
 
 <p align="center">
-  <img src="/assets/images/about/gyroid.gif" alt="Gyroid"/>
-</p>
-
-<p align="center">
-  <img src="/assets/images/about/fischerKoch.gif" alt="TPMS"/>
+  <img src="/assets/images/about/gyroid.gif" alt="Gyroid" width="49%"/>
+  <img src="/assets/images/about/fischerKoch.gif" alt="TPMS" width="49%"/>
 </p>
 
 
