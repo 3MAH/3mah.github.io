@@ -44,7 +44,10 @@ Here are the main features:
   <img src="/assets/images/about/fischerKoch.gif" alt="TPMS" width="49%"/>
 </p>
 
-<p align="center"><img src="/assets/images/about/shell.png" alt="Shell" width="50%"/></p>
+<p align="center">
+  <img src="/assets/images/about/shell.png" alt="Shell" width="49%"/>
+  <img src="/assets/images/about/beams.png" alt="Beams" width="49%"/>
+</p>
 
 <p style="text-align: justify;">
 Microgen is dedicated to parametric geometrical definition of structures applied to mechanical simulations. It has a lot of exciting features! You can see below that triply periodic surfaces and volumes are very easy to represent for FEM simulation or 3D printing
