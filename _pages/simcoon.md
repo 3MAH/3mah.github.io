@@ -6,7 +6,7 @@ excerpt: "Simcoon is a free, open-source C++ library for simulating multiphysics
 intro:
   - image_path: /assets/images/logo_simcoon/simcoon_logo_text.png
     excerpt: 'Simcoon is a scientific library built to facilitate the analysis of mechanics of materials. It provides a C++ API with Python bindings, designed to help researchers implement modern material behavior models for Finite Element Analysis packages. Built on Armadillo and FTensor for high-performance tensor operations.'
-    url: "https://simcoon.readthedocs.io/"
+    url: "https://3mah.github.io/simcoon-docs/"
     btn_label: "View Documentation"
     btn_class: "btn--primary"
 layouts_gallery:
@@ -37,7 +37,7 @@ Here are the main features:
 * Built-in identification software using hybrid genetic-gradient algorithms
 * Can be used as a standalone solver or coupled to FEA packages (Abaqus, Ansys, etc.)
 
-[View full documentation](https://simcoon.readthedocs.io/){: .btn .btn--info .btn--large}
+[View full documentation](https://3mah.github.io/simcoon-docs/){: .btn .btn--info .btn--large}
 [Back to 3MAH](https://3mah.github.io/){: .btn .btn--inverse .btn--large}
 
 {% include gallery id="layouts_gallery" caption="Main features of the Simcoon library: `Constitutive models`, `Multi-scale models`, and `Identification and analyses`." %}

@@ -6,7 +6,7 @@ excerpt: "Microgen is a Python library designed to facilitate microstructure gen
 intro:
   - image_path: /assets/images/logo_microgen/microgen_logo.png
     excerpt: 'Microgen is a Python library designed to streamline microstructure generation and mesh creation. It leverages Open CASCADE (via CadQuery) and VTK (using PyVista) for geometry generation, Neper for 3D tessellation, GMSH for mesh generation, and MMG for remeshing.'
-    url: "https://microgen.readthedocs.io/"
+    url: "https://3mah.github.io/microgen-docs/"
     btn_label: "View Documentation"
     btn_class: "btn--primary"
 layouts_gallery:
@@ -31,7 +31,7 @@ classes: wide
 [![build-and-test workflow](https://github.com/3MAH/microgen/actions/workflows/build-and-test.yml/badge.svg)](https://github.com/3MAH/microgen)
 [![Anaconda-Server Badge](https://anaconda.org/set3mah/microgen/badges/installer/conda.svg)](https://conda.anaconda.org/set3mah)
 [![PyPI version](https://badge.fury.io/py/microgen.svg)](https://pypi.org/project/microgen/)
-[![Documentation Status](https://readthedocs.org/projects/microgen/badge/?version=latest)](https://microgen.readthedocs.io/en/latest/?badge=latest)
+[![Documentation](https://img.shields.io/badge/docs-microgen-blue?style=for-the-badge)](https://3mah.github.io/microgen-docs/)
 
 
 Here are the main features:
@@ -56,9 +56,9 @@ Microgen is dedicated to parametric geometrical definition of structures applied
 
 Several geometrical operations are included (repetition, boolean, slicing, etc.). Microgen heavily relies on CadQuery (Python wrapper for Open CASCADE) and PyVista (Python VTK visualisation library). It facilitates the generation of meshes using GMSH, allowing periodic meshes if the geometry is periodic. It also wraps the [MMG remeshing software](https://www.mmgtools.org) developed at INRIA.
 
-This software is compatible with [fedOO](https://3mah.github.io/fedoo/) for non-linear (geometrical and material) homogenization for mechanical, thermal and thermo-mechanical problems. It can also be utilised with other FEA solutions such as Abaqus, Ansys, Salome, FEniCS, Zebulon, etc.
+This software is compatible with [fedOO](https://3mah.github.io/fedoo-docs/) for non-linear (geometrical and material) homogenization for mechanical, thermal and thermo-mechanical problems. It can also be utilised with other FEA solutions such as Abaqus, Ansys, Salome, FEniCS, Zebulon, etc.
 
-[View full documentation](https://microgen.readthedocs.io/){: .btn .btn--info .btn--large}
+[View full documentation](https://3mah.github.io/microgen-docs/){: .btn .btn--info .btn--large}
 [Back to 3MAH](https://3mah.github.io/){: .btn .btn--inverse .btn--large}
 
 {% include gallery id="layouts_gallery" caption="Main microstructures obtained using the Microgen library: `Neovius TPMS`, `Voronoi tessellation of polycrystals`, and `Gyroid surfaces`." %}

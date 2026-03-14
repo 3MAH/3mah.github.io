@@ -6,7 +6,7 @@ excerpt: "fedOO is a free open source Finite Element library developed in Python
 intro:
   - image_path: /assets/images/logo_fedoo/fedoo_logo.png
     excerpt: 'fedOO is a Python Finite Element library, highly tunable with emphasis on model reduction (PGD, AI-based models). It balances speed and ease-of-use, and integrates a non-linear solver with tools to facilitate homogenization techniques and multiscale modelling.'
-    url: "https://3mah.github.io/fedoo/"
+    url: "https://3mah.github.io/fedoo-docs/"
     btn_label: "View Documentation"
     btn_class: "btn--primary"
 layouts_gallery:
@@ -41,7 +41,7 @@ Here are the main features:
 * Mesh import/export from msh (GMSH) and vtk formats
 * Export results in vtk format for easy visualisation with [Paraview](https://www.paraview.org/)
 
-[View full documentation](https://3mah.github.io/fedoo/){: .btn .btn--info .btn--large}
+[View full documentation](https://3mah.github.io/fedoo-docs/){: .btn .btn--info .btn--large}
 [Back to 3MAH](https://3mah.github.io/){: .btn .btn--inverse .btn--large}
 
 {% include gallery id="layouts_gallery" caption="Examples of Finite Element simulations using fedOO: `Beam network`, `damage in composites`, and `architectured materials`." %}
