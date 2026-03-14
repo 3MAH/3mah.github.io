@@ -7,8 +7,8 @@ header:
   cta_label: "Download"
   cta_url: "https://github.com/3MAH/"
 excerpt: "A set of scientific tools that render simulation in mechanics of materials and multiphysics easy. Open source, it is perfect to conduct research in the field of mechanics, thermomechanics with a focus on non-linear response, homogeneization of heterogeneous materials, composites and smart materials."
-intro: 
-- excerpt: 'In the 3MAH set, Simcoon expands the possibilities of the simulation in Mechanics of Materials and merge education, research and industrial requirements with a new, interactive approach. fedOO is a lightweight finite element solver, primarily developped for  study of model reduction methods, and now include exciting features about non-linear finite transformation analysis and homogenization tools.'
+intro:
+- excerpt: 'The 3MAH set brings together three complementary tools: **Simcoon**, a C++ library with Python bindings for constitutive modeling and multiphysics simulation; **fedOO**, a Python Finite Element solver with emphasis on model reduction, non-linear analysis and homogenization; and **Microgen**, a Python library for microstructure generation and meshing. Together, they provide a complete workflow from CAD to simulation for mechanics of materials research.'
 feature_row:
   - image_path: assets/images/index/constitutive.png
     alt: "Constitutive Models"

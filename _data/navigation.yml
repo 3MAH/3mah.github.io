@@ -1,21 +1,15 @@
 # main links
 main:
   - title: "Simcoon"
-    url: /simcoon/
+    url: https://simcoon.readthedocs.io/
   - title: "fedOO"
-    url: /fedoo/
+    url: https://3mah.github.io/fedoo/
   - title: "microgen"
-    url: /microgen/
+    url: https://microgen.readthedocs.io/
   - title: "Team"
     url: /team/
-  - title: "Documentation"
-    url: /docs/3-Home/
   - title: "Gallery"
     url: /gallery/
-  # - title: "Sample Collections"
-  #   url: /collection-archive/
-  # - title: "Sitemap"
-  #   url: /sitemap/
 
 # documentation links
 docs:
@@ -25,12 +19,16 @@ docs:
       url: /docs/3-Home/
 - title: Microgen
   children:
+    - title: "Documentation"
+      url: https://microgen.readthedocs.io/
     - title: "Installation"
       url: /docs/m-installation/
     - title: "Create Conda package"
       url: /docs/m-create-package/
 - title: Simcoon
   children:
+    - title: "Documentation"
+      url: https://simcoon.readthedocs.io/
     - title: "Installation"
       url: /docs/s-installation/
     - title: "Quick-Start Guide"
@@ -41,6 +39,8 @@ docs:
       url: /docs/s-create-package/
 - title: fedOO
   children:
+    - title: "Documentation"
+      url: https://3mah.github.io/fedoo/
     - title: "Tutorials"
       url: /docs/f-tutorials/
     - title: "Create Conda package"

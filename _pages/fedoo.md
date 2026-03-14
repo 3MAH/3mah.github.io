@@ -1,11 +1,14 @@
 ---
-title: "About"
+title: "fedOO"
 layout: splash
 permalink: /fedoo/
-excerpt: "Simcoon is a scientific library built to facilitate the analysis of mechanics of materials. It is built on the top of Armadillo, a high quality C++ linear algebra library. It integrates several algorithms for the analysis of heterogeneous materials Enjoy!"
+excerpt: "fedOO is a free open source Finite Element library developed in Python, designed for mechanical and thermal simulations of heterogeneous materials."
 intro:
   - image_path: /assets/images/logo_fedoo/fedoo_logo.png
-    excerpt: 'fedOO is a Python library for Finite Elements, highly tunable with emphasis on model reduction (PGD, AI-based models). It has a designed balance between speed and ease-of-use. fedOO integrates a non-linear solver, and tools to faciitate integration of homogenization techniques and multiscale modelling.'
+    excerpt: 'fedOO is a Python Finite Element library, highly tunable with emphasis on model reduction (PGD, AI-based models). It balances speed and ease-of-use, and integrates a non-linear solver with tools to facilitate homogenization techniques and multiscale modelling.'
+    url: "https://3mah.github.io/fedoo/"
+    btn_label: "View Documentation"
+    btn_class: "btn--primary"
 layouts_gallery:
   - url: /assets/images/about/fedooBeams.png
     image_path: /assets/images/about/fedooBeams.png
@@ -16,7 +19,7 @@ layouts_gallery:
   - url: /assets/images/about/shearPerio.png
     image_path: /assets/images/about/shearPerio.png
     alt: "Simulation of periodic architectured materials response using Periodic boundary conditions"
-last_modified_at: 2018-01-10T11:22:24-05:00
+last_modified_at: 2026-03-12
 toc: false
 classes: wide
 ---
@@ -25,14 +28,20 @@ classes: wide
 
 Here are the main features:
 
-* FEDOO is entirely written in Python 3
-* Resolution of problems based on a separated decomposition (PGD, POD, Reduced bases)
-Static and Dynamics poblems
-* Mesh import/export from msh (GMSH) and vtk format
-* Export results in vtk file for easy visualisation with Paraview (https://www.paraview.org/)
-* Constitutive equation library including elasto-plastic law, composites law, ...
-* Include many type of elements like cohesive elements, 2D, 3D, beam, ...
-* Geometrical non linearities
-* And many other....
+* Entirely written in Python 3 with an emphasis on readable, maintainable code
+* Implicit Finite Element solver for static and dynamic problems
+* Resolution of problems based on separated decomposition (PGD, POD, Reduced bases)
+* Integration with the Simcoon library for finite strain constitutive laws
+* Supports 2D, 3D, beam, plate, and cohesive elements
+* Contact analysis in 2D and 3D, including self-contact
+* Geometric non-linearities
+* Periodic boundary conditions and automatic tangent matrix extraction for homogenization
+* Multi-point constraint support for complex boundary conditions
+* Embedded results visualization using the PyVista library
+* Mesh import/export from msh (GMSH) and vtk formats
+* Export results in vtk format for easy visualisation with [Paraview](https://www.paraview.org/)
 
-{% include gallery id="layouts_gallery" caption="Examples of Finite Element simulations using fedoo : `Beam network`, `damage in composites`, and `architectured materials`." %}
+[View full documentation](https://3mah.github.io/fedoo/){: .btn .btn--info .btn--large}
+[Back to 3MAH](https://3mah.github.io/){: .btn .btn--inverse .btn--large}
+
+{% include gallery id="layouts_gallery" caption="Examples of Finite Element simulations using fedOO: `Beam network`, `damage in composites`, and `architectured materials`." %}

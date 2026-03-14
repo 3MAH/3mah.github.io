@@ -1,11 +1,14 @@
 ---
-title: "About"
+title: "Simcoon"
 layout: splash
 permalink: /simcoon/
-excerpt: "Simcoon is a scientific library built to facilitate the analysis of mechanics of materials. It is built on the top of Armadillo, a high quality C++ linear algebra library. It integrates several algorithms for the analysis of heterogeneous materials Enjoy!"
+excerpt: "Simcoon is a free, open-source C++ library for simulating multiphysics systems, with emphasis on constitutive modeling for heterogeneous materials."
 intro:
   - image_path: /assets/images/logo_simcoon/simcoon_logo_text.png
-    excerpt: 'Simcoon is a C++ library with emphasis on speed and ease-of-use. Its principle focus is to provide tools to facilitate the implementation of up-to-date constitutive model for materials in Finite Element Analysis Packages. This is done by providing a C++ API to generate user material subroutine based on a library of functions. Also, Simcoon provides tools to analyse the behavior of material, considering loading at the material point level.'
+    excerpt: 'Simcoon is a scientific library built to facilitate the analysis of mechanics of materials. It provides a C++ API with Python bindings, designed to help researchers implement modern material behavior models for Finite Element Analysis packages. Built on Armadillo and FTensor for high-performance tensor operations.'
+    url: "https://simcoon.readthedocs.io/"
+    btn_label: "View Documentation"
+    btn_class: "btn--primary"
 layouts_gallery:
   - url: /assets/images/about/coupled_cons_models.png
     image_path: /assets/images/about/coupled_cons_models.png
@@ -16,20 +19,25 @@ layouts_gallery:
   - url: /assets/images/about/DIC_map.png
     image_path: /assets/images/about/DIC_map.png
     alt: "Digital Image Correlation - multiaxial strain field"
-last_modified_at: 2018-01-10T11:22:24-05:00
+last_modified_at: 2026-03-12
 toc: false
 classes: wide
 ---
 
 {% include feature_row id="intro" type="left" %}
 
-* Simcoon consists in an Application Programming Interface (API) developped in C++ and exposed in Python. 
+Here are the main features:
 
-* It relies on the high quality linear algebra library C++ library Armadillo. This provides a perfect balance between speed and ease of use 
- 
-* It can be used as a standalone solver tool for the numerical simulation of material's thermomechanical response, or coupled to Finite Element Analysis (FEA) packages for the simulation of complex structures 
+* Simcoon provides both a C++ and a Python API for flexibility and accessibility
+* Built on the Armadillo linear algebra library and FTensor for advanced tensor operations, providing a balance between speed and ease of use
+* Thermomechanical solver for material point analysis and composite effective property prediction
+* Constitutive models for anisotropic elasticity, plasticity, viscoelasticity, and phase transformation
+* Handles geometric non-linearities with multiple strain measures (Lagrangian, Eulerian, cumulative strains) and spin options (Jaumann, Green-Naghdi, logarithmic)
+* Extensive libraries for continuum mechanics functions, homogenization techniques, and micromechanics schemes
+* Built-in identification software using hybrid genetic-gradient algorithms
+* Can be used as a standalone solver or coupled to FEA packages (Abaqus, Ansys, etc.)
 
-* Provide efficient material constitutive law for anisotropic elasticity, plasticity, viscoélasticity, phase transformation
+[View full documentation](https://simcoon.readthedocs.io/){: .btn .btn--info .btn--large}
+[Back to 3MAH](https://3mah.github.io/){: .btn .btn--inverse .btn--large}
 
-
-{% include gallery id="layouts_gallery" caption="Main features of the simcoon library `Constitutive models`, `Multi-scale models`, and `Identification and analyses`." %}
+{% include gallery id="layouts_gallery" caption="Main features of the Simcoon library: `Constitutive models`, `Multi-scale models`, and `Identification and analyses`." %}
