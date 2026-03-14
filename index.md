@@ -13,23 +13,23 @@ feature_row:
   - image_path: assets/images/index/constitutive.png
     alt: "Constitutive Models"
     title: "Constitutive Models"
-    excerpt: "Develop your own **constitutive model** or use one of the many out-of-the-box models."
-    url: "https://3mah.github.io/simcoon-docs/"
-    btn_label: "Read More"
+    excerpt: "Develop your own **constitutive model** or use one of the many out-of-the-box models: isotropic/anisotropic elasticity, plasticity with isotropic, kinematic or Chaboche hardening, and hyperelasticity."
+    url: "https://3mah.github.io/simcoon-docs/examples/umats/EPICP.html"
+    btn_label: "See Example"
     btn_class: "btn--primary"
   - image_path: /assets/images/index/homogenization.png
     alt: "Homogenization"
     title: "Homogenization"
-    excerpt: "Obtain **effective properties** using Micromechanics or Periodic Homogenization tools."
-    url: "https://3mah.github.io/fedoo-docs/"
-    btn_label: "Read More"
+    excerpt: "Obtain **effective properties** of composites using Mori-Tanaka or self-consistent micromechanics schemes, and study the effect of volume fraction and inclusion shape."
+    url: "https://3mah.github.io/simcoon-docs/examples/heterogeneous/homogenization.html"
+    btn_label: "See Example"
     btn_class: "btn--primary"
   - image_path: /assets/images/index/optimization.png
     alt: "Identification"
     title: "Identification"
-    excerpt: "Get **material parameters** using optimization algorithms."
-    url: "https://3mah.github.io/simcoon-docs/"
-    btn_label: "Read More"
+    excerpt: "Analyse **directional stiffness** and effective material properties, and set up parameter identification workflows."
+    url: "https://3mah.github.io/simcoon-docs/examples/analysis/directional_stiffness.html"
+    btn_label: "See Example"
     btn_class: "btn--primary"
 feature_row2:
   - image_path: /assets/images/index/architectured.png
@@ -50,8 +50,6 @@ feature_row3:
 ---
 
 {% include feature_row id="intro" type="center" %}
-
-<a href='https://mybinder.org/v2/gh/3MAH/CSMA2022/HEAD'> <img alt='binder' src='https://mybinder.org/badge_logo.svg' width='200' > </a>
 
 {% include feature_row %}
 
