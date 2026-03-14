@@ -14,37 +14,37 @@ feature_row:
     alt: "Constitutive Models"
     title: "Constitutive Models"
     excerpt: "Develop your own **constitutive model** or use one of the many out-of-the-box models."
-    url: "#test-link"
+    url: "https://3mah.github.io/simcoon-docs/"
     btn_label: "Read More"
     btn_class: "btn--primary"
   - image_path: /assets/images/index/homogenization.png
     alt: "Homogenization"
     title: "Homogenization"
     excerpt: "Obtain **effective properties** using Micromechanics or Periodic Homogenization tools."
-    url: "#test-link"
+    url: "https://3mah.github.io/fedoo-docs/"
     btn_label: "Read More"
     btn_class: "btn--primary"
   - image_path: /assets/images/index/optimization.png
     alt: "Identification"
     title: "Identification"
     excerpt: "Get **material parameters** using optimization algorithms."
-    url: "#test-link"
+    url: "https://3mah.github.io/simcoon-docs/"
     btn_label: "Read More"
     btn_class: "btn--primary"
 feature_row2:
   - image_path: /assets/images/index/architectured.png
     alt: "Architectured materials"
     title: "Architectured materials"
-    excerpt: 'Get the most out of Architectured materials. Apply periodic boundary conditions to obtain effective properties and non-linear response to loading conditions you define'
-    url: "#test-link"
-    btn_label: "Read More"
+    excerpt: 'Get the most out of Architectured materials. Apply periodic boundary conditions to obtain effective properties and non-linear response to loading conditions you define.'
+    url: "https://3mah.github.io/fedoo-docs/examples/03-advanced/3D_periodic_BC_off_axis.html"
+    btn_label: "See Example"
     btn_class: "btn--primary"
 feature_row3:
   - image_path: /assets/images/index/identification.png
     alt: "Parameter identification"
     title: "Parameter identification"
-    excerpt: 'Set up a parameter identification workflow, using gradient-based or genetic algorithms'
-    url: "#test-link"
+    excerpt: 'Set up a parameter identification workflow, using gradient-based or genetic algorithms.'
+    url: "https://3mah.github.io/simcoon-docs/"
     btn_label: "Read More"
     btn_class: "btn--primary"
 ---
