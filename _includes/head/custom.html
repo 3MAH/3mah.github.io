@@ -39,6 +39,48 @@
       rgba(238, 125, 48, 0.22) 82%,
       rgba(238, 125, 48, 0)   100%);
   }
+
+  /* Full-width showcase block (used for the tube-compression triptych and
+     the microstructure→simulation pair). Brand-coloured left rule, rich
+     caption block, image bleeds to the container edges. */
+  .showcase {
+    margin: 2.5em 0 3em;
+    padding: 1em 1.4em 1.4em;
+    border-left: 6px solid #2fa12c;
+    background: linear-gradient(90deg,
+      rgba(47, 161, 44, 0.10) 0%,
+      rgba(47, 161, 44, 0.04) 35%,
+      rgba(47, 161, 44, 0)   100%);
+    border-radius: 0 8px 8px 0;
+  }
+  .showcase__title {
+    margin: 0 0 0.35em;
+    color: #1f7a1a;
+    font-weight: 700;
+    font-size: 1.4em;
+  }
+  .showcase__lede {
+    margin: 0 0 0.9em;
+    color: #2a2f3a;
+    font-size: 1.05em;
+    line-height: 1.5;
+  }
+  .showcase__img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+  .showcase__caption {
+    margin: 0.7em 0 0;
+    font-size: 0.92em;
+    color: #5a5e6b;
+  }
+  .showcase__caption code {
+    background: rgba(47, 161, 44, 0.10);
+    padding: 0.05em 0.4em;
+    border-radius: 3px;
+  }
 </style>
 
 <!-- SEO: keywords (page-level overrides site-level) -->
