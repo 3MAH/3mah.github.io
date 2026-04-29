@@ -2,6 +2,93 @@
 
 <!-- insert favicons. use http://realfavicongenerator.net/ -->
 
+<!-- Brand colours for section headings (Simcoon / fedoo / Microgen).
+     Each heading gets a translucent brand-coloured band behind it that
+     fades out at both ends, so the title sits inside its brand colour
+     without dominating the page. -->
+<style>
+  h1.brand-simcoon, h2.brand-simcoon, h3.brand-simcoon,
+  h1.brand-fedoo,   h2.brand-fedoo,   h3.brand-fedoo,
+  h1.brand-microgen,h2.brand-microgen,h3.brand-microgen {
+    padding: 0.45em 0.7em;
+    margin-top: 2em;
+    border-radius: 6px;
+    display: block;
+  }
+  h1.brand-simcoon, h2.brand-simcoon, h3.brand-simcoon {
+    color: #971C20;
+    background: linear-gradient(90deg,
+      rgba(151, 28, 32, 0)    0%,
+      rgba(151, 28, 32, 0.22) 18%,
+      rgba(151, 28, 32, 0.22) 82%,
+      rgba(151, 28, 32, 0)  100%);
+  }
+  h1.brand-fedoo, h2.brand-fedoo, h3.brand-fedoo {
+    color: #1f7a1a;
+    background: linear-gradient(90deg,
+      rgba(47, 161, 44, 0)    0%,
+      rgba(47, 161, 44, 0.22) 18%,
+      rgba(47, 161, 44, 0.22) 82%,
+      rgba(47, 161, 44, 0)  100%);
+  }
+  h1.brand-microgen, h2.brand-microgen, h3.brand-microgen {
+    color: #c45f1a;
+    background: linear-gradient(90deg,
+      rgba(238, 125, 48, 0)   0%,
+      rgba(238, 125, 48, 0.22) 18%,
+      rgba(238, 125, 48, 0.22) 82%,
+      rgba(238, 125, 48, 0)   100%);
+  }
+</style>
+
+<!-- SEO: keywords (page-level overrides site-level) -->
+{%- assign seo_keywords = page.keywords | default: site.keywords -%}
+{%- if seo_keywords -%}
+  {%- if seo_keywords.first -%}
+    {%- assign seo_keywords = seo_keywords | join: ", " -%}
+  {%- endif -%}
+<meta name="keywords" content="{{ seo_keywords | escape }}">
+{%- endif %}
+
+<!-- SEO: structured data for the three open-source libraries -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Simcoon",
+      "applicationCategory": "EngineeringApplication",
+      "operatingSystem": "Linux, macOS, Windows",
+      "url": "https://3mah.github.io/simcoon-docs/",
+      "codeRepository": "https://github.com/3MAH/simcoon",
+      "programmingLanguage": ["C++", "Python"],
+      "description": "Constitutive modeling and micromechanics library: anisotropic elasticity, plasticity, viscoelasticity, hyperelasticity, phase transformation and mean-field homogenization."
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "fedoo",
+      "applicationCategory": "EngineeringApplication",
+      "operatingSystem": "Linux, macOS, Windows",
+      "url": "https://3mah.github.io/fedoo-docs/",
+      "codeRepository": "https://github.com/3MAH/fedoo",
+      "programmingLanguage": "Python",
+      "description": "Python finite element solver for nonlinear solid mechanics with periodic homogenization, beam, shell and solid elements, and PGD model reduction."
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Microgen",
+      "applicationCategory": "EngineeringApplication",
+      "operatingSystem": "Linux, macOS, Windows",
+      "url": "https://3mah.github.io/microgen-docs/",
+      "codeRepository": "https://github.com/3MAH/microgen",
+      "programmingLanguage": "Python",
+      "description": "Python library for microstructure generation and meshing: TPMS, lattices, polycrystals and hybrid architectures, exported as periodic finite element meshes."
+    }
+  ]
+}
+</script>
+
 <!-- MathJax Support -->
 <script type="text/javascript" async
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
