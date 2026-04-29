@@ -1,11 +1,30 @@
 ---
-title: "fedOO"
+title: "fedoo — Nonlinear Finite Element Analysis in Python"
 layout: splash
 permalink: /fedoo/
-excerpt: "fedOO is a free open source Finite Element library developed in Python, designed for mechanical and thermal simulations of heterogeneous materials."
+description: "fedoo is an open-source Python finite element library for nonlinear mechanics, with periodic homogenization, finite-strain solid / beam / shell elements, contact, and PGD model reduction. Native coupling to Simcoon constitutive models for advanced material behaviour."
+keywords:
+  - fedoo
+  - finite element analysis
+  - FEM
+  - Python finite element
+  - nonlinear mechanics
+  - finite strain
+  - periodic homogenization
+  - representative volume element
+  - RVE
+  - PGD
+  - proper generalized decomposition
+  - model reduction
+  - beam elements
+  - shell elements
+  - solid mechanics
+  - heterogeneous materials
+  - multiscale
+excerpt: "fedoo is a free open source Finite Element library developed in Python, designed for mechanical and thermal simulations of heterogeneous materials."
 intro:
   - image_path: /assets/images/logo_fedoo/fedoo_logo.png
-    excerpt: 'fedOO is a Python Finite Element library, highly tunable with emphasis on model reduction (PGD, AI-based models). It balances speed and ease-of-use, and integrates a non-linear solver with tools to facilitate homogenization techniques and multiscale modelling.'
+    excerpt: 'fedoo is a Python Finite Element library, highly tunable with emphasis on model reduction (PGD, AI-based models). It balances speed and ease-of-use, and integrates a non-linear solver with tools to facilitate homogenization techniques and multiscale modelling.'
     url: "https://3mah.github.io/fedoo-docs/"
     btn_label: "View Documentation"
     btn_class: "btn--primary"
@@ -44,4 +63,4 @@ Here are the main features:
 [View full documentation](https://3mah.github.io/fedoo-docs/){: .btn .btn--info .btn--large}
 [Back to 3MAH](https://3mah.github.io/){: .btn .btn--inverse .btn--large}
 
-{% include gallery id="layouts_gallery" caption="Examples of Finite Element simulations using fedOO: `Beam network`, `damage in composites`, and `architectured materials`." %}
+{% include gallery id="layouts_gallery" caption="Examples of Finite Element simulations using fedoo: `Beam network`, `damage in composites`, and `architectured materials`." %}

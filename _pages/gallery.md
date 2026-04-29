@@ -1,11 +1,23 @@
 ---
-title: "Gallery"
+title: "Gallery — Simulations & Renderings"
 layout: single
 permalink: /gallery/
 toc: false
 classes: wide
 author_profile: true
 author : Yves Chemisky
+description: "A visual gallery of research outputs from the 3MAH stack: physics-informed graph neural networks for full-field reconstruction, periodic homogenization, finite-strain simulations, TPMS and lattice architectures, polycrystal mechanics."
+keywords:
+  - physics-informed neural network
+  - PIGNN
+  - graph neural network
+  - full-field reconstruction
+  - finite-strain hyperelasticity
+  - periodic homogenization
+  - TPMS gallery
+  - lattice mechanics
+  - polycrystal simulation
+  - computational homogenization
 ---
 
 ## Physics-Informed Graph Neural Networks for Local Field Reconstruction
@@ -40,7 +52,7 @@ This work develops thermodynamically consistent Recurrent Neural Networks capabl
 
 ## TPMS-Based and Strut-Based Lattices for Biomedical Applications
 
-A numerical investigation of the effective mechanical properties and local stress distributions of Triply Periodic Minimal Surface (TPMS)-based and strut-based lattice structures for biomedical applications. Using Microgen for geometry generation and fedOO for finite element analysis, this study compares different lattice topologies in terms of stiffness, strength and stress concentration, providing guidelines for the design of bone implants and tissue engineering scaffolds.
+A numerical investigation of the effective mechanical properties and local stress distributions of Triply Periodic Minimal Surface (TPMS)-based and strut-based lattice structures for biomedical applications. Using Microgen for geometry generation and fedoo for finite element analysis, this study compares different lattice topologies in terms of stiffness, strength and stress concentration, providing guidelines for the design of bone implants and tissue engineering scaffolds.
 
 {% include figure image_path="/assets/images/gallery/2022_TPMS_lattices.png" caption="Workflow of the numerical investigation: TPMS-based and strut-based unit cell designs are generated, periodic homogenization is applied to compute effective elastic properties and local stress distributions, and stress fields are compared at equivalent stiffness across topologies." %}
 

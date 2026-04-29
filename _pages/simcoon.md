@@ -1,7 +1,27 @@
 ---
-title: "Simcoon"
+title: "Simcoon — Constitutive Modeling & Micromechanics"
 layout: splash
 permalink: /simcoon/
+description: "Simcoon is an open-source C++ / Python library for constitutive modeling and micromechanics: anisotropic elasticity, plasticity (isotropic, kinematic, Chaboche), viscoelasticity, hyperelasticity, phase transformation, mean-field homogenization (Mori-Tanaka, self-consistent), and identification of model parameters. UMAT and UEXTERNALDB compatible for Abaqus."
+keywords:
+  - Simcoon
+  - constitutive modeling
+  - micromechanics
+  - mean-field homogenization
+  - Mori-Tanaka
+  - self-consistent
+  - plasticity
+  - kinematic hardening
+  - Chaboche
+  - viscoelasticity
+  - hyperelasticity
+  - shape memory alloys
+  - UMAT
+  - Abaqus
+  - C++
+  - Python
+  - parameter identification
+  - genetic algorithm
 excerpt: "Simcoon is a free, open-source C++ library for simulating multiphysics systems, with emphasis on constitutive modeling for heterogeneous materials."
 intro:
   - image_path: /assets/images/logo_simcoon/simcoon_logo_text.png
