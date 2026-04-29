@@ -64,7 +64,9 @@ def digraded(x, y, z, phi_pair, frame: float):
 def main():
     transition_width = 1.0
     n_frames_per_pair = 16
-    tpms_resolution = 80   # was 30 — smoother (less polygonal) surfaces
+    tpms_resolution = 70    # marching-cubes resolution. Sharp box-face cuts
+                            # come from split-vertex normals (below), not
+                            # from cranking this — 70 is plenty.
 
     pl = pv.Plotter(off_screen=True, window_size=WINDOW, lighting="three lights")
     pl.set_background("#ffffff", top="#f1ebe2")
@@ -74,7 +76,7 @@ def main():
     pl.camera.Elevation(60.0)
     pl.camera.Azimuth(30.0)
 
-    pl.open_movie(str(OUT), framerate=18, quality=7)
+    pl.open_movie(str(OUT), framerate=12, quality=7)
 
     for i in range(len(PHI_SEQUENCE) - 1):
         phi = PHI_SEQUENCE[i: i + 2]
@@ -93,10 +95,14 @@ def main():
                 resolution=tpms_resolution,
             )
             shape = geom.generateVtk(type_part="sheet").extract_surface()
+            # Split vertices at sharp feature edges (TPMS-meets-cube
+            # dihedrals): keeps Phong shading smooth across the curved
+            # TPMS surface while preserving sharp creases at the box cuts.
             shape = shape.compute_normals(
                 cell_normals=False, point_normals=True,
                 consistent_normals=True, auto_orient_normals=True,
-                split_vertices=False,
+                split_vertices=True,
+                feature_angle=30.0,
             )
 
             pl.clear_actors()

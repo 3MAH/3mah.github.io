@@ -902,42 +902,128 @@ def render_ipc_indentation():
     solid = fd.Assembly.create(wf, mesh)
     assembly = fd.Assembly.sum(solid, ipc_contact)
 
-    pb = fd.problem.NonLinear(assembly)
-    nodes_bottom = mesh.find_nodes("Y", 0)
-    nodes_disk_top = mesh.find_nodes("Y", mesh.bounding_box.ymax)
-    pb.bc.add("Dirichlet", nodes_bottom, "Disp", 0)
-    pb.bc.add("Dirichlet", nodes_disk_top, "Disp", [0, imposed_disp])
-    pb.set_nr_criterion("Force", tol=5e-3, max_subiter=10)
-    pb.nlsolve(dt=0.1, tmax=1, update_dt=True, print_info=0)
+    import shutil, tempfile
+    out_dir = Path(tempfile.mkdtemp(prefix="fedoo_ipc_"))
+    try:
+        pb = fd.problem.NonLinear(assembly)
+        # Multi-frame results — one frame per converged step
+        ipc_res = pb.add_output(
+            str(out_dir / "ipc_indentation"),
+            solid, ["Stress", "Disp"],
+        )
 
-    res = pb.get_results(solid, ["Stress", "Disp"])
-    pv_mesh = res.to_pyvista()
-    _expand_stress_components(pv_mesh, "Stress")
-    disp_key = _ensure_3d_disp(pv_mesh)
-    if disp_key:
-        pv_mesh = pv_mesh.warp_by_vector(disp_key, factor=1.0)
-        _expand_stress_components(pv_mesh, "Stress")
-    pv_mesh.set_active_scalars("Stress_vm")
+        nodes_bottom = mesh.find_nodes("Y", 0)
+        nodes_disk_top = mesh.find_nodes("Y", mesh.bounding_box.ymax)
+        pb.bc.add("Dirichlet", nodes_bottom, "Disp", 0)
+        pb.bc.add("Dirichlet", nodes_disk_top, "Disp", [0, imposed_disp])
+        pb.set_nr_criterion("Force", tol=5e-3, max_subiter=10)
+        pb.nlsolve(dt=0.1, tmax=1, update_dt=True, print_info=0)
 
-    pl = make_plotter(WINDOW_LANDSCAPE, background=BG_NIGHT)
-    # Restrict colour scaling to the soft plate so the Hertzian stress bulb
-    # is visible (the stiff disk and BC node would otherwise saturate the map).
-    plate_vm = np.asarray(pv_mesh.point_data["Stress_vm"])[:mesh_plate.n_nodes]
-    cap = float(np.percentile(plate_vm, 95))
-    add_field_mesh(
-        pl, pv_mesh, "Stress_vm", cmap=FEDOO_SEQ,
-        show_edges=False,
-        bar_title="von Mises (MPa)",
-        clim=[0.0, cap],
-    )
-    add_caption(pl, "IPC contact - disk indentation - von Mises stress")
-    pl.view_xy()
-    pl.camera.zoom(1.45)
-    out = OUT_DIR / "fedoo_ipc_indentation.png"
-    pl.screenshot(str(out))
-    pl.close()
-    print(f"   wrote {out}")
-    return out
+        n_iter = ipc_res.n_iter
+
+        def warped_frame(idx):
+            ipc_res.load(idx)
+            m = ipc_res.to_pyvista()
+            _expand_stress_components(m, "Stress")
+            d = _ensure_3d_disp(m)
+            if d:
+                m = m.warp_by_vector(d, factor=1.0)
+                _expand_stress_components(m, "Stress")
+            m.set_active_scalars("Stress_vm")
+            return m
+
+        # Final frame drives the colour scaling so all frames share the
+        # same plate-vm percentile cap.
+        final = warped_frame(n_iter - 1)
+        plate_vm = np.asarray(final.point_data["Stress_vm"])[:mesh_plate.n_nodes]
+        cap = float(np.percentile(plate_vm, 95))
+        clim = [0.0, cap]
+
+        # ----- 1) static final-state PNG (kept as poster for the video) ----
+        pl = make_plotter(WINDOW_LANDSCAPE, background=BG_NIGHT)
+        add_field_mesh(
+            pl, final, "Stress_vm", cmap=FEDOO_SEQ,
+            show_edges=False, bar_title="von Mises (MPa)", clim=clim,
+        )
+        add_caption(pl, "IPC contact - disk indentation - von Mises stress")
+        pl.view_xy()
+        pl.camera.zoom(1.45)
+        out_png = OUT_DIR / "fedoo_ipc_indentation.png"
+        pl.screenshot(str(out_png))
+        pl.close()
+        print(f"   wrote {out_png}")
+
+        # ----- 2) evolution MP4 -------------------------------------------
+        # Even dimensions for libx264
+        movie_size = (
+            WINDOW_LANDSCAPE[0] - (WINDOW_LANDSCAPE[0] % 2),
+            WINDOW_LANDSCAPE[1] - (WINDOW_LANDSCAPE[1] % 2),
+        )
+        n_frames = min(50, n_iter)
+        frame_indices = np.linspace(0, n_iter - 1, n_frames).astype(int)
+
+        # Camera bounds = union of initial + final frame so the plate's
+        # fixed bottom and lateral edges stay anchored throughout the loop.
+        first = warped_frame(0)
+        b0 = np.array(first.bounds)
+        bF = np.array(final.bounds)
+        fixed_bounds = (
+            min(b0[0], bF[0]), max(b0[1], bF[1]),
+            min(b0[2], bF[2]), max(b0[3], bF[3]),
+            min(b0[4], bF[4]), max(b0[5], bF[5]),
+        )
+
+        movie_pl = make_plotter(window_size=movie_size, background=BG_NIGHT)
+        out_movie = OUT_DIR / "fedoo_ipc_indentation.mp4"
+        movie_pl.open_movie(str(out_movie), framerate=15, quality=7)
+
+        # ---- Stable caption + camera ----
+        add_caption(
+            movie_pl,
+            "IPC contact - disk indentation - von Mises stress",
+        )
+        movie_pl.view_xy()
+        movie_pl.reset_camera(bounds=fixed_bounds)
+        movie_pl.camera.zoom(1.45)
+
+        # Persistent scalar bar args, used only on the FIRST add_mesh call
+        # so we get exactly one bar (not flickering across frames).
+        bar_kwargs = dict(
+            title="von Mises (MPa)", color="#0e1c30",
+            label_font_size=14, title_font_size=18,
+            n_labels=4, shadow=False, italic=False, bold=False,
+            font_family="arial",
+            position_x=0.83, position_y=0.12,
+            width=0.045, height=0.50, fmt="%.2g", vertical=True,
+        )
+
+        def _show_frame(mesh, *, with_bar):
+            """Replace the named 'ipc' actor; keep scalar bar persistent."""
+            movie_pl.add_mesh(
+                mesh, name="ipc",                   # replace-in-place
+                scalars="Stress_vm", cmap=FEDOO_SEQ, clim=clim,
+                show_edges=False, smooth_shading=True,
+                ambient=0.30, diffuse=0.85, specular=0.05, specular_power=10,
+                show_scalar_bar=with_bar,
+                scalar_bar_args=bar_kwargs if with_bar else None,
+            )
+
+        # First frame creates the scalar bar; every subsequent frame just
+        # swaps the mesh actor with the same name — no bar churn.
+        _show_frame(first, with_bar=True)
+        for _ in range(8):
+            movie_pl.write_frame()
+        for fi in frame_indices:
+            _show_frame(warped_frame(int(fi)), with_bar=False)
+            movie_pl.write_frame()
+        _show_frame(final, with_bar=False)
+        for _ in range(20):
+            movie_pl.write_frame()
+        movie_pl.close()
+        print(f"   wrote {out_movie}  ({out_movie.stat().st_size / 1024:.0f} KB)")
+        return out_png
+    finally:
+        shutil.rmtree(out_dir, ignore_errors=True)
 
 
 def render_kelvin_raw():

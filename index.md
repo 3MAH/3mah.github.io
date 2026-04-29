@@ -89,8 +89,9 @@ fedoo_row:
     btn_class: "btn--primary"
 
 fedoo_contact:
-  - image_path: /assets/images/index/fedoo/fedoo_ipc_indentation.png
-    alt: "IPC contact disk indentation"
+  - image_path: /assets/images/index/fedoo/fedoo_ipc_indentation.mp4
+    poster: /assets/images/index/fedoo/fedoo_ipc_indentation.png
+    alt: "Stiff disk progressively indenting a soft plate, von Mises stress field"
     title: "Contact with IPC"
     excerpt: "Robust **incremental potential contact** (IPC) via the `ipctk` backend — barrier-method, intersection-free, **frictional or frictionless** contact for indentation, self-contact and lattice compression. The disk-on-plate example here is validated against the Hertzian half-space solution."
     url: "https://3mah.github.io/fedoo-docs/"
