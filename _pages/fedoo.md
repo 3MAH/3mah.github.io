@@ -2,7 +2,7 @@
 title: "fedoo — Nonlinear Finite Element Analysis in Python"
 layout: splash
 permalink: /fedoo/
-description: "fedoo is an open-source Python finite element library for nonlinear mechanics, with periodic homogenization, finite-strain solid / beam / shell elements, contact, and PGD model reduction. Native coupling to Simcoon constitutive models for advanced material behaviour."
+description: "fedoo is an open-source Python finite element library for nonlinear mechanics, with periodic homogenization, finite-strain solid / beam / shell elements, contact, and PGD model reduction. Native coupling to simcoon constitutive models for advanced material behaviour."
 keywords:
   - fedoo
   - finite element analysis
@@ -50,7 +50,7 @@ Here are the main features:
 * Entirely written in Python 3 with an emphasis on readable, maintainable code
 * Implicit Finite Element solver for static and dynamic problems
 * Resolution of problems based on separated decomposition (PGD, POD, Reduced bases)
-* Integration with the Simcoon library for finite strain constitutive laws
+* Integration with the simcoon library for finite strain constitutive laws
 * Supports 2D, 3D, beam, plate, and cohesive elements
 * Contact analysis in 2D and 3D, including self-contact
 * Geometric non-linearities

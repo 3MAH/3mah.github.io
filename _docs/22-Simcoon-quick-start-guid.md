@@ -1,15 +1,15 @@
 ---
 title: "Quick-Start Guide"
 permalink: /docs/s-quick-start-guide/
-excerpt: "How to quickly get started with Simcoon."
+excerpt: "How to quickly get started with simcoon."
 last_modified_at: 2021-06-07T08:48:05-04:00
 redirect_from:
   - /theme-setup/
 ---
 
-Simcoon has been developed as a API platform to help engineers and researchers in mechanics to develop constitutive models and numerical simulations. You could go the the [**Gallery** page]({{ "/gallery/" | relative_url }}) to see some examples of how Simcoon is utilized.
+simcoon has been developed as a API platform to help engineers and researchers in mechanics to develop constitutive models and numerical simulations. You could go the the [**Gallery** page]({{ "/gallery/" | relative_url }}) to see some examples of how simcoon is utilized.
 
-## Simcoon first steps
+## simcoon first steps
 
 We first import *simmit* (the python simulation module of simcoon) and *numpy* 
 
@@ -27,14 +27,14 @@ L = sim.L_iso(E,nu,"Enu")
 print np.array_str(L, precision=4, suppress_small=True)
 {% endhighlight %}
 
-Conversely, one can ask Simcoon to output he material properties, providing s stiffness tensor:
+Conversely, one can ask simcoon to output he material properties, providing s stiffness tensor:
 
 {% highlight python %}
 x = sim.L_iso_props(L)
 print(x)
 {% endhighlight %}
 
-Simcoon can also check the symetries of a provided stiffness tensor and ouput the set of material parameter, if a specific symmetry has been found:
+simcoon can also check the symetries of a provided stiffness tensor and ouput the set of material parameter, if a specific symmetry has been found:
 
 {% highlight python %}
 d = sim.check_symetries(L)
@@ -42,9 +42,9 @@ print(d['umat_type'])
 print(d['props'])
 {% endhighlight %}
 
-## Simcoon tutorial
+## simcoon tutorial
 
-Probably the first thing you would like to do with Simcoon is to simulate the mechanical response corresponding of a simple tension test, considering an elastic isotropic material:
+Probably the first thing you would like to do with simcoon is to simulate the mechanical response corresponding of a simple tension test, considering an elastic isotropic material:
 
 We first import *simmit* (the python simulation module of simcoon) and *numpy* 
 
@@ -85,7 +85,7 @@ pathfile = 'path.txt'
 outputfile = 'results_ELISO.txt'
 {% endhighlight %}
 
-The last part is to define the loading path. Further details about this file is given in the <a href="https://simcoon.readthedocs.io/en/latest/">Simcoon documentation</a>, but for instance you could just create a folder 'data' and create a text file named 'path.txt' with the following inside:
+The last part is to define the loading path. Further details about this file is given in the <a href="https://simcoon.readthedocs.io/en/latest/">simcoon documentation</a>, but for instance you could just create a folder 'data' and create a text file named 'path.txt' with the following inside:
 
 {% highlight sh %}
 #Initial_temperature
@@ -122,4 +122,4 @@ T 293.5
 The latter correspond to a pure strain-controlled tension test in the direction *1* up to 1% strain, at the temperature 293.5K.
 
 You can now run your just created python file (you could also create a jupyter notebook, or run the notebook ELISO.ipynb that you can find in the examples). You will now find in the 'results' folder a file named *results_ELISO.txt*. Have a look at the existing notebook or in the documentation to know how to analyse the result file. The documentation of the latest version of simcoon can be found here: 
- <a href="https://simcoon.readthedocs.io/en/latest/">Simcoon documentation</a>.
+ <a href="https://simcoon.readthedocs.io/en/latest/">simcoon documentation</a>.

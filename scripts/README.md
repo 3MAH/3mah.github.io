@@ -8,7 +8,8 @@ output PNGs are committed alongside the rest of the site.
 
 | File | What it produces |
 | --- | --- |
-| `render_simcoon.py` | All `assets/images/index/simcoon/*.png` (Chaboche EPCHA hysteresis, Mori-Tanaka homogenization, directional stiffness rose, SMA loop, yield surfaces). Pure matplotlib + simcoon. |
+| `render_simcoon.py` | Mori-Tanaka homogenization, directional stiffness rose, SMA loop, yield surfaces. Pure matplotlib + simcoon. Quick (< 10 s). |
+| `render_simcoon_identification.py` | Drives the new `EPCHA` Chaboche cyclic identification example merged into simcoon master — fits 7 parameters from 3 cyclic uniaxial tests via differential evolution and saves a brand-styled experiment-vs-fit plot to `simcoon_chaboche_identification.png`. Needs the simcoon source tree (defaults to `~/Documents/GitHub/simcoon`, override with `SIMCOON_REPO=…`); takes 1–2 min. |
 | `render_fedoo.py` | All `assets/images/index/fedoo/*.png` (plate with hole, Kelvin RVE periodic homog, IPC indentation, tube-compression triptych, beam lattice, shell pressure, hero square). Uses fedoo + simcoon (EPCHA / EPICP UMATs) + pyvista. |
 | `render_microgen.py` | TPMS hero stack: cylinder, sphere, helix sweep, graded gyroid, surfaces grid, warm-cylinder variant. Pure pyvista, reads VTK meshes from `_render_inputs/`. |
 | `render_microgen_hero.py` | Mesh-edge close-up of the graded gyroid (`microgen_hero.png`). |
@@ -17,7 +18,7 @@ output PNGs are committed alongside the rest of the site.
 
 ## Inputs
 
-The Microgen and fedoo renders need TPMS / lattice / Kelvin meshes — 14
+The microgen and fedoo renders need TPMS / lattice / Kelvin meshes — 14
 files totalling ~330 MB. They are too large for git and are kept locally
 (uncommitted, gitignored) at:
 
@@ -32,7 +33,7 @@ _render_inputs/
 ```
 
 The meshes were generated with
-[Microgen](https://3mah.github.io/microgen-docs/); the recipes are in
+[microgen](https://3mah.github.io/microgen-docs/); the recipes are in
 its example gallery.
 
 If/when these stabilise and become worth archiving, `scripts/fetch_inputs.py`

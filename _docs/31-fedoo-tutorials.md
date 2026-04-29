@@ -1,7 +1,7 @@
 ---
 title: "Tutorials"
 permalink: /docs/f-tutorials/
-excerpt: "Tutorials for the main Simcoon features."
+excerpt: "Tutorials for the main simcoon features."
 last_modified_at: 2022-01-27T21:36:18-04:00
 ---
 

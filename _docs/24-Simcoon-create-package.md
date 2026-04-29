@@ -1,11 +1,11 @@
 ---
 title: "Create Conda package"
 permalink: /docs/s-create-package/
-excerpt: "How to create Simcoon conda package."
+excerpt: "How to create simcoon conda package."
 last_modified_at: 2022-01-27T16:51:00-04:00
 ---
 
-## How to create Simcoon conda package
+## How to create simcoon conda package
 
 To build a conda package, a recipe must be written. It consists in creating a meta.yaml file that will tell the building tool several informations such as the dependencies necessary for the package you want to build. It is also necessary to create a build.sh (for Linux and OSx) and/or a bld.bat (Windows) file to list the commands used to compile and/or install the package. These files have been put in the folder conda.recipe.
 

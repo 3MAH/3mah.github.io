@@ -1,10 +1,10 @@
 ---
-title: "Simcoon — Constitutive Modeling & Micromechanics"
+title: "simcoon — Constitutive Modeling & Micromechanics"
 layout: splash
 permalink: /simcoon/
-description: "Simcoon is an open-source C++ / Python library for constitutive modeling and micromechanics: anisotropic elasticity, plasticity (isotropic, kinematic, Chaboche), viscoelasticity, hyperelasticity, phase transformation, mean-field homogenization (Mori-Tanaka, self-consistent), and identification of model parameters. UMAT and UEXTERNALDB compatible for Abaqus."
+description: "simcoon is an open-source C++ / Python library for constitutive modeling and micromechanics: anisotropic elasticity, plasticity (isotropic, kinematic, Chaboche), viscoelasticity, hyperelasticity, phase transformation, mean-field homogenization (Mori-Tanaka, self-consistent), and identification of model parameters. UMAT and UEXTERNALDB compatible for Abaqus."
 keywords:
-  - Simcoon
+  - simcoon
   - constitutive modeling
   - micromechanics
   - mean-field homogenization
@@ -22,10 +22,10 @@ keywords:
   - Python
   - parameter identification
   - genetic algorithm
-excerpt: "Simcoon is a free, open-source C++ library for simulating multiphysics systems, with emphasis on constitutive modeling for heterogeneous materials."
+excerpt: "simcoon is a free, open-source C++ library for simulating multiphysics systems, with emphasis on constitutive modeling for heterogeneous materials."
 intro:
   - image_path: /assets/images/logo_simcoon/simcoon_logo_text.png
-    excerpt: 'Simcoon is a scientific library built to facilitate the analysis of mechanics of materials. It provides a C++ API with Python bindings, designed to help researchers implement modern material behavior models for Finite Element Analysis packages. Built on Armadillo and FTensor for high-performance tensor operations.'
+    excerpt: 'simcoon is a scientific library built to facilitate the analysis of mechanics of materials. It provides a C++ API with Python bindings, designed to help researchers implement modern material behavior models for Finite Element Analysis packages. Built on Armadillo and FTensor for high-performance tensor operations.'
     url: "https://3mah.github.io/simcoon-docs/"
     btn_label: "View Documentation"
     btn_class: "btn--primary"
@@ -48,7 +48,7 @@ classes: wide
 
 Here are the main features:
 
-* Simcoon provides both a C++ and a Python API for flexibility and accessibility
+* simcoon provides both a C++ and a Python API for flexibility and accessibility
 * Built on the Armadillo linear algebra library and FTensor for advanced tensor operations, providing a balance between speed and ease of use
 * Thermomechanical solver for material point analysis and composite effective property prediction
 * Constitutive models for anisotropic elasticity, plasticity, viscoelasticity, and phase transformation
@@ -60,4 +60,4 @@ Here are the main features:
 [View full documentation](https://3mah.github.io/simcoon-docs/){: .btn .btn--info .btn--large}
 [Back to 3MAH](https://3mah.github.io/){: .btn .btn--inverse .btn--large}
 
-{% include gallery id="layouts_gallery" caption="Main features of the Simcoon library: `Constitutive models`, `Multi-scale models`, and `Identification and analyses`." %}
+{% include gallery id="layouts_gallery" caption="Main features of the simcoon library: `Constitutive models`, `Multi-scale models`, and `Identification and analyses`." %}

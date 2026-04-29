@@ -1,11 +1,11 @@
 ---
 title: "Tutorials"
 permalink: /docs/s-tutorials/
-excerpt: "Tutorials for the main Simcoon features."
+excerpt: "Tutorials for the main simcoon features."
 last_modified_at: 2019-08-20T21:36:18-04:00
 ---
 
-**Please note:** Make sure you activate your environment before running any python code that invoke Simcoon.
+**Please note:** Make sure you activate your environment before running any python code that invoke simcoon.
 {: .notice--info}
 
 The python script and input files for this tutoial can be found [here]():
@@ -29,7 +29,7 @@ conda install -c conda-forge matplolib matplotlib-inline pandas
 
 ## Composite simulation with mean field methods
 
-**Please note:** Be careful with the data type while you pass numpy arrays. Make sure you define them as dtype='float' unless specified, since they will be interpreted as float by Simcoon, i.e.:
+**Please note:** Be careful with the data type while you pass numpy arrays. Make sure you define them as dtype='float' unless specified, since they will be interpreted as float by simcoon, i.e.:
 x = np.array([1, 2, 3, 4, 5],  dtype='float')
 {: .notice--info}
 
@@ -149,7 +149,7 @@ n_3 = np.cos(theta)*np.ones(128)
 n = np.array([n_1*n_1, n_2*n_2, n_3*n_3, n_1*n_2, n_1*n_3, n_2*n_3]).transpose(1,2,0).reshape(128,128,1,6)
 {% endhighlight %}
 
-Next we are using *Simcoon* to determine the elastic stiffness matrix $$ \mathcal{L} $$ from the cubic stiffness components $$(C_{11}, C_{12}, C_{44})$$ and to invert it to obtain the compliance matrix $$ \mathcal{M} $$:
+Next we are using *simcoon* to determine the elastic stiffness matrix $$ \mathcal{L} $$ from the cubic stiffness components $$(C_{11}, C_{12}, C_{44})$$ and to invert it to obtain the compliance matrix $$ \mathcal{M} $$:
 
 {% highlight python %}
 C11 = 185000.

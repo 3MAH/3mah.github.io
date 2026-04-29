@@ -1,10 +1,10 @@
 ---
-title: "Microgen — Microstructure Generation & Periodic Meshing"
+title: "microgen — Microstructure Generation & Periodic Meshing"
 layout: splash
 permalink: /microgen/
-description: "Microgen is an open-source Python library for microstructure generation and meshing: TPMS (gyroid, Schwarz, Schoen, Neovius), octet-truss and lattice cells, Voronoi polycrystals, hybrid architectures, with conforming periodic meshes via Gmsh and MMG. Built on Open CASCADE / CadQuery and PyVista."
+description: "microgen is an open-source Python library for microstructure generation and meshing: TPMS (gyroid, Schwarz, Schoen, Neovius), octet-truss and lattice cells, Voronoi polycrystals, hybrid architectures, with conforming periodic meshes via Gmsh and MMG. Built on Open CASCADE / CadQuery and PyVista."
 keywords:
-  - Microgen
+  - microgen
   - microstructure generation
   - mesh generation
   - TPMS
@@ -25,10 +25,10 @@ keywords:
   - Open CASCADE
   - periodic mesh
   - architectured materials
-excerpt: "Microgen is a Python library designed to facilitate microstructure generation and meshing."
+excerpt: "microgen is a Python library designed to facilitate microstructure generation and meshing."
 intro:
   - image_path: /assets/images/logo_microgen/microgen_logo.png
-    excerpt: 'Microgen is a Python library designed to streamline microstructure generation and mesh creation. It leverages Open CASCADE (via CadQuery) and VTK (using PyVista) for geometry generation, Neper for 3D tessellation, GMSH for mesh generation, and MMG for remeshing.'
+    excerpt: 'microgen is a Python library designed to streamline microstructure generation and mesh creation. It leverages Open CASCADE (via CadQuery) and VTK (using PyVista) for geometry generation, Neper for 3D tessellation, GMSH for mesh generation, and MMG for remeshing.'
     url: "https://3mah.github.io/microgen-docs/"
     btn_label: "View Documentation"
     btn_class: "btn--primary"
@@ -75,13 +75,13 @@ Here are the main features:
   <img src="/assets/images/about/beams.png" alt="Beams" width="49%"/>
 </p>
 
-Microgen is dedicated to parametric geometrical definition of structures applied to mechanical simulations. Triply periodic surfaces and volumes are easy to represent for FEM simulation or 3D printing. Microgen's objective is to represent, with an easy-to-learn Python scripting approach, any CAD-compatible surface and volume and be able to easily perform parametric analysis.
+microgen is dedicated to parametric geometrical definition of structures applied to mechanical simulations. Triply periodic surfaces and volumes are easy to represent for FEM simulation or 3D printing. microgen's objective is to represent, with an easy-to-learn Python scripting approach, any CAD-compatible surface and volume and be able to easily perform parametric analysis.
 
-Several geometrical operations are included (repetition, boolean, slicing, etc.). Microgen heavily relies on CadQuery (Python wrapper for Open CASCADE) and PyVista (Python VTK visualisation library). It facilitates the generation of meshes using GMSH, allowing periodic meshes if the geometry is periodic. It also wraps the [MMG remeshing software](https://www.mmgtools.org) developed at INRIA.
+Several geometrical operations are included (repetition, boolean, slicing, etc.). microgen heavily relies on CadQuery (Python wrapper for Open CASCADE) and PyVista (Python VTK visualisation library). It facilitates the generation of meshes using GMSH, allowing periodic meshes if the geometry is periodic. It also wraps the [MMG remeshing software](https://www.mmgtools.org) developed at INRIA.
 
 This software is compatible with [fedoo](https://3mah.github.io/fedoo-docs/) for non-linear (geometrical and material) homogenization for mechanical, thermal and thermo-mechanical problems. It can also be utilised with other FEA solutions such as Abaqus, Ansys, Salome, FEniCS, Zebulon, etc.
 
 [View full documentation](https://3mah.github.io/microgen-docs/){: .btn .btn--info .btn--large}
 [Back to 3MAH](https://3mah.github.io/){: .btn .btn--inverse .btn--large}
 
-{% include gallery id="layouts_gallery" caption="Main microstructures obtained using the Microgen library: `Neovius TPMS`, `Voronoi tessellation of polycrystals`, and `Gyroid surfaces`." %}
+{% include gallery id="layouts_gallery" caption="Main microstructures obtained using the microgen library: `Neovius TPMS`, `Voronoi tessellation of polycrystals`, and `Gyroid surfaces`." %}

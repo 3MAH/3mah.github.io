@@ -2,7 +2,7 @@
 title: "Team & Collaborators"
 permalink: /team/
 layout: single
-description: "Researchers, engineers and laboratories behind Simcoon, fedoo and Microgen. The 3MAH initiative is a joint effort across Université de Bordeaux, Arts et Métiers, CNRS and partner institutions in computational mechanics of materials."
+description: "Researchers, engineers and laboratories behind simcoon, fedoo and microgen. The 3MAH initiative is a joint effort across Université de Bordeaux, Arts et Métiers, CNRS and partner institutions in computational mechanics of materials."
 keywords:
   - 3MAH team
   - computational mechanics research
@@ -13,7 +13,7 @@ keywords:
   - Yves Chemisky
   - mechanics of materials laboratory
   - open-source scientific software
-excerpt: "Simcoon, fedoo and Microgen are collaborative efforts."
+excerpt: "simcoon, fedoo and microgen are collaborative efforts."
 layouts_gallery:
   - url: /assets/images/logo_institutions/Universite-Bordeaux_logo.jpg
     image_path: /assets/images/logo_institutions/Universite-Bordeaux_logo_med.jpg
@@ -34,7 +34,7 @@ classes: wide
 
 ## Lead developers
 
-Simcoon, fedoo and Microgen are mainly developed and maintained by the 3MAH Team, jointly at the **laboratoire TIMC** (Université Grenoble Alpes) and the **I2M laboratory** (Université de Bordeaux). All projects are released under the GNU General Public License: GPL, version 3.
+simcoon, fedoo and microgen are mainly developed and maintained by the 3MAH Team, jointly at the **laboratoire TIMC** (Université Grenoble Alpes) and the **I2M laboratory** (Université de Bordeaux). All projects are released under the GNU General Public License: GPL, version 3.
 
 | Name | Role | GitHub |
 |------|------|--------|
@@ -52,7 +52,7 @@ The 3MAH tools are collaborative efforts from researchers around the world. The 
 The [TIMC laboratory](https://www.timc.fr/) (Translational and Interdisciplinary Medicine in Grenoble) is a CNRS research unit (UMR 5525) at Université Grenoble Alpes. It brings together researchers from the fields of medicine, biology, computer science, mathematics and engineering to develop innovative approaches in health sciences and biomedical engineering. Within TIMC, the **BIOMECAMOT** team focuses on biomechanics, constitutive modeling of biological and engineering materials, and the development of computational tools for multiscale and multiphysics simulations. The 3MAH tools are actively developed within this team, bridging the gap between advanced material modeling and biomedical applications.
 
 The [I2M laboratory](https://www.i2m.u-bordeaux.fr/) (Institut de Mécanique et d'Ingénierie) at Université de Bordeaux gathers research efforts in mechanical engineering.
-I2M is part within several projects connected to design the industry of the future, functional materials, sustainable housing or to prevent deterioration of famous historical sites as the cave of Lascaux. Such projects are supported by skills acquired and developed in the field of multiscale physical phenomena within heterogeneous media and systems, either using experimental approaches (from microscopy to process instrumentation), or the numerical tools (such as Simcoon and fedoo, but you shall have a look at [Notus](https://notus-cfd.org/) in fluid mechanics, and [GranOO](https://www.granoo.org/) for 3D dynamic simulations based on the discrete element method).
+I2M is part within several projects connected to design the industry of the future, functional materials, sustainable housing or to prevent deterioration of famous historical sites as the cave of Lascaux. Such projects are supported by skills acquired and developed in the field of multiscale physical phenomena within heterogeneous media and systems, either using experimental approaches (from microscopy to process instrumentation), or the numerical tools (such as simcoon and fedoo, but you shall have a look at [Notus](https://notus-cfd.org/) in fluid mechanics, and [GranOO](https://www.granoo.org/) for 3D dynamic simulations based on the discrete element method).
 
 Other institutions have participated or are using the 3MAH tools around the world:
 

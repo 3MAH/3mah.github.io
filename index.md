@@ -7,9 +7,9 @@ header:
   og_image: /assets/images/index/microgen/tpms_cylinder.png
   cta_label: "Download"
   cta_url: "https://github.com/3MAH/"
-  caption: "Gyroid TPMS rendered with Microgen"
+  caption: "Gyroid TPMS rendered with microgen"
 title: "3MAH — Mechanics of Heterogeneous & Architectured Materials"
-description: "Open-source scientific software for mechanics of materials and multiphysics. Simcoon (constitutive modeling, micromechanics, UMAT), fedoo (nonlinear finite element analysis, periodic homogenization, PGD), and Microgen (TPMS, lattices, polycrystals and microstructure meshing) in a single coherent workflow."
+description: "Open-source scientific software for mechanics of materials and multiphysics. simcoon (constitutive modeling, micromechanics, UMAT), fedoo (nonlinear finite element analysis, periodic homogenization, PGD), and microgen (TPMS, lattices, polycrystals and microstructure meshing) in a single coherent workflow."
 keywords:
   - mechanics of materials
   - computational mechanics
@@ -29,9 +29,9 @@ keywords:
   - shape memory alloys
   - composites
   - Mori-Tanaka
-  - Simcoon
+  - simcoon
   - fedoo
-  - Microgen
+  - microgen
   - Python
   - C++
   - UMAT
@@ -40,15 +40,15 @@ keywords:
 excerpt: "Open-source scientific tools for the mechanics of materials and multiphysics: constitutive modeling, finite element analysis, and microstructure generation, in a single coherent workflow."
 
 intro:
-  - excerpt: 'The **3MAH** initiative brings together three complementary, interoperable open-source libraries: **Simcoon** for constitutive modeling and micromechanics, **fedoo** for nonlinear finite element analysis, and **Microgen** for microstructure generation and meshing. Together, they provide a complete pipeline from geometry to simulation for research in mechanics of heterogeneous and architectured materials.'
+  - excerpt: 'The **3MAH** initiative brings together three complementary, interoperable open-source libraries: **simcoon** for constitutive modeling and micromechanics, **fedoo** for nonlinear finite element analysis, and **microgen** for microstructure generation and meshing. Together, they provide a complete pipeline from geometry to simulation for research in mechanics of heterogeneous and architectured materials.'
 
 simcoon_row:
   - image_path: /assets/images/logo_simcoon/simcoon_logo_text.png
-    alt: "Simcoon"
-    title: "Simcoon"
+    alt: "simcoon"
+    title: "simcoon"
     excerpt: "**Constitutive modeling and micromechanics** in C++ with Python bindings. Anisotropic elasticity, plasticity (isotropic, kinematic, Chaboche), viscoelasticity, hyperelasticity and phase transformation, with finite-strain support."
     url: "https://3mah.github.io/simcoon-docs/"
-    btn_label: "Simcoon docs"
+    btn_label: "simcoon docs"
     btn_class: "btn--primary"
   - image_path: /assets/images/index/simcoon/simcoon_homog_mori_tanaka.png
     alt: "Mean-field homogenization"
@@ -63,15 +63,6 @@ simcoon_row:
     excerpt: "Analyse **directional stiffness**, yield surfaces and cyclic response, then identify model parameters with hybrid genetic-gradient algorithms."
     url: "https://3mah.github.io/simcoon-docs/examples/analysis/directional_stiffness.html"
     btn_label: "See example"
-    btn_class: "btn--primary"
-
-simcoon_extra:
-  - image_path: /assets/images/index/simcoon/simcoon_epicp_hysteresis.png
-    alt: "Cyclic plasticity"
-    title: "From cyclic plasticity to shape-memory alloys"
-    excerpt: "Simulate complex paths -- isotropic and kinematic hardening, superelastic SMA loops, viscoplasticity -- at the material point, or as a UMAT/UEXTERNALDB plug-in for Abaqus and other FEA packages."
-    url: "https://3mah.github.io/simcoon-docs/examples/umats/EPICP.html"
-    btn_label: "Read more"
     btn_class: "btn--primary"
 
 fedoo_row:
@@ -108,11 +99,11 @@ fedoo_contact:
 
 microgen_row:
   - image_path: /assets/images/logo_microgen/microgen_logo.png
-    alt: "Microgen"
-    title: "Microgen"
+    alt: "microgen"
+    title: "microgen"
     excerpt: "A **Python library for microstructure generation and meshing**: TPMS, lattices, polycrystals and hybrid architectures, exported to CAD or directly to periodic FE meshes."
     url: "https://3mah.github.io/microgen-docs/"
-    btn_label: "Microgen docs"
+    btn_label: "microgen docs"
     btn_class: "btn--primary"
   - image_path: /assets/images/index/microgen/gyroid_graded.png
     alt: "Graded TPMS"
@@ -125,15 +116,6 @@ microgen_row:
     alt: "Voronoi polycrystal"
     title: "Polycrystals & architectured cells"
     excerpt: "**Voronoi** polycrystals, octet-truss lattices, honeycombs and hybrid architectures, ready for periodic homogenization in fedoo or Abaqus."
-    url: "https://3mah.github.io/microgen-docs/"
-    btn_label: "Read more"
-    btn_class: "btn--primary"
-
-microgen_extra:
-  - image_path: /assets/images/index/microgen/microgen_hero.png
-    alt: "Conforming triangular mesh of a graded gyroid"
-    title: "Conforming, periodic meshes"
-    excerpt: "Drive Gmsh and MMG from Python to obtain **conforming, periodic meshes** ready for finite element analysis, regardless of the geometric complexity."
     url: "https://3mah.github.io/microgen-docs/"
     btn_label: "Read more"
     btn_class: "btn--primary"
@@ -153,24 +135,47 @@ cta_row:
 
 {% include feature_row id="intro" type="center" %}
 
-## Simcoon — Constitutive modeling & micromechanics
+## simcoon — Constitutive modeling & micromechanics
 {: .brand-simcoon}
 
 {% include feature_row id="simcoon_row" %}
 
-{% include feature_row id="simcoon_extra" type="left" %}
+<figure class="showcase showcase--simcoon">
+  <p class="showcase__title">Parameter identification from cyclic experiments</p>
+  <p class="showcase__lede">
+    Identify <strong>seven Chaboche parameters</strong> — initial yield σ_y,
+    Voce isotropic hardening (Q, b) and two non-linear Armstrong-Frederick
+    backstresses (C₁, D₁, C₂, D₂) — from <strong>three cyclic uniaxial
+    tests</strong> at increasing strain amplitudes. simcoon's
+    <strong>EPCHA</strong> UMAT is the forward model, driven through
+    <code>sim.solver</code>; the new <code>simcoon.identify</code> module
+    wraps SciPy's differential evolution with a key-based file-templating
+    workflow that generalises to any optimiser or external simulator.
+  </p>
+  <a href="https://3mah.github.io/simcoon-docs/examples/identification/chaboche_cyclic_identification.html">
+    <img class="showcase__img"
+         src="/assets/images/index/simcoon/simcoon_chaboche_identification.png"
+         alt="Three cyclic stress-strain hysteresis loops at ±1 / ±1.5 / ±2 % strain — experimental data dashed and identified Chaboche fit solid">
+  </a>
+  <p class="showcase__caption">
+    EPCHA UMAT · E = 140 GPa, ν = 0.3 (fixed) · 7 parameters identified ·
+    cost = NMSE-per-response, balanced across the three tests · optimiser:
+    <code>scipy.optimize.differential_evolution</code> (popsize 15, maxiter 80,
+    seed 42) · final cost ≈ 8 × 10⁻³.
+  </p>
+</figure>
 
 ## fedoo — Nonlinear finite element analysis
 {: .brand-fedoo}
 
 {% include feature_row id="fedoo_row" %}
 
-<figure class="showcase">
+<figure class="showcase showcase--fedoo">
   <p class="showcase__title">Nonlinear and finite-strain mechanics</p>
   <p class="showcase__lede">
     Plastic buckling of a thin tube under axial compression — 2D <strong>axisymmetric</strong>
     model with <strong>updated-Lagrangian</strong> finite strain,
-    <strong>self-contact</strong>, and a Simcoon <strong>EPICP</strong>
+    <strong>self-contact</strong>, and a simcoon <strong>EPICP</strong>
     elasto-plastic UMAT. Line-search Newton with adaptive stiffness drives
     the tube from undeformed to fully folded in a single nonlinear solve.
   </p>
@@ -189,21 +194,59 @@ cta_row:
 
 {% include feature_row id="fedoo_contact" type="left" %}
 
-## Microgen — Microstructure generation & meshing
+## microgen — Microstructure generation & meshing
 {: .brand-microgen}
 
 {% include feature_row id="microgen_row" %}
 
-{% include feature_row id="microgen_extra" type="left" %}
+<figure class="showcase showcase--microgen">
+  <p class="showcase__title">Graded and periodic meshes</p>
+  <p class="showcase__lede">
+    microgen drives <strong>Gmsh</strong> and <strong>MMG</strong> from
+    Python to deliver two complementary mesh styles for architectured
+    materials: <strong>graded</strong> structures with spatially varying
+    thickness, and seamlessly <strong>periodic</strong> unit cells ready
+    for periodic-homogenisation BCs in fedoo or Abaqus.
+  </p>
+  <div class="showcase__grid">
+    <figure class="showcase__cell">
+      <a href="https://3mah.github.io/microgen-docs/">
+        <img class="showcase__img"
+             src="/assets/images/index/microgen/microgen_hero.png"
+             alt="Spatially graded gyroid with the conforming triangular mesh visible across the gradient">
+      </a>
+      <p class="showcase__subcaption">
+        <strong>Graded</strong> — gyroid with thickness varying along x,
+        meshed conformingly through the gradient.
+      </p>
+    </figure>
+    <figure class="showcase__cell">
+      <a href="https://3mah.github.io/microgen-docs/">
+        <img class="showcase__img"
+             src="/assets/images/index/microgen/microgen_periodic.png"
+             alt="A single TPMS unit cell tiled three by two showing seamless periodicity across cell boundaries">
+      </a>
+      <p class="showcase__subcaption">
+        <strong>Periodic</strong> — a single unit cell tiled 3 × 2 with no
+        seam visible at the cell boundaries.
+      </p>
+    </figure>
+  </div>
+  <p class="showcase__caption">
+    Open CASCADE / CadQuery for geometry · Gmsh for the conforming
+    triangulation · MMG for adaptive remeshing · exported as <code>.vtk</code>
+    /<code>.msh</code> for fedoo, Abaqus and others.
+  </p>
+</figure>
 
 ## From microstructure to simulation
 
-The same Kelvin (truncated-octahedron) unit cell is generated and meshed with **Microgen**, exported as a conforming periodic mesh, then loaded directly into **fedoo** to run a periodic homogenization with **Simcoon** constitutive models. One workflow, three libraries — geometry, mesh and simulation kept in lock-step.
+The same Kelvin (truncated-octahedron) unit cell is generated and meshed with **microgen**, exported as a conforming periodic mesh, then loaded directly into **fedoo** to run a periodic homogenization with **simcoon** constitutive models. One workflow, three libraries — geometry, mesh and simulation kept in lock-step.
 
 <figure class="half">
-  <a href="/microgen/"><img src="/assets/images/index/fedoo/fedoo_kelvin_mesh.png" alt="Kelvin RVE - conforming periodic mesh from Microgen"></a>
+  <a href="/microgen/"><img src="/assets/images/index/fedoo/fedoo_kelvin_mesh.png" alt="Kelvin RVE - conforming periodic mesh from microgen"></a>
   <a href="/fedoo/"><img src="/assets/images/index/fedoo/fedoo_periodic_homog.png" alt="Kelvin RVE - periodic homogenization with fedoo"></a>
-  <figcaption>Same Kelvin unit cell — left: periodic conforming mesh from Microgen; right: periodic homogenization (shear E<sub>YZ</sub>, σ<sub>YZ</sub> field) in fedoo.</figcaption>
+  <figcaption>Same Kelvin unit cell — left: periodic conforming mesh from microgen; right: periodic homogenization (shear E<sub>YZ</sub>, σ<sub>YZ</sub> field) in fedoo.</figcaption>
 </figure>
 
 {% include feature_row id="cta_row" %}

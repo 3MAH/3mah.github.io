@@ -1,12 +1,17 @@
 """Render hero-quality Simcoon-branded figures for the 3MAH website.
 
 Produces 1600x1000 PNGs that visually communicate Simcoon's capabilities:
-- EPCHA cyclic plasticity (Voce + two Armstrong-Frederick backstresses)
 - Mori-Tanaka homogenization with Voigt/Reuss bounds — built on
   ``simcoon.L_iso`` and ``simcoon.Eshelby_sphere``
 - Directional stiffness rose for an anisotropic (cubic) crystal
 - SMA superelastic loop
 - Plane-stress yield surfaces (von Mises, Tresca, Hill, Drucker)
+
+The Chaboche cyclic identification figure
+(``simcoon_chaboche_identification.png``) lives in its own driver
+``render_simcoon_identification.py`` because it runs the actual
+differential-evolution identification — too slow to bundle into the
+quick-render `main()` here.
 """
 
 from __future__ import annotations
@@ -85,98 +90,6 @@ def save(fig, name: str):
 # ---------------------------------------------------------------------------
 # 1) Cyclic plasticity hysteresis (EPICP / EPKCP-like)
 # ---------------------------------------------------------------------------
-def plot_cyclic_plasticity():
-    """Chaboche cyclic plasticity: Voce isotropic + two Armstrong-Frederick backstresses.
-
-    Mirrors the EPCHA UMAT shipped with Simcoon (Voce saturation + nonlinear
-    kinematic hardening with two backstresses). Material parameters are tuned
-    for a steel-like response with a visible Bauschinger effect, rounded
-    elastic-plastic transitions and modest cyclic hardening.
-    """
-    E = 70_000.0          # MPa, Young's modulus
-    sig_y0 = 240.0        # MPa, initial yield stress
-    # Voce isotropic hardening:  R(p) = Q * (1 - exp(-b*p))
-    Q_inf = 70.0          # MPa
-    b_iso = 14.0
-    # Two Armstrong-Frederick backstresses
-    C1, gamma1 = 28_000.0, 320.0
-    C2, gamma2 =  4_500.0,  28.0
-
-    cycles = [0.0, 0.012, -0.012, 0.012, -0.012, 0.012, -0.012]
-    eps_total = np.concatenate(
-        [np.linspace(a, b_, 260) for a, b_ in zip(cycles[:-1], cycles[1:])]
-    )
-
-    sig = 0.0
-    a1 = 0.0
-    a2 = 0.0
-    p = 0.0
-    sig_history = np.empty_like(eps_total)
-    prev_eps = eps_total[0]
-
-    for i, eps in enumerate(eps_total):
-        deps = eps - prev_eps
-        sig_trial = sig + E * deps
-        eta = sig_trial - (a1 + a2)
-        R = Q_inf * (1.0 - np.exp(-b_iso * p))
-        f_trial = abs(eta) - (sig_y0 + R)
-
-        if f_trial > 0.0:
-            sgn = np.sign(eta)
-            dp = f_trial / (E + C1 + C2 + Q_inf * b_iso)  # initial guess
-            for _ in range(40):
-                a1_new = (a1 + C1 * dp * sgn) / (1.0 + gamma1 * dp)
-                a2_new = (a2 + C2 * dp * sgn) / (1.0 + gamma2 * dp)
-                R_new  = Q_inf * (1.0 - np.exp(-b_iso * (p + dp)))
-                # residual:  sgn*(sig_trial - a1_new - a2_new) - (sig_y0 + R_new) - E*dp = 0
-                res = sgn * (sig_trial - a1_new - a2_new) - (sig_y0 + R_new) - E * dp
-                # derivatives w.r.t. dp
-                dA1 = (C1 * sgn - gamma1 * a1_new) / (1.0 + gamma1 * dp)
-                dA2 = (C2 * sgn - gamma2 * a2_new) / (1.0 + gamma2 * dp)
-                dR  = Q_inf * b_iso * np.exp(-b_iso * (p + dp))
-                dres = -sgn * (dA1 + dA2) - dR - E
-                step = res / dres
-                dp -= step
-                if abs(step) < 1.0e-12:
-                    break
-            a1 = (a1 + C1 * dp * sgn) / (1.0 + gamma1 * dp)
-            a2 = (a2 + C2 * dp * sgn) / (1.0 + gamma2 * dp)
-            p += dp
-            sig = sig_trial - E * dp * sgn
-        else:
-            sig = sig_trial
-
-        sig_history[i] = sig
-        prev_eps = eps
-
-    fig, ax = plt.subplots(figsize=FIGSIZE)
-    ax.axhline(0, color=BRAND_GREY, linewidth=0.8)
-    ax.axvline(0, color=BRAND_GREY, linewidth=0.8)
-    ax.plot(eps_total * 100, sig_history, color=BRAND_RED, linewidth=3.2)
-    ax.fill(eps_total * 100, sig_history, color=BRAND_RED, alpha=0.07)
-    ax.set_xlabel(r"Strain $\varepsilon_{11}$  [%]")
-    ax.set_ylabel(r"Stress $\sigma_{11}$  [MPa]")
-    ax.set_title("Cyclic plasticity — Chaboche (Voce + two AF backstresses)")
-    ax.text(
-        0.02,
-        0.96,
-        (
-            "Chaboche EPCHA\n"
-            "  E = 70 GPa,  $\\sigma_y$ = 240 MPa\n"
-            "  Voce: $Q$ = 70 MPa,  $b$ = 14\n"
-            "  AF #1: $C_1$ = 28 GPa,  $\\gamma_1$ = 320\n"
-            "  AF #2: $C_2$ = 4.5 GPa,  $\\gamma_2$ = 28"
-        ),
-        transform=ax.transAxes,
-        ha="left",
-        va="top",
-        fontsize=12,
-        color=BRAND_INK,
-        bbox=dict(facecolor=BRAND_LIGHT, edgecolor="none", pad=8, alpha=0.85),
-    )
-    save(fig, "simcoon_epicp_hysteresis.png")
-
-
 # ---------------------------------------------------------------------------
 # 2) Mori-Tanaka effective Young's modulus vs volume fraction
 # ---------------------------------------------------------------------------
@@ -686,7 +599,6 @@ def plot_hero():
 def main():
     style()
     print("Rendering Simcoon hero figures…")
-    plot_cyclic_plasticity()
     plot_mori_tanaka()
     plot_directional_stiffness()
     plot_sma_superelastic()

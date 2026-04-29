@@ -1,6 +1,6 @@
 # main links
 main:
-  - title: "Simcoon"
+  - title: "simcoon"
     url: https://3mah.github.io/simcoon-docs/
   - title: "fedoo"
     url: https://3mah.github.io/fedoo-docs/
@@ -17,7 +17,7 @@ docs:
   children:
     - title: "Home"
       url: /docs/3-Home/
-- title: Microgen
+- title: microgen
   children:
     - title: "Documentation"
       url: https://3mah.github.io/microgen-docs/
@@ -25,7 +25,7 @@ docs:
       url: /docs/m-installation/
     - title: "Create Conda package"
       url: /docs/m-create-package/
-- title: Simcoon
+- title: simcoon
   children:
     - title: "Documentation"
       url: https://3mah.github.io/simcoon-docs/

@@ -5,7 +5,7 @@ excerpt: "3MAH documentation"
 last_modified_at: 2022-01-26T16:51:00-04:00
 ---
 
-## Microgen
+## microgen
 - [Overview](/docs/m-overview/)
 
 - [Installation](/docs/m-installation/)
@@ -13,7 +13,7 @@ last_modified_at: 2022-01-26T16:51:00-04:00
 - [Create conda package](/docs/m-create-package/)
 
 
-## Simcoon
+## simcoon
 - [Installation](/docs/s-installation/)
 
 - [Quick-start-guide](/docs/s-quick-start-guide/)
