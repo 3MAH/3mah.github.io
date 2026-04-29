@@ -17,8 +17,9 @@ output PNGs are committed alongside the rest of the site.
 
 ## Inputs
 
-The Microgen and fedoo renders need TPMS / lattice / Kelvin meshes. They are
-**not committed** (each is 10 – 200 MB) but expected at:
+The Microgen and fedoo renders need TPMS / lattice / Kelvin meshes — 14
+files totalling ~330 MB. They are too large for git and are kept locally
+(uncommitted, gitignored) at:
 
 ```
 _render_inputs/
@@ -30,10 +31,14 @@ _render_inputs/
 └── surfaces_0.vtp … surfaces_8.vtp   # 9 unit-cell TPMS for the surfaces grid
 ```
 
-These files were generated with [Microgen](https://3mah.github.io/microgen-docs/).
-If you need to regenerate them, the recipes are in the Microgen examples
-(see `microgen-docs/examples/...`); the on-disk copies in this repo's
-`_render_inputs/` are also kept around locally for convenience.
+The meshes were generated with
+[Microgen](https://3mah.github.io/microgen-docs/); the recipes are in
+its example gallery.
+
+If/when these stabilise and become worth archiving, `scripts/fetch_inputs.py`
+is ready to download them from a Zenodo deposit (set `ZENODO_RECORD` in
+that file once a record is published; the SHA-256 manifest is already
+pinned). For now, the file is dormant.
 
 ## Running
 
