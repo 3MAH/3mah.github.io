@@ -91,9 +91,18 @@ fedoo_row:
 fedoo_contact:
   - image_path: /assets/images/index/fedoo/fedoo_ipc_indentation.png
     alt: "IPC contact disk indentation"
-    title: "Frictionless contact with IPC"
-    excerpt: "Robust **incremental potential contact** (IPC) via the `ipctk` backend: barrier-method, intersection-free contact for indentation, self-contact and lattice compression — validated against the Hertzian half-space solution."
+    title: "Contact with IPC"
+    excerpt: "Robust **incremental potential contact** (IPC) via the `ipctk` backend — barrier-method, intersection-free, **frictional or frictionless** contact for indentation, self-contact and lattice compression. The disk-on-plate example here is validated against the Hertzian half-space solution."
     url: "https://3mah.github.io/fedoo-docs/"
+    btn_label: "Read more"
+    btn_class: "btn--primary"
+
+microgen_morph:
+  - image_path: /assets/images/index/microgen/microgen_morph.mp4
+    alt: "Continuous morphing through eleven TPMS surface families"
+    title: "Continuous morphing between TPMS families"
+    excerpt: "Blend any two TPMS surface functions with a tanh weight to walk continuously through families: **gyroid → Schwarz P → Schwarz D → Neovius → Schoen IWP → Schoen FRD → Fischer-Koch S → PMY → honeycomb → Lidinoid → split P → gyroid**. The animated transition exposes the underlying surface-function arithmetic of microgen."
+    url: "https://3mah.github.io/microgen-docs/"
     btn_label: "Read more"
     btn_class: "btn--primary"
 
@@ -112,8 +121,9 @@ microgen_row:
     url: "https://3mah.github.io/microgen-docs/"
     btn_label: "See example"
     btn_class: "btn--primary"
-  - image_path: /assets/images/index/microgen/examples/voronoi_polycrystal.png
-    alt: "Voronoi polycrystal"
+  - image_path: /assets/images/index/microgen/examples/voronoi_polycrystal.mp4
+    poster: /assets/images/index/microgen/examples/voronoi_polycrystal.png
+    alt: "Voronoi polycrystal grains assembling one by one"
     title: "Polycrystals & architectured cells"
     excerpt: "**Voronoi** polycrystals, octet-truss lattices, honeycombs and hybrid architectures, ready for periodic homogenization in fedoo or Abaqus."
     url: "https://3mah.github.io/microgen-docs/"
@@ -152,11 +162,11 @@ cta_row:
     wraps SciPy's differential evolution with a key-based file-templating
     workflow that generalises to any optimiser or external simulator.
   </p>
-  <a href="https://3mah.github.io/simcoon-docs/examples/identification/chaboche_cyclic_identification.html">
-    <img class="showcase__img"
-         src="/assets/images/index/simcoon/simcoon_chaboche_identification.png"
-         alt="Three cyclic stress-strain hysteresis loops at ±1 / ±1.5 / ±2 % strain — experimental data dashed and identified Chaboche fit solid">
-  </a>
+  <video class="showcase__video"
+         src="/assets/images/index/simcoon/simcoon_chaboche_identification.mp4"
+         poster="/assets/images/index/simcoon/simcoon_chaboche_identification.png"
+         autoplay loop muted playsinline preload="metadata"
+         aria-label="Differential-evolution iterations converging onto three experimental cyclic stress-strain curves"></video>
   <p class="showcase__caption">
     EPCHA UMAT · E = 140 GPa, ν = 0.3 (fixed) · 7 parameters identified ·
     cost = NMSE-per-response, balanced across the three tests · optimiser:
@@ -179,11 +189,30 @@ cta_row:
     elasto-plastic UMAT. Line-search Newton with adaptive stiffness drives
     the tube from undeformed to fully folded in a single nonlinear solve.
   </p>
-  <a href="https://3mah.github.io/fedoo-docs/examples/03-advanced/tube_compression.html">
-    <img class="showcase__img"
-         src="/assets/images/index/fedoo/fedoo_tube_compression.png"
-         alt="Axial buckling of a thin tube — undeformed, mid-deformed, fully folded with equivalent plastic strain field">
-  </a>
+  <div class="showcase__grid showcase__grid--cols-3">
+    <figure class="showcase__cell">
+      <img class="showcase__img"
+           src="/assets/images/index/fedoo/fedoo_tube_initial.png"
+           alt="Undeformed tube — initial configuration">
+      <p class="showcase__subcaption"><strong>Initial</strong></p>
+    </figure>
+    <figure class="showcase__cell">
+      <video class="showcase__video"
+             src="/assets/images/index/fedoo/fedoo_tube_evolution.mp4"
+             poster="/assets/images/index/fedoo/fedoo_tube_initial.png"
+             autoplay loop muted playsinline preload="metadata"
+             aria-label="Tube buckling evolution from undeformed to fully folded under axial compression"></video>
+      <p class="showcase__subcaption"><strong>Evolution</strong></p>
+    </figure>
+    <figure class="showcase__cell">
+      <a href="https://3mah.github.io/fedoo-docs/examples/03-advanced/tube_compression.html">
+        <img class="showcase__img"
+             src="/assets/images/index/fedoo/fedoo_tube_final.png"
+             alt="Fully folded tube — final accordion-like configuration with equivalent plastic strain field">
+      </a>
+      <p class="showcase__subcaption"><strong>Final</strong></p>
+    </figure>
+  </div>
   <p class="showcase__caption">
     E = 200 GPa · σ_y = 300 MPa · power-law isotropic hardening
     <code>σ = σ_y + k·p<sup>m</sup></code> (k = 1000, m = 0.3) ·
@@ -216,8 +245,7 @@ cta_row:
              alt="Spatially graded gyroid with the conforming triangular mesh visible across the gradient">
       </a>
       <p class="showcase__subcaption">
-        <strong>Graded</strong> — gyroid with thickness varying along x,
-        meshed conformingly through the gradient.
+        <strong>Graded</strong> — tanh-graded gyroid, thickness varying along x.
       </p>
     </figure>
     <figure class="showcase__cell">
@@ -227,8 +255,7 @@ cta_row:
              alt="A single TPMS unit cell tiled three by two showing seamless periodicity across cell boundaries">
       </a>
       <p class="showcase__subcaption">
-        <strong>Periodic</strong> — a single unit cell tiled 3 × 2 with no
-        seam visible at the cell boundaries.
+        <strong>Periodic</strong> — unit cell tiled 3 × 2, no seam visible.
       </p>
     </figure>
   </div>
@@ -238,6 +265,8 @@ cta_row:
     /<code>.msh</code> for fedoo, Abaqus and others.
   </p>
 </figure>
+
+{% include feature_row id="microgen_morph" type="right" %}
 
 ## From microstructure to simulation
 

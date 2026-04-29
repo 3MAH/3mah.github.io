@@ -767,54 +767,91 @@ def render_tube_compression():
             cam_target[2] + 0.4 * span_z,
         )
 
-        # Render each frame as its own off-screen plotter, then concat
-        # horizontally with PIL — pyvista's shape=(1, 3) subplotting has
-        # quirks with set_background and per-subplot light rigs.
-        panel_w = 1200
-        panel_h = 1500
-        panel_imgs = []
-        for col, (m, label) in enumerate(zip(meshes, frame_labels)):
-            pl = make_plotter(
-                window_size=(panel_w, panel_h), background=BG_NIGHT,
-            )
-            show_bar = (col == 2)
+        # Three independent panels — initial (static PNG), evolution
+        # (MP4), final (static PNG). H.264 needs even dimensions.
+        panel_w = 1000
+        panel_h = 1200
+        # Even dimensions for libx264 / yuv420p
+        movie_w = panel_w if panel_w % 2 == 0 else panel_w + 1
+        movie_h = panel_h if panel_h % 2 == 0 else panel_h + 1
+
+        def _frame_plotter(window_size, with_label=None, with_bar=False):
+            pl = make_plotter(window_size=window_size, background=BG_NIGHT)
+            if with_label is not None:
+                pl.add_text(
+                    with_label, position="upper_left",
+                    color=TEXT_DARK, font_size=22, shadow=False, font="arial",
+                )
+            return pl
+
+        bar_kwargs = dict(
+            title="equivalent plastic strain  p",
+            color=TEXT_DARK,
+            label_font_size=24, title_font_size=30,
+            n_labels=4, shadow=False, italic=False, bold=False,
+            font_family="arial",
+            position_x=0.78, position_y=0.10,
+            width=0.08, height=0.65, fmt="%.2g", vertical=True,
+        )
+
+        def _add_tube(pl, mesh, show_bar=False):
             pl.add_mesh(
-                m,
-                scalars="P",
-                cmap=FEDOO_SEQ,
-                clim=clim,
-                show_edges=False,
-                smooth_shading=True,
+                mesh, scalars="P", cmap=FEDOO_SEQ, clim=clim,
+                show_edges=False, smooth_shading=True,
                 ambient=0.30, diffuse=0.85, specular=0.05, specular_power=10,
                 show_scalar_bar=show_bar,
-                scalar_bar_args=dict(
-                    title="equivalent plastic strain  p",
-                    color=TEXT_DARK,
-                    label_font_size=28, title_font_size=34,
-                    n_labels=4, shadow=False, italic=False, bold=False,
-                    font_family="arial",
-                    position_x=0.72, position_y=0.10,
-                    width=0.10, height=0.65, fmt="%.2g", vertical=True,
-                ) if show_bar else None,
-            )
-            pl.add_text(
-                label, position="upper_left",
-                color=TEXT_DARK, font_size=22, shadow=False, font="arial",
+                scalar_bar_args=bar_kwargs if show_bar else None,
             )
             pl.camera_position = [cam_pos, cam_target, (0, 0, 1)]
             pl.reset_camera(bounds=tuple(union_bounds))
             pl.camera.elevation = -10
             pl.camera.zoom(1.05)
-            panel_imgs.append(np.asarray(pl.screenshot(return_img=True)))
-            pl.close()
 
-        # Stitch horizontally
-        from PIL import Image
-        composite = np.concatenate(panel_imgs, axis=1)
-        out = OUT_DIR / "fedoo_tube_compression.png"
-        Image.fromarray(composite).save(str(out))
-        print(f"   wrote {out}")
-        return out
+        # ----- 1) static initial frame (PNG) -------------------------------
+        pl = _frame_plotter((panel_w, panel_h), with_label="Undeformed")
+        _add_tube(pl, meshes[0])
+        out_initial = OUT_DIR / "fedoo_tube_initial.png"
+        pl.screenshot(str(out_initial))
+        pl.close()
+        print(f"   wrote {out_initial}")
+
+        # ----- 2) static final frame (PNG, with colorbar) ------------------
+        pl = _frame_plotter((panel_w, panel_h), with_label="Fully deformed")
+        _add_tube(pl, meshes[-1], show_bar=True)
+        out_final = OUT_DIR / "fedoo_tube_final.png"
+        pl.screenshot(str(out_final))
+        pl.close()
+        print(f"   wrote {out_final}")
+
+        # ----- 3) evolution MP4 --------------------------------------------
+        # Sample ~50 frames evenly over the simulation history.
+        n_frames = min(60, n_iter)
+        frame_indices = np.linspace(0, n_iter - 1, n_frames).astype(int)
+
+        movie_pl = _frame_plotter((movie_w, movie_h), with_label=None)
+        out_movie = OUT_DIR / "fedoo_tube_evolution.mp4"
+        movie_pl.open_movie(str(out_movie), framerate=15, quality=7)
+        # Tiny intro hold on the undeformed shape
+        for _ in range(8):
+            movie_pl.clear_actors()
+            _add_tube(movie_pl, meshes[0])
+            movie_pl.write_frame()
+        for fi in frame_indices:
+            data_3d.load(int(fi))
+            m = data_3d.to_pyvista()
+            d = _ensure_3d_disp(m)
+            warped = m.warp_by_vector(d, factor=1.0) if d else m
+            movie_pl.clear_actors()
+            _add_tube(movie_pl, warped)
+            movie_pl.write_frame()
+        # Hold on the folded final state
+        for _ in range(20):
+            movie_pl.clear_actors()
+            _add_tube(movie_pl, meshes[-1])
+            movie_pl.write_frame()
+        movie_pl.close()
+        print(f"   wrote {out_movie}  ({out_movie.stat().st_size / 1024:.0f} KB)")
+        return out_initial
     finally:
         shutil.rmtree(out_dir, ignore_errors=True)
 

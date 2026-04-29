@@ -35,8 +35,14 @@ MICROGEN_RAMP = LinearSegmentedColormap.from_list(
 
 
 def main():
-    mesh = pv.read(INPUTS / "gyroid_graded.vtk")
-    if not mesh.is_all_triangles:
+    raw = pv.read(INPUTS / "tanh_0.3_2_0.5.vtk")
+    # Tanh-graded gyroid is a volume mesh; pull the boundary surface and
+    # ensure it's triangulated.
+    if hasattr(raw, "extract_surface"):
+        mesh = raw.extract_surface()
+    else:
+        mesh = raw
+    if hasattr(mesh, "is_all_triangles") and not mesh.is_all_triangles:
         mesh = mesh.triangulate()
     mesh = mesh.clean()
 

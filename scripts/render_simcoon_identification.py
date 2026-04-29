@@ -32,6 +32,7 @@ REPO = Path(__file__).resolve().parent.parent
 OUT = REPO / "assets" / "images" / "index" / "simcoon"
 OUT.mkdir(parents=True, exist_ok=True)
 OUT_PATH = OUT / "simcoon_chaboche_identification.png"
+OUT_VIDEO = OUT / "simcoon_chaboche_identification.mp4"
 
 # Brand palette matching the rest of render_simcoon.py
 BRAND_RED = "#971C20"
@@ -156,13 +157,22 @@ def main():
             exp = np.loadtxt(os.path.join(path_exp, expfile))
             exp_stresses.append(exp[:, 3].reshape(-1, 1))
 
+        # Capture best-of-generation parameter vectors so we can replay
+        # the convergence as an animation after the optimisation finishes.
+        history: list[np.ndarray] = []
+
+        def _de_callback(xk, convergence=None):
+            history.append(np.asarray(xk).copy())
+            return False
+
         print(" Chaboche cyclic identification — running differential evolution …")
         result = identification(
             cost, PARAMS,
             args=(exp_stresses, path_data, path_results),
             seed=42, popsize=15, maxiter=80, tol=1e-6, disp=False,
+            callback=_de_callback,
         )
-        print(f"   final cost = {result.fun:.4e}")
+        print(f"   final cost = {result.fun:.4e}   ({len(history)} generations)")
 
         final_props = build_props(np.array([p.value for p in PARAMS]))
 
@@ -211,6 +221,83 @@ def main():
         fig.savefig(OUT_PATH, dpi=DPI, bbox_inches="tight", pad_inches=0.35)
         plt.close(fig)
         print(f"   wrote {OUT_PATH} ({OUT_PATH.stat().st_size / 1024:.0f} KB)")
+
+        # ----- convergence animation (MP4) ---------------------------------
+        if history:
+            print(f" Replaying {len(history)} generations into an MP4 …")
+            import imageio.v2 as iio
+            # Sub-sample to ~25 frames so replay stays under a minute.
+            n_anim = min(25, len(history))
+            sample_idx = np.linspace(0, len(history) - 1, n_anim).astype(int)
+
+            # Pre-compute experiment arrays once
+            exp_data = {}
+            for _, _, _, expfile in TESTS:
+                exp_data[expfile] = np.loadtxt(os.path.join(path_exp, expfile))
+            # Stable axis limits across the animation
+            all_exp_strain = np.concatenate(
+                [exp_data[expfile][:, 2] for *_, expfile in TESTS]
+            ) * 100.0
+            all_exp_stress = np.concatenate(
+                [exp_data[expfile][:, 3] for *_, expfile in TESTS]
+            )
+            xlim = (1.05 * all_exp_strain.min(), 1.05 * all_exp_strain.max())
+            ylim = (1.10 * all_exp_stress.min(), 1.10 * all_exp_stress.max())
+
+            frames = []
+            for k, gen_idx in enumerate(sample_idx):
+                xk = history[gen_idx]
+                props_k = build_props(xk)
+                fig, ax = plt.subplots(figsize=FIGSIZE)
+                style_axes(ax)
+                ax.set_xlim(xlim)
+                ax.set_ylim(ylim)
+                for (name, pathfile, _tab, expfile), color in zip(TESTS, TEST_COLORS):
+                    exp = exp_data[expfile]
+                    try:
+                        sigma_num = run_one(
+                            props_k, pathfile, f"sim_anim_{name}.txt",
+                            path_data, path_results,
+                        )
+                    except Exception:
+                        continue
+                    ax.plot(exp[:, 2] * 100, exp[:, 3], color=color,
+                            linestyle="--", linewidth=1.4, alpha=0.55,
+                            label=f"{name} — experiment")
+                    ax.plot(exp[:, 2] * 100, sigma_num, color=color,
+                            linestyle="-", linewidth=2.4,
+                            label=f"{name} — current fit")
+                ax.set_xlabel(r"strain $\varepsilon_{11}$  [%]")
+                ax.set_ylabel(r"stress $\sigma_{11}$  [MPa]")
+                ax.set_title(
+                    f"Differential-evolution generation "
+                    f"{gen_idx + 1} / {len(history)}"
+                )
+                ax.legend(loc="lower right", framealpha=0.92, ncol=2,
+                          fontsize=12, edgecolor=BRAND_GREY)
+                fig.tight_layout()
+                fig.canvas.draw()
+                w, h = fig.canvas.get_width_height()
+                # Even dimensions for libx264 / yuv420p
+                rgba = np.asarray(fig.canvas.buffer_rgba())
+                rgb = rgba[..., :3]
+                if rgb.shape[1] % 2 == 1:
+                    rgb = rgb[:, :-1, :]
+                if rgb.shape[0] % 2 == 1:
+                    rgb = rgb[:-1, :, :]
+                frames.append(rgb)
+                plt.close(fig)
+                print(f"   frame {k+1}/{n_anim}  (gen {gen_idx+1})")
+
+            # Hold the final frame for ~1.5 s
+            for _ in range(6):
+                frames.append(frames[-1])
+
+            iio.mimsave(
+                OUT_VIDEO, frames, fps=4,
+                codec="libx264", quality=7, pixelformat="yuv420p",
+            )
+            print(f"   wrote {OUT_VIDEO} ({OUT_VIDEO.stat().st_size / 1024:.0f} KB)")
     finally:
         os.chdir(cwd)
 
