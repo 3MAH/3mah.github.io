@@ -2,7 +2,7 @@
 main:
   - title: "Simcoon"
     url: https://3mah.github.io/simcoon-docs/
-  - title: "fedOO"
+  - title: "fedoo"
     url: https://3mah.github.io/fedoo-docs/
   - title: "microgen"
     url: https://3mah.github.io/microgen-docs/
@@ -37,7 +37,7 @@ docs:
       url: /docs/s-tutorials/
     - title: "Create Conda package"
       url: /docs/s-create-package/
-- title: fedOO
+- title: fedoo
   children:
     - title: "Documentation"
       url: https://3mah.github.io/fedoo-docs/

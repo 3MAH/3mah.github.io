@@ -23,7 +23,7 @@ last_modified_at: 2022-01-26T16:51:00-04:00
 - [Create conda package](/docs/s-create-package/)
 
 
-## FedOO
+## fedoo
 - [Tutorials](/docs/f-tutorials/)
 
 - [Create conda package](/docs/f-create-package/)
