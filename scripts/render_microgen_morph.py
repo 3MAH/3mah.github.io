@@ -1,11 +1,20 @@
 """Render a TPMS morphing movie for the microgen showcase.
 
-Adapted from microgen's ``graded_cell_type_density_movie.py``: walks
-through eleven different TPMS surface families (gyroid → schwarzP →
-schwarzD → neovius → schoenIWP → schoenFRD → fischerKochS → pmy →
-honeycomb → lidinoid → split_p → gyroid), interpolating between
-neighbours via a tanh weight. The result is a continuous loop of TPMS
-shapes for the homepage.
+Inspired by microgen's reference ``graded_cell_type_density_movie.py`` —
+walks gyroid → schwarzP → schwarzD → neovius → schoenIWP → schoenFRD →
+fischerKochS → pmy → honeycomb → lidinoid → split_p → gyroid, blending
+neighbours via a tanh weight on a linear superposition of implicit
+functions.
+
+Differences from the reference:
+- Higher marching-cubes resolution so the TPMS-meets-cube exit curves
+  are smooth rather than jagged.
+- Vertices within 1e-3 of a cube face are snapped to that face exactly,
+  so the box-face cuts are planar to double precision.
+- Phong smooth shading with a feature-angle split, so the cube-face
+  creases stay sharp while the TPMS interior shades smoothly.
+- Brand-orange microgen colormap (matches the logo / showcase styling)
+  instead of the default viridis.
 
 Output: assets/images/index/microgen/microgen_morph.mp4
 """
@@ -39,7 +48,7 @@ REPO = Path(__file__).resolve().parent.parent
 OUT = REPO / "assets" / "images" / "index" / "microgen" / "microgen_morph.mp4"
 OUT.parent.mkdir(parents=True, exist_ok=True)
 
-WINDOW = (1080, 1080)  # even dimensions for libx264
+WINDOW = (1024, 768)  # matches the CSMA reference; even for libx264
 
 MICROGEN_RAMP = LinearSegmentedColormap.from_list(
     "microgen_ramp",
@@ -63,20 +72,19 @@ def digraded(x, y, z, phi_pair, frame: float):
 
 def main():
     transition_width = 1.0
-    n_frames_per_pair = 16
-    tpms_resolution = 70    # marching-cubes resolution. Sharp box-face cuts
-                            # come from split-vertex normals (below), not
-                            # from cranking this — 70 is plenty.
+    n_frames_per_pair = 20
+    tpms_resolution = 45    # 50% above the reference's 30, enough to smooth
+                            # the TPMS-cube exit curves without blowing up
+                            # render cost (scales as resolution^3).
 
-    pl = pv.Plotter(off_screen=True, window_size=WINDOW, lighting="three lights")
-    pl.set_background("#ffffff", top="#f1ebe2")
-    pl.enable_anti_aliasing("ssaa")
+    pl = pv.Plotter(off_screen=True, window_size=WINDOW)
+    pl.set_background("white")
     pl.camera.position = (1.5, 2.5, 2.0)
     pl.camera.Roll(45.0)
     pl.camera.Elevation(60.0)
     pl.camera.Azimuth(30.0)
 
-    pl.open_movie(str(OUT), framerate=12, quality=7)
+    pl.open_movie(str(OUT), framerate=24, quality=8)
 
     for i in range(len(PHI_SEQUENCE) - 1):
         phi = PHI_SEQUENCE[i: i + 2]
@@ -94,27 +102,32 @@ def main():
                 repeat_cell=(1, 1, 1),
                 resolution=tpms_resolution,
             )
-            shape = geom.generateVtk(type_part="sheet").extract_surface()
-            # Split vertices at sharp feature edges (TPMS-meets-cube
-            # dihedrals): keeps Phong shading smooth across the curved
-            # TPMS surface while preserving sharp creases at the box cuts.
+            shape = geom.generate_vtk(type_part="sheet").extract_surface()
+
+            # Snap vertices within 1e-3 of any cube face onto that face,
+            # so the box-face cuts are planar to double precision.
+            pts = np.asarray(shape.points).copy()
+            for axis in range(3):
+                pts[np.abs(pts[:, axis] + 0.5) < 1e-3, axis] = -0.5
+                pts[np.abs(pts[:, axis] - 0.5) < 1e-3, axis] =  0.5
+            shape.points = pts
+            # Sharp Phong creases at the TPMS-meets-cube dihedrals.
             shape = shape.compute_normals(
                 cell_normals=False, point_normals=True,
                 consistent_normals=True, auto_orient_normals=True,
-                split_vertices=True,
-                feature_angle=30.0,
+                split_vertices=True, feature_angle=30.0,
             )
 
-            pl.clear_actors()
-            pts = np.asarray(shape.points)
-            shape["dist"] = np.linalg.norm(pts, axis=1).astype(np.float32)
+            pl.clear()
+            shape["distances"] = np.linalg.norm(np.asarray(shape.points), axis=1)
             pl.add_mesh(
                 shape,
-                scalars="dist",
+                scalars="distances",
                 cmap=MICROGEN_RAMP,
-                show_scalar_bar=False,
+                clim=[0.0, 1.0],
                 smooth_shading=True,
-                ambient=0.40, diffuse=0.72, specular=0.06, specular_power=10,
+                specular=0.6,
+                show_scalar_bar=False,
             )
             pl.write_frame()
             print(f"   pair {i+1}/{len(PHI_SEQUENCE) - 1}  frame {f:.2f}")
