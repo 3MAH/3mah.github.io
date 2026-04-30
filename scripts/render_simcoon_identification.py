@@ -165,11 +165,36 @@ def main():
             history.append(np.asarray(xk).copy())
             return False
 
+        # Seed DE with a deliberately weak initial population so the
+        # animation opens on an obviously-elastic-looking response and
+        # the convergence onto the cyclic loops is visually dramatic.
+        # Default scipy Latin-hypercube would already land close to a
+        # plausible fit in 2-3 generations and undersell the algorithm.
+        bounds_arr = np.array([p.bounds for p in PARAMS])
+        weak_guess = np.array([
+            70.0,       # sigmaY  (low yield → too-soft elastic-plastic transition)
+            300.0,      # Q       (low isotropic saturation)
+            0.3,        # b       (slow saturation)
+            5000.0,     # C_1     (weak backstress modulus)
+            50.0,       # D_1     (slow backstress saturation)
+            50000.0,    # C_2     (weak fast-backstress)
+            200.0,      # D_2     (slow fast-backstress saturation)
+        ])
+        weak_guess = np.clip(weak_guess, bounds_arr[:, 0], bounds_arr[:, 1])
+        rng = np.random.default_rng(7)
+        pop_size = 15
+        # Cluster ±20% around the weak central guess, then clip to bounds.
+        init_pop = weak_guess * rng.uniform(0.8, 1.2, size=(pop_size, weak_guess.size))
+        init_pop = np.clip(init_pop, bounds_arr[:, 0], bounds_arr[:, 1])
+        # Prepend the central weak guess as the visual starting point of
+        # the animation (DE's callback only fires AFTER iteration 1).
+        history.append(weak_guess.copy())
+
         print(" Chaboche cyclic identification — running differential evolution …")
         result = identification(
             cost, PARAMS,
             args=(exp_stresses, path_data, path_results),
-            seed=42, popsize=15, maxiter=80, tol=1e-6, disp=False,
+            seed=42, init=init_pop, maxiter=80, tol=1e-6, disp=False,
             callback=_de_callback,
         )
         print(f"   final cost = {result.fun:.4e}   ({len(history)} generations)")
