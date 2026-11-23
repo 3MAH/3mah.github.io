@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+  {#- three.js import map on every page, and a tiny loader that imports the TPMS animation
+      only when a page with a .tpms-hero__canvas is shown, including after instant navigation
+      (navigation.instant does not run <head> scripts of the next page). -#}
+  <script type="importmap">
+  {"imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+  }}
+  </script>
+  <script type="module">
+    // absolute URL, resolved now: instant navigation later changes the document URL
+    const src = new URL("{{ base_url }}/assets/javascripts/tpms-hero.js", document.baseURI).href;
+    let loaded = false;
+    const check = () => {
+      if (!loaded && document.querySelector(".tpms-hero__canvas")) { loaded = true; import(src); }
+    };
+    if (window.document$) window.document$.subscribe(check); else check();
+  </script>
+  {%- set kw = page.meta.keywords if page and page.meta and page.meta.keywords else none %}
+  {%- if kw %}
+  <meta name="keywords" content="{{ kw | join(', ') }}">
+  {%- endif %}
+  <meta property="og:image" content="{{ config.site_url }}assets/images/index/microgen/tpms_cylinder.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "3MAH",
+        "url": "https://3mah.github.io/",
+        "sameAs": ["https://github.com/3MAH"]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "simcoon",
+        "applicationCategory": "EngineeringApplication",
+        "operatingSystem": "Linux, macOS, Windows",
+        "url": "https://3mah.github.io/simcoon-docs/",
+        "codeRepository": "https://github.com/3MAH/simcoon",
+        "programmingLanguage": ["C++", "Python"],
+        "description": "Constitutive modeling and micromechanics library: anisotropic elasticity, plasticity, viscoelasticity, hyperelasticity, phase transformation and mean-field homogenization."
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "fedoo",
+        "applicationCategory": "EngineeringApplication",
+        "operatingSystem": "Linux, macOS, Windows",
+        "url": "https://3mah.github.io/fedoo-docs/",
+        "codeRepository": "https://github.com/3MAH/fedoo",
+        "programmingLanguage": "Python",
+        "description": "Python finite element solver for nonlinear solid mechanics with periodic homogenization, beam, shell and solid elements, and PGD model reduction."
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "microgen",
+        "applicationCategory": "EngineeringApplication",
+        "operatingSystem": "Linux, macOS, Windows",
+        "url": "https://3mah.github.io/microgen-docs/",
+        "codeRepository": "https://github.com/3MAH/microgen",
+        "programmingLanguage": "Python",
+        "description": "Python library for microstructure generation and meshing: TPMS, lattices, polycrystals and hybrid architectures, exported as periodic finite element meshes."
+      }
+    ]
+  }
+  </script>
+{% endblock %}

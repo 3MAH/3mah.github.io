@@ -1,14 +1,15 @@
-*.gem
-*.sublime-project
-*.sublime-workspace
-.bundle
+# Zensical build output and local environment
+site/
+.cache/
+.venv/
+__pycache__/
 .DS_Store
-.jekyll-metadata
-.sass-cache
-_asset_bundler_cache
-_site
-codekit-config.json
-example/_site
-Gemfile.lock
-node_modules
-npm-debug.log*
+
+# Large local render inputs (see scripts/README.md)
+_render_inputs
+results/
+examples/
+*.fdz
+*.pyc
+/*.vtk
+/*.vtp

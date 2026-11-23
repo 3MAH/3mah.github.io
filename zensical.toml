@@ -1,0 +1,121 @@
+[project]
+site_name = "3MAH"
+site_url = "https://3mah.github.io/"
+site_description = "Open-source scientific software for the mechanics of materials and multiphysics: simcoon (constitutive modeling and micromechanics), fedoo (nonlinear finite element analysis) and microgen (microstructure generation and meshing)."
+site_author = "3MAH team"
+repo_url = "https://github.com/3MAH/3mah.github.io"
+repo_name = "3MAH/3mah.github.io"
+edit_uri = "edit/master/docs/"
+copyright = "Copyright &copy; 3MAH team — released under GPL-3.0"
+extra_css = ["assets/stylesheets/extra.css"]
+extra_javascript = [
+  "assets/javascripts/examples.js",
+  "assets/javascripts/mathjax.js",
+  "https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js",
+]
+nav = [
+  { "Home" = "index.md" },
+  { "Get started" = "get-started.md" },
+  { "Libraries" = [
+    { "simcoon" = "simcoon.md" },
+    { "fedoo" = "fedoo.md" },
+    { "microgen" = "microgen.md" },
+  ] },
+  { "Examples" = "examples.md" },
+  { "Documentation" = "documentation.md" },
+  { "Research" = "gallery.md" },
+  { "Team" = "team.md" },
+]
+
+# The former guides now live in the Sphinx documentation of each library:
+# keep their old URLs alive by redirecting them.
+[project.plugins.redirects.redirect_maps]
+"docs/3-Home.md" = "get-started.md"
+"docs/m-overview.md" = "https://3mah.github.io/microgen-docs/Overview.html"
+"docs/m-installation.md" = "https://3mah.github.io/microgen-docs/Install.html"
+"docs/m-create-package.md" = "https://3mah.github.io/microgen-docs/Install.html"
+"docs/s-installation.md" = "https://3mah.github.io/simcoon-docs/installation.html"
+"docs/s-quick-start-guide.md" = "https://3mah.github.io/simcoon-docs/simulation/index.html"
+"docs/s-tutorials.md" = "https://3mah.github.io/simcoon-docs/examples/index.html"
+"docs/s-create-package.md" = "https://3mah.github.io/simcoon-docs/installation.html"
+"docs/f-tutorials.md" = "https://3mah.github.io/fedoo-docs/stable/examples/index.html"
+"docs/f-create-package.md" = "https://3mah.github.io/fedoo-docs/stable/install.html"
+
+[project.theme]
+variant = "modern"
+custom_dir = "overrides"
+language = "en"
+logo = "assets/images/logo_3mah/3mah_logo.png"
+favicon = "assets/images/logo_3mah/favicon.png"
+features = [
+  "content.action.edit",
+  "content.code.annotate",
+  "content.code.copy",
+  "content.tooltips",
+  "navigation.footer",
+  "navigation.indexes",
+  "navigation.instant",
+  "navigation.instant.prefetch",
+  "navigation.path",
+  "navigation.sections",
+  "navigation.tabs",
+  "navigation.top",
+  "navigation.tracking",
+  "search.highlight",
+  "toc.follow",
+]
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme)"
+toggle.icon = "lucide/sun-moon"
+toggle.name = "Switch to light mode"
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: light)"
+scheme = "default"
+primary = "custom"
+accent = "custom"
+toggle.icon = "lucide/sun"
+toggle.name = "Switch to dark mode"
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: dark)"
+scheme = "slate"
+primary = "custom"
+accent = "custom"
+toggle.icon = "lucide/moon"
+toggle.name = "Switch to system preference"
+
+[project.extra]
+social = [
+  { icon = "fontawesome/brands/github", link = "https://github.com/3MAH", name = "3MAH on GitHub" },
+]
+
+[project.markdown_extensions]
+abbr = {}
+admonition = {}
+attr_list = {}
+def_list = {}
+footnotes = {}
+md_in_html = {}
+tables = {}
+toc.permalink = true
+pymdownx.arithmatex.generic = true
+pymdownx.betterem = {}
+pymdownx.caret = {}
+pymdownx.details = {}
+pymdownx.emoji.emoji_generator = "zensical.extensions.emoji.to_svg"
+pymdownx.emoji.emoji_index = "zensical.extensions.emoji.twemoji"
+pymdownx.highlight.anchor_linenums = true
+pymdownx.highlight.line_spans = "__span"
+pymdownx.highlight.pygments_lang_class = true
+pymdownx.inlinehilite = {}
+pymdownx.keys = {}
+pymdownx.mark = {}
+pymdownx.smartsymbols = {}
+pymdownx.snippets.base_path = ["snippets"]
+pymdownx.snippets.check_paths = true
+pymdownx.superfences = {}
+pymdownx.tabbed.alternate_style = true
+pymdownx.tasklist.custom_checkbox = true
+pymdownx.tilde = {}

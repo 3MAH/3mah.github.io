@@ -1,0 +1,1101 @@
+[
+ {
+  "library": "simcoon",
+  "section": "Mechanical Constitutive Laws",
+  "title": "Isotropic elasticity examples",
+  "url": "https://3mah.github.io/simcoon-docs/examples/mechanical/ELISO.html",
+  "thumbnail": "https://3mah.github.io/simcoon-docs/_images/sphx_glr_ELISO_thumb.png"
+ },
+ {
+  "library": "simcoon",
+  "section": "Mechanical Constitutive Laws",
+  "title": "Transversely Isotropic Elasticity Example",
+  "url": "https://3mah.github.io/simcoon-docs/examples/mechanical/ELIST.html",
+  "thumbnail": "https://3mah.github.io/simcoon-docs/_images/sphx_glr_ELIST_thumb.png"
+ },
+ {
+  "library": "simcoon",
+  "section": "Mechanical Constitutive Laws",
+  "title": "Orthotropic Elasticity Example",
+  "url": "https://3mah.github.io/simcoon-docs/examples/mechanical/ELORT.html",
+  "thumbnail": "https://3mah.github.io/simcoon-docs/_images/sphx_glr_ELORT_thumb.png"
+ },
+ {
+  "library": "simcoon",
+  "section": "Mechanical Constitutive Laws",
+  "title": "Plasticity with Chaboche Hardening Example",
+  "url": "https://3mah.github.io/simcoon-docs/examples/mechanical/EPCHA.html",
+  "thumbnail": "https://3mah.github.io/simcoon-docs/_images/sphx_glr_EPCHA_thumb.png"
+ },
+ {
+  "library": "simcoon",
+  "section": "Mechanical Constitutive Laws",
+  "title": "Plasticity with isotropic hardening example",
+  "url": "https://3mah.github.io/simcoon-docs/examples/mechanical/EPICP.html",
+  "thumbnail": "https://3mah.github.io/simcoon-docs/_images/sphx_glr_EPICP_thumb.png"
+ },
+ {
+  "library": "simcoon",
+  "section": "Mechanical Constitutive Laws",
+  "title": "Johnson-Cook plasticity: strain-rate sensitivity",
+  "url": "https://3mah.github.io/simcoon-docs/examples/mechanical/EPJCK.html",
+  "thumbnail": "https://3mah.github.io/simcoon-docs/_images/sphx_glr_EPJCK_thumb.png"
+ },
+ {
+  "library": "simcoon",
+  "section": "Mechanical Constitutive Laws",
+  "title": "Plasticity with Isotropic and Kinematic Hardening Example",
+  "url": "https://3mah.github.io/simcoon-docs/examples/mechanical/EPKCP.html",
+  "thumbnail": "https://3mah.github.io/simcoon-docs/_images/sphx_glr_EPKCP_thumb.png"
+ },
+ {
+  "library": "simcoon",
+  "section": "Mechanical Constitutive Laws",
+  "title": "Modular UMAT Example — Composable Elasto-Plasticity",
+  "url": "https://3mah.github.io/simcoon-docs/examples/mechanical/MODUL.html",
+  "thumbnail": "https://3mah.github.io/simcoon-docs/_images/sphx_glr_MODUL_thumb.png"
+ },
+ {
+  "library": "simcoon",
+  "section": "Mechanical Constitutive Laws",
+  "title": "Closest-Point Projection — Non-Proportional Loading",
+  "url": "https://3mah.github.io/simcoon-docs/examples/mechanical/MODUL_closest_point.html",
+  "thumbnail": "https://3mah.github.io/simcoon-docs/_images/sphx_glr_MODUL_closest_point_thumb.png"
+ },
+ {
+  "library": "simcoon",
+  "section": "Mechanical Constitutive Laws",
+  "title": "Modular UMAT under Finite Strain — Hencky Hyperelasto-Plasticity",
+  "url": "https://3mah.github.io/simcoon-docs/examples/mechanical/MODUL_finite.html",
+  "thumbnail": "https://3mah.github.io/simcoon-docs/_images/sphx_glr_MODUL_finite_thumb.png"
+ },
+ {
+  "library": "simcoon",
+  "section": "Mechanical Constitutive Laws",
+  "title": "Modular UMAT: Hyperelastic Block with Prony Branches (Finite-Strain Viscoelasticity)",
+  "url": "https://3mah.github.io/simcoon-docs/examples/mechanical/MODUL_hyper_visco.html",
+  "thumbnail": "https://3mah.github.io/simcoon-docs/_images/sphx_glr_MODUL_hyper_visco_thumb.png"
+ },
+ {
+  "library": "simcoon",
+  "section": "Mechanical Constitutive Laws",
+  "title": "Prony Series Viscoelastic Model (Generalized Maxwell)",
+  "url": "https://3mah.github.io/simcoon-docs/examples/mechanical/PRONY_N.html",
+  "thumbnail": "https://3mah.github.io/simcoon-docs/_images/sphx_glr_PRONY_N_thumb.png"
+ },
+ {
+  "library": "simcoon",
+  "section": "Mechanical Constitutive Laws",
+  "title": "Shape Memory Alloy - Superelastic Model",
+  "url": "https://3mah.github.io/simcoon-docs/examples/mechanical/SMA_T.html",
+  "thumbnail": "https://3mah.github.io/simcoon-docs/_images/sphx_glr_SMA_T_thumb.png"
+ },
+ {
+  "library": "simcoon",
+  "section": "Mechanical Constitutive Laws",
+  "title": "Shape Memory Alloy - Transformation and Reorientation",
+  "url": "https://3mah.github.io/simcoon-docs/examples/mechanical/SMA_TR.html",
+  "thumbnail": "https://3mah.github.io/simcoon-docs/_images/sphx_glr_SMA_TR_thumb.png"
+ },
+ {
+  "library": "simcoon",
+  "section": "Mechanical Constitutive Laws",
+  "title": "Zener viscoelastic model",
+  "url": "https://3mah.github.io/simcoon-docs/examples/mechanical/ZENER.html",
+  "thumbnail": "https://3mah.github.io/simcoon-docs/_images/sphx_glr_ZENER_thumb.png"
+ },
+ {
+  "library": "simcoon",
+  "section": "Mechanical Constitutive Laws",
+  "title": "Generalized Zener model (N Kelvin branches)",
+  "url": "https://3mah.github.io/simcoon-docs/examples/mechanical/ZENER_N.html",
+  "thumbnail": "https://3mah.github.io/simcoon-docs/_images/sphx_glr_ZENER_N_thumb.png"
+ },
+ {
+  "library": "simcoon",
+  "section": "Thermomechanical Constitutive Laws",
+  "title": "Isotropic elasticity (thermomechanical)",
+  "url": "https://3mah.github.io/simcoon-docs/examples/thermomechanical/ELISO.html",
+  "thumbnail": "https://3mah.github.io/simcoon-docs/_images/sphx_glr_ELISO_thumb1.png"
+ },
+ {
+  "library": "simcoon",
+  "section": "Thermomechanical Constitutive Laws",
+  "title": "Transversely isotropic elasticity (thermomechanical)",
+  "url": "https://3mah.github.io/simcoon-docs/examples/thermomechanical/ELIST.html",
+  "thumbnail": "https://3mah.github.io/simcoon-docs/_images/sphx_glr_ELIST_thumb1.png"
+ },
+ {
+  "library": "simcoon",
+  "section": "Thermomechanical Constitutive Laws",
+  "title": "Orthotropic elasticity (thermomechanical)",
+  "url": "https://3mah.github.io/simcoon-docs/examples/thermomechanical/ELORT.html",
+  "thumbnail": "https://3mah.github.io/simcoon-docs/_images/sphx_glr_ELORT_thumb1.png"
+ },
+ {
+  "library": "simcoon",
+  "section": "Thermomechanical Constitutive Laws",
+  "title": "Plasticity with isotropic hardening (thermomechanical)",
+  "url": "https://3mah.github.io/simcoon-docs/examples/thermomechanical/EPICP.html",
+  "thumbnail": "https://3mah.github.io/simcoon-docs/_images/sphx_glr_EPICP_thumb1.png"
+ },
+ {
+  "library": "simcoon",
+  "section": "Thermomechanical Constitutive Laws",
+  "title": "Johnson-Cook plasticity with adiabatic self-heating (thermomechanical)",
+  "url": "https://3mah.github.io/simcoon-docs/examples/thermomechanical/EPJCK.html",
+  "thumbnail": "https://3mah.github.io/simcoon-docs/_images/sphx_glr_EPJCK_thumb1.png"
+ },
+ {
+  "library": "simcoon",
+  "section": "Thermomechanical Constitutive Laws",
+  "title": "Plasticity with kinematic hardening (thermomechanical)",
+  "url": "https://3mah.github.io/simcoon-docs/examples/thermomechanical/EPKCP.html",
+  "thumbnail": "https://3mah.github.io/simcoon-docs/_images/sphx_glr_EPKCP_thumb1.png"
+ },
+ {
+  "library": "simcoon",
+  "section": "Thermomechanical Constitutive Laws",
+  "title": "Shape Memory Alloy - Thermomechanical coupling",
+  "url": "https://3mah.github.io/simcoon-docs/examples/thermomechanical/SMA_T.html",
+  "thumbnail": "https://3mah.github.io/simcoon-docs/_images/sphx_glr_SMA_T_thumb1.png"
+ },
+ {
+  "library": "simcoon",
+  "section": "Thermomechanical Constitutive Laws",
+  "title": "Zener viscoelastic model (thermomechanical)",
+  "url": "https://3mah.github.io/simcoon-docs/examples/thermomechanical/ZENER.html",
+  "thumbnail": "https://3mah.github.io/simcoon-docs/_images/sphx_glr_ZENER_thumb1.png"
+ },
+ {
+  "library": "simcoon",
+  "section": "Hyperelasticity",
+  "title": "Anisotropic hyperelasticity - inflation of an arterial layer (HOLZA)",
+  "url": "https://3mah.github.io/simcoon-docs/examples/hyperelasticity/GOH2006_tube_inflation.html",
+  "thumbnail": "https://3mah.github.io/simcoon-docs/_images/sphx_glr_GOH2006_tube_inflation_thumb.png"
+ },
+ {
+  "library": "simcoon",
+  "section": "Hyperelasticity",
+  "title": "Hyperelastic models - use the API",
+  "url": "https://3mah.github.io/simcoon-docs/examples/hyperelasticity/HYPER_numerical.html",
+  "thumbnail": "https://3mah.github.io/simcoon-docs/_images/sphx_glr_HYPER_numerical_thumb.png"
+ },
+ {
+  "library": "simcoon",
+  "section": "Hyperelasticity",
+  "title": "Hyperelastic models - use the umat",
+  "url": "https://3mah.github.io/simcoon-docs/examples/hyperelasticity/HYPER_umat.html",
+  "thumbnail": "https://3mah.github.io/simcoon-docs/_images/sphx_glr_HYPER_umat_thumb.png"
+ },
+ {
+  "library": "simcoon",
+  "section": "Hyperelasticity",
+  "title": "Mooney-Rivlin identification with the MOORI UMAT and the simcoon API",
+  "url": "https://3mah.github.io/simcoon-docs/examples/hyperelasticity/hyperelastic_umat_identification.html",
+  "thumbnail": "https://3mah.github.io/simcoon-docs/_images/sphx_glr_hyperelastic_umat_identification_thumb.png"
+ },
+ {
+  "library": "simcoon",
+  "section": "Continuum Mechanics Examples",
+  "title": "Constitutive Library Examples",
+  "url": "https://3mah.github.io/simcoon-docs/examples/continuum_mechanics/constitutive_relations.html",
+  "thumbnail": "https://3mah.github.io/simcoon-docs/_images/sphx_glr_constitutive_relations_thumb.png"
+ },
+ {
+  "library": "simcoon",
+  "section": "Continuum Mechanics Examples",
+  "title": "A Neo-Hookean material with the Tensor API",
+  "url": "https://3mah.github.io/simcoon-docs/examples/continuum_mechanics/neo_hookean_tensor.html",
+  "thumbnail": "https://3mah.github.io/simcoon-docs/_images/sphx_glr_neo_hookean_tensor_thumb.png"
+ },
+ {
+  "library": "simcoon",
+  "section": "Continuum Mechanics Examples",
+  "title": "Rotation library Examples",
+  "url": "https://3mah.github.io/simcoon-docs/examples/continuum_mechanics/rotation.html",
+  "thumbnail": "https://3mah.github.io/simcoon-docs/_images/sphx_glr_rotation_thumb.png"
+ },
+ {
+  "library": "simcoon",
+  "section": "Continuum Mechanics Examples",
+  "title": "Stress transfer: Cauchy → PKI/PKII/Kirchhoff",
+  "url": "https://3mah.github.io/simcoon-docs/examples/continuum_mechanics/stress_measures.html",
+  "thumbnail": "https://3mah.github.io/simcoon-docs/_images/sphx_glr_stress_measures_thumb.png"
+ },
+ {
+  "library": "simcoon",
+  "section": "Continuum Mechanics Examples",
+  "title": "Stress transfer library examples",
+  "url": "https://3mah.github.io/simcoon-docs/examples/continuum_mechanics/stress_transfer_helpers.html",
+  "thumbnail": "https://3mah.github.io/simcoon-docs/_images/sphx_glr_stress_transfer_helpers_thumb.png"
+ },
+ {
+  "library": "simcoon",
+  "section": "Continuum Mechanics Examples",
+  "title": "Tensor2 and Tensor4 Examples",
+  "url": "https://3mah.github.io/simcoon-docs/examples/continuum_mechanics/tensor.html",
+  "thumbnail": "https://3mah.github.io/simcoon-docs/_images/sphx_glr_tensor_thumb.png"
+ },
+ {
+  "library": "simcoon",
+  "section": "Continuum Mechanics Examples",
+  "title": "The basis of a tensor: frames, convected bases and the metric",
+  "url": "https://3mah.github.io/simcoon-docs/examples/continuum_mechanics/tensor_basis.html",
+  "thumbnail": "https://3mah.github.io/simcoon-docs/_images/sphx_glr_tensor_basis_thumb.png"
+ },
+ {
+  "library": "simcoon",
+  "section": "Continuum Mechanics Examples",
+  "title": "Yield Criteria Examples",
+  "url": "https://3mah.github.io/simcoon-docs/examples/continuum_mechanics/yield_criteria.html",
+  "thumbnail": "https://3mah.github.io/simcoon-docs/_images/sphx_glr_yield_criteria_thumb.png"
+ },
+ {
+  "library": "simcoon",
+  "section": "Analysis and processing examples",
+  "title": "Increment size convergence study",
+  "url": "https://3mah.github.io/simcoon-docs/examples/analysis/convergence_study.html",
+  "thumbnail": "https://3mah.github.io/simcoon-docs/_images/sphx_glr_convergence_study_thumb.png"
+ },
+ {
+  "library": "simcoon",
+  "section": "Analysis and processing examples",
+  "title": "Effective properties of a cubic material",
+  "url": "https://3mah.github.io/simcoon-docs/examples/analysis/directional_stiffness.html",
+  "thumbnail": "https://3mah.github.io/simcoon-docs/_images/sphx_glr_directional_stiffness_thumb.png"
+ },
+ {
+  "library": "simcoon",
+  "section": "Analysis and processing examples",
+  "title": "Numerical vs Analytical Eshelby Tensor Comparison",
+  "url": "https://3mah.github.io/simcoon-docs/examples/analysis/eshelby_numerical_vs_analytical.html",
+  "thumbnail": "https://3mah.github.io/simcoon-docs/_images/sphx_glr_eshelby_numerical_vs_analytical_thumb.png"
+ },
+ {
+  "library": "simcoon",
+  "section": "Analysis and processing examples",
+  "title": "Parameter Identification for Mooney-Rivlin Hyperelastic Material",
+  "url": "https://3mah.github.io/simcoon-docs/examples/analysis/hyperelastic_parameter_identification.html",
+  "thumbnail": "https://3mah.github.io/simcoon-docs/_images/sphx_glr_hyperelastic_parameter_identification_thumb.png"
+ },
+ {
+  "library": "simcoon",
+  "section": "Analysis and processing examples",
+  "title": "Comparison of objective rates",
+  "url": "https://3mah.github.io/simcoon-docs/examples/analysis/objective_rates.html",
+  "thumbnail": "https://3mah.github.io/simcoon-docs/_images/sphx_glr_objective_rates_thumb.png"
+ },
+ {
+  "library": "simcoon",
+  "section": "Heterogeneous materials simulation",
+  "title": "Composite Parameter Identification using Mori-Tanaka and Self-Consistent",
+  "url": "https://3mah.github.io/simcoon-docs/examples/heterogeneous/composite_parameter_identification.html",
+  "thumbnail": "https://3mah.github.io/simcoon-docs/_images/sphx_glr_composite_parameter_identification_thumb.png"
+ },
+ {
+  "library": "simcoon",
+  "section": "Heterogeneous materials simulation",
+  "title": "Micromechanics Examples",
+  "url": "https://3mah.github.io/simcoon-docs/examples/heterogeneous/effective_props.html",
+  "thumbnail": "https://3mah.github.io/simcoon-docs/_images/sphx_glr_effective_props_thumb.png"
+ },
+ {
+  "library": "simcoon",
+  "section": "Heterogeneous materials simulation",
+  "title": "Eshelby Tensor Examples",
+  "url": "https://3mah.github.io/simcoon-docs/examples/heterogeneous/eshelby_tensors.html",
+  "thumbnail": "https://3mah.github.io/simcoon-docs/_images/sphx_glr_eshelby_tensors_thumb.png"
+ },
+ {
+  "library": "simcoon",
+  "section": "Heterogeneous materials simulation",
+  "title": "2 phase composite homogenization example",
+  "url": "https://3mah.github.io/simcoon-docs/examples/heterogeneous/homogenization.html",
+  "thumbnail": "https://3mah.github.io/simcoon-docs/_images/sphx_glr_homogenization_thumb.png"
+ },
+ {
+  "library": "simcoon",
+  "section": "Parameter identification examples",
+  "title": "Chaboche Cyclic Plasticity Identification",
+  "url": "https://3mah.github.io/simcoon-docs/examples/identification/chaboche_cyclic_identification.html",
+  "thumbnail": "https://3mah.github.io/simcoon-docs/_images/sphx_glr_chaboche_cyclic_identification_thumb.png"
+ },
+ {
+  "library": "simcoon",
+  "section": "Parameter identification examples",
+  "title": "Identification through keys in a JSON material file",
+  "url": "https://3mah.github.io/simcoon-docs/examples/identification/json_keys_identification.html",
+  "thumbnail": "https://3mah.github.io/simcoon-docs/_images/sphx_glr_json_keys_identification_thumb.png"
+ },
+ {
+  "library": "simcoon",
+  "section": "Python and machine-learning constitutive laws",
+  "title": "J2 plasticity written in Python (PYEXT)",
+  "url": "https://3mah.github.io/simcoon-docs/examples/ml/pyumat_numpy_j2.html",
+  "thumbnail": "https://3mah.github.io/simcoon-docs/_images/sphx_glr_pyumat_numpy_j2_thumb.png"
+ },
+ {
+  "library": "fedoo",
+  "section": "Basic examples",
+  "title": "Cantilever beam with beam elements",
+  "url": "https://3mah.github.io/fedoo-docs/stable/examples/basic/beam_elements_cantilever.html",
+  "thumbnail": "https://3mah.github.io/fedoo-docs/stable/_images/sphx_glr_beam_elements_cantilever_thumb.png"
+ },
+ {
+  "library": "fedoo",
+  "section": "Basic examples",
+  "title": "Cantilever beam using 3D hexahedral elements",
+  "url": "https://3mah.github.io/fedoo-docs/stable/examples/basic/cantilever_beam_3d.html",
+  "thumbnail": "https://3mah.github.io/fedoo-docs/stable/_images/sphx_glr_cantilever_beam_3d_thumb.png"
+ },
+ {
+  "library": "fedoo",
+  "section": "Basic examples",
+  "title": "3D cantilever beam with geometric nonlinearities",
+  "url": "https://3mah.github.io/fedoo-docs/stable/examples/basic/cantilever_beam_3d_nlgeom.html",
+  "thumbnail": "https://3mah.github.io/fedoo-docs/stable/_images/sphx_glr_cantilever_beam_3d_nlgeom_thumb.png"
+ },
+ {
+  "library": "fedoo",
+  "section": "Basic examples",
+  "title": "Three-point bending of an I-shaped beam",
+  "url": "https://3mah.github.io/fedoo-docs/stable/examples/basic/i_beam_three_point_bending.html",
+  "thumbnail": "https://3mah.github.io/fedoo-docs/stable/_images/sphx_glr_i_beam_three_point_bending_thumb.png"
+ },
+ {
+  "library": "fedoo",
+  "section": "Basic examples",
+  "title": "Beam lattice structure using a beam model with geometric nonlinearities",
+  "url": "https://3mah.github.io/fedoo-docs/stable/examples/basic/lattice_beam.html",
+  "thumbnail": "https://3mah.github.io/fedoo-docs/stable/_images/sphx_glr_lattice_beam_thumb.png"
+ },
+ {
+  "library": "fedoo",
+  "section": "Basic examples",
+  "title": "Linear buckling of a pinned beam",
+  "url": "https://3mah.github.io/fedoo-docs/stable/examples/basic/linear_buckling.html",
+  "thumbnail": "https://3mah.github.io/fedoo-docs/stable/_images/sphx_glr_linear_buckling_thumb.png"
+ },
+ {
+  "library": "fedoo",
+  "section": "Basic examples",
+  "title": "Free vibration of a clamped square plate",
+  "url": "https://3mah.github.io/fedoo-docs/stable/examples/basic/modal_analysis.html",
+  "thumbnail": "https://3mah.github.io/fedoo-docs/stable/_images/sphx_glr_modal_analysis_thumb.png"
+ },
+ {
+  "library": "fedoo",
+  "section": "Basic examples",
+  "title": "2D plate with hole in tension",
+  "url": "https://3mah.github.io/fedoo-docs/stable/examples/basic/plate_with_hole_tension.html",
+  "thumbnail": "https://3mah.github.io/fedoo-docs/stable/_images/sphx_glr_plate_with_hole_tension_thumb.png"
+ },
+ {
+  "library": "fedoo",
+  "section": "Basic examples",
+  "title": "Define and solve user equation",
+  "url": "https://3mah.github.io/fedoo-docs/stable/examples/basic/poisson_eq.html",
+  "thumbnail": "https://3mah.github.io/fedoo-docs/stable/_images/sphx_glr_poisson_eq_thumb.png"
+ },
+ {
+  "library": "fedoo",
+  "section": "Basic examples",
+  "title": "Creating simple meshes and swept geometries",
+  "url": "https://3mah.github.io/fedoo-docs/stable/examples/basic/simple_mesh_generation.html",
+  "thumbnail": "https://3mah.github.io/fedoo-docs/stable/_images/sphx_glr_simple_mesh_generation_thumb.png"
+ },
+ {
+  "library": "fedoo",
+  "section": "Basic examples",
+  "title": "Compression of a ping-pong ball",
+  "url": "https://3mah.github.io/fedoo-docs/stable/examples/basic/spherical_shell_compression.html",
+  "thumbnail": "https://3mah.github.io/fedoo-docs/stable/_images/sphx_glr_spherical_shell_compression_thumb.png"
+ },
+ {
+  "library": "fedoo",
+  "section": "Basic examples",
+  "title": "Visualization tutorial: shear test of a cube",
+  "url": "https://3mah.github.io/fedoo-docs/stable/examples/basic/visualization.html",
+  "thumbnail": "https://3mah.github.io/fedoo-docs/stable/_images/sphx_glr_visualization_thumb.png"
+ },
+ {
+  "library": "fedoo",
+  "section": "Boundary conditions and constraints",
+  "title": "Mean motion torsion",
+  "url": "https://3mah.github.io/fedoo-docs/stable/examples/boundary_conditions/mean_rigid_motion_torsion.html",
+  "thumbnail": "https://3mah.github.io/fedoo-docs/stable/_images/sphx_glr_mean_rigid_motion_torsion_thumb.png"
+ },
+ {
+  "library": "fedoo",
+  "section": "Boundary conditions and constraints",
+  "title": "Analysis and visualization of a multi-mesh model",
+  "url": "https://3mah.github.io/fedoo-docs/stable/examples/boundary_conditions/multi_mesh_example.html",
+  "thumbnail": "https://3mah.github.io/fedoo-docs/stable/_images/sphx_glr_multi_mesh_example_thumb.png"
+ },
+ {
+  "library": "fedoo",
+  "section": "Boundary conditions and constraints",
+  "title": "2D periodic boundary condition",
+  "url": "https://3mah.github.io/fedoo-docs/stable/examples/boundary_conditions/periodic_bc_2d_plate_with_hole.html",
+  "thumbnail": "https://3mah.github.io/fedoo-docs/stable/_images/sphx_glr_periodic_bc_2d_plate_with_hole_thumb.png"
+ },
+ {
+  "library": "fedoo",
+  "section": "Boundary conditions and constraints",
+  "title": "Off-axis tensile test on a gyroid unit cell with periodic boundary conditions",
+  "url": "https://3mah.github.io/fedoo-docs/stable/examples/boundary_conditions/periodic_bc_3d_gyroid_off_axis.html",
+  "thumbnail": "https://3mah.github.io/fedoo-docs/stable/_images/sphx_glr_periodic_bc_3d_gyroid_off_axis_thumb.png"
+ },
+ {
+  "library": "fedoo",
+  "section": "Boundary conditions and constraints",
+  "title": "In-plane periodic boundary conditions on a woven composite ply",
+  "url": "https://3mah.github.io/fedoo-docs/stable/examples/boundary_conditions/periodic_bc_composite_ply.html",
+  "thumbnail": "https://3mah.github.io/fedoo-docs/stable/_images/sphx_glr_periodic_bc_composite_ply_thumb.png"
+ },
+ {
+  "library": "fedoo",
+  "section": "Boundary conditions and constraints",
+  "title": "Periodic BC without node pinning: mean displacement constraint",
+  "url": "https://3mah.github.io/fedoo-docs/stable/examples/boundary_conditions/periodic_bc_mean_disp_constraint.html",
+  "thumbnail": "https://3mah.github.io/fedoo-docs/stable/_images/sphx_glr_periodic_bc_mean_disp_constraint_thumb.png"
+ },
+ {
+  "library": "fedoo",
+  "section": "Boundary conditions and constraints",
+  "title": "Pressure constraint",
+  "url": "https://3mah.github.io/fedoo-docs/stable/examples/boundary_conditions/pressurized_pipe.html",
+  "thumbnail": "https://3mah.github.io/fedoo-docs/stable/_images/sphx_glr_pressurized_pipe_thumb.png"
+ },
+ {
+  "library": "fedoo",
+  "section": "Boundary conditions and constraints",
+  "title": "Rigid tie constraint",
+  "url": "https://3mah.github.io/fedoo-docs/stable/examples/boundary_conditions/rigid_tie.html",
+  "thumbnail": "https://3mah.github.io/fedoo-docs/stable/_images/sphx_glr_rigid_tie_thumb.png"
+ },
+ {
+  "library": "fedoo",
+  "section": "Contact and interfaces",
+  "title": "Composite double-cantilever beam with a cohesive interface",
+  "url": "https://3mah.github.io/fedoo-docs/stable/examples/contact/cohesive_dcb_3d.html",
+  "thumbnail": "https://3mah.github.io/fedoo-docs/stable/_images/sphx_glr_cohesive_dcb_3d_thumb.png"
+ },
+ {
+  "library": "fedoo",
+  "section": "Contact and interfaces",
+  "title": "Hertz axisymmetric contact benchmark: rigid sphere on elastic half-space",
+  "url": "https://3mah.github.io/fedoo-docs/stable/examples/contact/hertz_axisymmetric.html",
+  "thumbnail": "https://3mah.github.io/fedoo-docs/stable/_images/sphx_glr_hertz_axisymmetric_thumb.png"
+ },
+ {
+  "library": "fedoo",
+  "section": "Contact and interfaces",
+  "title": "Disk-rectangle contact (2D, IPC method)",
+  "url": "https://3mah.github.io/fedoo-docs/stable/examples/contact/ipc_disk_rectangle.html",
+  "thumbnail": "https://3mah.github.io/fedoo-docs/stable/_images/sphx_glr_ipc_disk_rectangle_thumb.png"
+ },
+ {
+  "library": "fedoo",
+  "section": "Contact and interfaces",
+  "title": "Gyroid self-contact under compression (3D, IPC method)",
+  "url": "https://3mah.github.io/fedoo-docs/stable/examples/contact/ipc_gyroid_compression.html",
+  "thumbnail": "https://3mah.github.io/fedoo-docs/media/examples/contact/ipc_gyroid_compression.png"
+ },
+ {
+  "library": "fedoo",
+  "section": "Contact and interfaces",
+  "title": "Gyroid compression with periodic BCs (3D, IPC method)",
+  "url": "https://3mah.github.io/fedoo-docs/stable/examples/contact/ipc_gyroid_compression_periodic.html",
+  "thumbnail": "https://3mah.github.io/fedoo-docs/media/examples/contact/ipc_gyroid_compression_periodic.png"
+ },
+ {
+  "library": "fedoo",
+  "section": "Contact and interfaces",
+  "title": "Elasto-plastic gyroid self-contact under compression (3D, IPC method)",
+  "url": "https://3mah.github.io/fedoo-docs/stable/examples/contact/ipc_gyroid_compression_plastic.html",
+  "thumbnail": "https://3mah.github.io/fedoo-docs/media/examples/contact/ipc_gyroid_compression_plastic.png"
+ },
+ {
+  "library": "fedoo",
+  "section": "Contact and interfaces",
+  "title": "Disk indentation (2D plane strain) — IPC contact with Hertz comparison",
+  "url": "https://3mah.github.io/fedoo-docs/stable/examples/contact/ipc_indentation_2d.html",
+  "thumbnail": "https://3mah.github.io/fedoo-docs/stable/_images/sphx_glr_ipc_indentation_2d_thumb.png"
+ },
+ {
+  "library": "fedoo",
+  "section": "Contact and interfaces",
+  "title": "Sphere indentation (3D) — IPC contact with Hertz comparison",
+  "url": "https://3mah.github.io/fedoo-docs/stable/examples/contact/ipc_indentation_3d.html",
+  "thumbnail": "https://3mah.github.io/fedoo-docs/media/examples/contact/ipc_indentation_3d.png"
+ },
+ {
+  "library": "fedoo",
+  "section": "Contact and interfaces",
+  "title": "Hemispherical punch indentation (3D, IPC method)",
+  "url": "https://3mah.github.io/fedoo-docs/stable/examples/contact/ipc_punch_indentation.html",
+  "thumbnail": "https://3mah.github.io/fedoo-docs/media/examples/contact/ipc_punch_indentation.png"
+ },
+ {
+  "library": "fedoo",
+  "section": "Contact and interfaces",
+  "title": "Self-contact — hole plate compression (2D, IPC method)",
+  "url": "https://3mah.github.io/fedoo-docs/stable/examples/contact/ipc_self_contact.html",
+  "thumbnail": "https://3mah.github.io/fedoo-docs/stable/_images/sphx_glr_ipc_self_contact_thumb.png"
+ },
+ {
+  "library": "fedoo",
+  "section": "Contact and interfaces",
+  "title": "Tube compression (2Daxi): IPC versus penalty self-contact",
+  "url": "https://3mah.github.io/fedoo-docs/stable/examples/contact/ipc_tube_compression.html",
+  "thumbnail": "https://3mah.github.io/fedoo-docs/media/examples/contact/ipc_tube_compression.png"
+ },
+ {
+  "library": "fedoo",
+  "section": "Contact and interfaces",
+  "title": "Disk-rectangle contact (2D, penalty method)",
+  "url": "https://3mah.github.io/fedoo-docs/stable/examples/contact/penalty_disk_rectangle.html",
+  "thumbnail": "https://3mah.github.io/fedoo-docs/stable/_images/sphx_glr_penalty_disk_rectangle_thumb.png"
+ },
+ {
+  "library": "fedoo",
+  "section": "Contact and interfaces",
+  "title": "Self-contact — hole plate compression (2D, penalty method)",
+  "url": "https://3mah.github.io/fedoo-docs/stable/examples/contact/penalty_self_contact.html",
+  "thumbnail": "https://3mah.github.io/fedoo-docs/stable/_images/sphx_glr_penalty_self_contact_thumb.png"
+ },
+ {
+  "library": "fedoo",
+  "section": "Contact and interfaces",
+  "title": "Compression of a tube using 2D axisymmetric model",
+  "url": "https://3mah.github.io/fedoo-docs/stable/examples/contact/tube_compression.html",
+  "thumbnail": "https://3mah.github.io/fedoo-docs/media/examples/contact/tube_compression.png"
+ },
+ {
+  "library": "fedoo",
+  "section": "Contact and interfaces",
+  "title": "Westergaard sinusoidal contact benchmark: IPC vs penalty",
+  "url": "https://3mah.github.io/fedoo-docs/stable/examples/contact/westergaard_sinusoidal.html",
+  "thumbnail": "https://3mah.github.io/fedoo-docs/stable/_images/sphx_glr_westergaard_sinusoidal_thumb.png"
+ },
+ {
+  "library": "fedoo",
+  "section": "Finite strain",
+  "title": "Nearly incompressible plasticity: four element formulations",
+  "url": "https://3mah.github.io/fedoo-docs/stable/examples/finite_strain/incompressibility_comparison.html",
+  "thumbnail": "https://3mah.github.io/fedoo-docs/stable/_images/sphx_glr_incompressibility_comparison_thumb.png"
+ },
+ {
+  "library": "fedoo",
+  "section": "Finite strain",
+  "title": "Finite-strain Neo-Hookean cantilever (rigid cap, force and displacement control)",
+  "url": "https://3mah.github.io/fedoo-docs/stable/examples/finite_strain/neohookean_cantilever.html",
+  "thumbnail": "https://3mah.github.io/fedoo-docs/stable/_images/sphx_glr_neohookean_cantilever_thumb.png"
+ },
+ {
+  "library": "fedoo",
+  "section": "Finite strain",
+  "title": "Snap-through of a compressed Neo-Hookean blade (static vs implicit dynamics)",
+  "url": "https://3mah.github.io/fedoo-docs/stable/examples/finite_strain/neohookean_snap_through.html",
+  "thumbnail": "https://3mah.github.io/fedoo-docs/stable/_images/sphx_glr_neohookean_snap_through_thumb.png"
+ },
+ {
+  "library": "fedoo",
+  "section": "Finite strain",
+  "title": "Large rigid rotation: objectivity check of the finite-strain update",
+  "url": "https://3mah.github.io/fedoo-docs/stable/examples/finite_strain/rotation_test.html",
+  "thumbnail": "https://3mah.github.io/fedoo-docs/stable/_images/sphx_glr_rotation_test_thumb.png"
+ },
+ {
+  "library": "fedoo",
+  "section": "Finite strain",
+  "title": "Plastic simple shear: total against updated Lagrangian",
+  "url": "https://3mah.github.io/fedoo-docs/stable/examples/finite_strain/shear_tl_vs_ul.html",
+  "thumbnail": "https://3mah.github.io/fedoo-docs/stable/_images/sphx_glr_shear_tl_vs_ul_thumb.png"
+ },
+ {
+  "library": "fedoo",
+  "section": "Plasticity",
+  "title": "Matrix with a stiff inclusion: three ways to assign materials",
+  "url": "https://3mah.github.io/fedoo-docs/stable/examples/plasticity/heterogeneous_struct.html",
+  "thumbnail": "https://3mah.github.io/fedoo-docs/stable/_images/sphx_glr_heterogeneous_struct_thumb.png"
+ },
+ {
+  "library": "fedoo",
+  "section": "Plasticity",
+  "title": "Elastoplastic matrix with an elastic inclusion (Heterogeneous law)",
+  "url": "https://3mah.github.io/fedoo-docs/stable/examples/plasticity/heterogeneous_struct_nl.html",
+  "thumbnail": "https://3mah.github.io/fedoo-docs/media/examples/plasticity/heterogeneous_struct_nl.png"
+ },
+ {
+  "library": "fedoo",
+  "section": "Plasticity",
+  "title": "2D elastoplastic three-point bending (Simcoon EPICP)",
+  "url": "https://3mah.github.io/fedoo-docs/stable/examples/plasticity/plastic_bending_2d.html",
+  "thumbnail": "https://3mah.github.io/fedoo-docs/media/examples/plasticity/plastic_bending_2d.png"
+ },
+ {
+  "library": "fedoo",
+  "section": "Plasticity",
+  "title": "2D elastoplastic three-point bending written from low-level operators",
+  "url": "https://3mah.github.io/fedoo-docs/stable/examples/plasticity/plastic_bending_2d_from_scratch.html",
+  "thumbnail": "https://3mah.github.io/fedoo-docs/stable/_images/sphx_glr_plastic_bending_2d_from_scratch_thumb.png"
+ },
+ {
+  "library": "fedoo",
+  "section": "Plasticity",
+  "title": "3D elastoplastic three-point bending",
+  "url": "https://3mah.github.io/fedoo-docs/stable/examples/plasticity/plastic_bending_3d.html",
+  "thumbnail": "https://3mah.github.io/fedoo-docs/media/examples/plasticity/plastic_bending_3d.png"
+ },
+ {
+  "library": "fedoo",
+  "section": "Plasticity",
+  "title": "Elastoplastic simple shear of a cube (finite strain, UL)",
+  "url": "https://3mah.github.io/fedoo-docs/stable/examples/plasticity/shear_test.html",
+  "thumbnail": "https://3mah.github.io/fedoo-docs/media/examples/plasticity/shear_test.png"
+ },
+ {
+  "library": "fedoo",
+  "section": "Plasticity",
+  "title": "Large torsion of a cube (finite strain, UL)",
+  "url": "https://3mah.github.io/fedoo-docs/stable/examples/plasticity/torsion_test.html",
+  "thumbnail": "https://3mah.github.io/fedoo-docs/media/examples/plasticity/torsion_test.png"
+ },
+ {
+  "library": "fedoo",
+  "section": "Shells and plates",
+  "title": "Laminated plate cantilever (ShellLaminate)",
+  "url": "https://3mah.github.io/fedoo-docs/stable/examples/shells/laminate_cantilever.html",
+  "thumbnail": "https://3mah.github.io/fedoo-docs/stable/_images/sphx_glr_laminate_cantilever_thumb.png"
+ },
+ {
+  "library": "fedoo",
+  "section": "Shells and plates",
+  "title": "Plate elements on a cantilever: comparison with beam theory",
+  "url": "https://3mah.github.io/fedoo-docs/stable/examples/shells/plate_elements_cantilever.html",
+  "thumbnail": "https://3mah.github.io/fedoo-docs/stable/_images/sphx_glr_plate_elements_cantilever_thumb.png"
+ },
+ {
+  "library": "fedoo",
+  "section": "Shells and plates",
+  "title": "Elastoplastic compression of a ping-pong ball",
+  "url": "https://3mah.github.io/fedoo-docs/stable/examples/shells/spherical_shell_compression_plastic.html",
+  "thumbnail": "https://3mah.github.io/fedoo-docs/stable/_images/sphx_glr_spherical_shell_compression_plastic_thumb.png"
+ },
+ {
+  "library": "fedoo",
+  "section": "Dynamics and rigid bodies",
+  "title": "Dynamic crack propagation by node release in a pre-strained strip",
+  "url": "https://3mah.github.io/fedoo-docs/stable/examples/dynamics/broberg_dynamic_crack.html",
+  "thumbnail": "https://3mah.github.io/fedoo-docs/media/examples/dynamics/broberg_dynamic_crack.png"
+ },
+ {
+  "library": "fedoo",
+  "section": "Dynamics and rigid bodies",
+  "title": "Shell ping-pong ball dropped on a solid plate (dynamic MultiMesh, IPC)",
+  "url": "https://3mah.github.io/fedoo-docs/stable/examples/dynamics/multi_mesh_dynamic_contact.html",
+  "thumbnail": "https://3mah.github.io/fedoo-docs/media/examples/dynamics/multi_mesh_dynamic_contact.png"
+ },
+ {
+  "library": "fedoo",
+  "section": "Dynamics and rigid bodies",
+  "title": "Rigid-body bounce with IPC contact",
+  "url": "https://3mah.github.io/fedoo-docs/stable/examples/dynamics/rigid_body_bounce.html",
+  "thumbnail": "https://3mah.github.io/fedoo-docs/stable/_images/sphx_glr_rigid_body_bounce_thumb.gif"
+ },
+ {
+  "library": "fedoo",
+  "section": "Dynamics and rigid bodies",
+  "title": "Rigid sphere bouncing on an analytic plane (IPC, Rayleigh damping)",
+  "url": "https://3mah.github.io/fedoo-docs/stable/examples/dynamics/rigid_body_bounce_ipc.html",
+  "thumbnail": "https://3mah.github.io/fedoo-docs/media/examples/dynamics/rigid_body_bounce_ipc.png"
+ },
+ {
+  "library": "fedoo",
+  "section": "Dynamics and rigid bodies",
+  "title": "Rigid Stanford bunny tumbling on a plane (IPC)",
+  "url": "https://3mah.github.io/fedoo-docs/stable/examples/dynamics/rigid_body_bunny_bounce.html",
+  "thumbnail": "https://3mah.github.io/fedoo-docs/media/examples/dynamics/rigid_body_bunny_bounce.png"
+ },
+ {
+  "library": "fedoo",
+  "section": "Dynamics and rigid bodies",
+  "title": "Rigid cow tumbling on a plane (IPC, non-convex body)",
+  "url": "https://3mah.github.io/fedoo-docs/stable/examples/dynamics/rigid_body_cow_bounce.html",
+  "thumbnail": "https://3mah.github.io/fedoo-docs/media/examples/dynamics/rigid_body_cow_bounce.png"
+ },
+ {
+  "library": "fedoo",
+  "section": "Dynamics and rigid bodies",
+  "title": "Rigid-body free fall: validation of the time integration",
+  "url": "https://3mah.github.io/fedoo-docs/stable/examples/dynamics/rigid_body_freefall.html",
+  "thumbnail": "https://3mah.github.io/fedoo-docs/stable/_images/sphx_glr_rigid_body_freefall_thumb.png"
+ },
+ {
+  "library": "fedoo",
+  "section": "Thermal and thermomechanical problems",
+  "title": "Transient heat conduction in a 2D square",
+  "url": "https://3mah.github.io/fedoo-docs/stable/examples/thermal/thermal_conduction_2d.html",
+  "thumbnail": "https://3mah.github.io/fedoo-docs/stable/_images/sphx_glr_thermal_conduction_2d_thumb.png"
+ },
+ {
+  "library": "fedoo",
+  "section": "Thermal and thermomechanical problems",
+  "title": "Transient heat conduction in a gyroid lattice",
+  "url": "https://3mah.github.io/fedoo-docs/stable/examples/thermal/thermal_conduction_3d.html",
+  "thumbnail": "https://3mah.github.io/fedoo-docs/stable/_images/sphx_glr_thermal_conduction_3d_thumb.png"
+ },
+ {
+  "library": "fedoo",
+  "section": "Thermal and thermomechanical problems",
+  "title": "Heterogeneous material: inclusion in a matrix under thermal loading",
+  "url": "https://3mah.github.io/fedoo-docs/stable/examples/thermal/thermal_loading.html",
+  "thumbnail": "https://3mah.github.io/fedoo-docs/stable/_images/sphx_glr_thermal_loading_thumb.png"
+ },
+ {
+  "library": "fedoo",
+  "section": "Thermal and thermomechanical problems",
+  "title": "Weakly coupled thermo-mechanical analysis of a gyroid lattice",
+  "url": "https://3mah.github.io/fedoo-docs/stable/examples/thermal/thermomechanical_weak_coupling_3d.html",
+  "thumbnail": "https://3mah.github.io/fedoo-docs/media/examples/thermal/thermomechanical_weak_coupling_3d.png"
+ },
+ {
+  "library": "fedoo",
+  "section": "Poromechanics",
+  "title": "Finite strain consolidation of a hyperelastic porous column",
+  "url": "https://3mah.github.io/fedoo-docs/stable/examples/poromechanics/finite_strain_consolidation.html",
+  "thumbnail": "https://3mah.github.io/fedoo-docs/stable/_images/sphx_glr_finite_strain_consolidation_thumb.png"
+ },
+ {
+  "library": "fedoo",
+  "section": "Poromechanics",
+  "title": "Indentation of a hyperelastic soft tissue: fluid exudation",
+  "url": "https://3mah.github.io/fedoo-docs/stable/examples/poromechanics/indentation_soft_tissue.html",
+  "thumbnail": "https://3mah.github.io/fedoo-docs/stable/_images/sphx_glr_indentation_soft_tissue_thumb.png"
+ },
+ {
+  "library": "fedoo",
+  "section": "Poromechanics",
+  "title": "Inf-sup (LBB) stable elements: Taylor-Hood interpolation",
+  "url": "https://3mah.github.io/fedoo-docs/stable/examples/poromechanics/taylor_hood_lbb.html",
+  "thumbnail": "https://3mah.github.io/fedoo-docs/stable/_images/sphx_glr_taylor_hood_lbb_thumb.png"
+ },
+ {
+  "library": "fedoo",
+  "section": "Poromechanics",
+  "title": "Terzaghi 1D consolidation (small strain)",
+  "url": "https://3mah.github.io/fedoo-docs/stable/examples/poromechanics/terzaghi_1d.html",
+  "thumbnail": "https://3mah.github.io/fedoo-docs/stable/_images/sphx_glr_terzaghi_1d_thumb.png"
+ },
+ {
+  "library": "fedoo",
+  "section": "Custom weak forms",
+  "title": "Stokes flow around a cylinder with a user-defined weak form",
+  "url": "https://3mah.github.io/fedoo-docs/stable/examples/custom_weak_forms/fluid_mechanics.html",
+  "thumbnail": "https://3mah.github.io/fedoo-docs/stable/_images/sphx_glr_fluid_mechanics_thumb.png"
+ },
+ {
+  "library": "fedoo",
+  "section": "Custom weak forms",
+  "title": "Transient Navier-Stokes flow around a cylinder with a user weak-form class",
+  "url": "https://3mah.github.io/fedoo-docs/stable/examples/custom_weak_forms/navier_stokes.html",
+  "thumbnail": "https://3mah.github.io/fedoo-docs/stable/_images/sphx_glr_navier_stokes_thumb.png"
+ },
+ {
+  "library": "fedoo",
+  "section": "Custom weak forms",
+  "title": "Lid-driven cavity (Stokes flow) with a user-defined weak form",
+  "url": "https://3mah.github.io/fedoo-docs/stable/examples/custom_weak_forms/recirculating_flow.html",
+  "thumbnail": "https://3mah.github.io/fedoo-docs/stable/_images/sphx_glr_recirculating_flow_thumb.png"
+ },
+ {
+  "library": "fedoo",
+  "section": "Homogenization",
+  "title": "FE2 multiscale analysis of a plate with a hole (octet-truss unit cell)",
+  "url": "https://3mah.github.io/fedoo-docs/stable/examples/homogenization/fe2_plate_with_hole.html",
+  "thumbnail": "https://3mah.github.io/fedoo-docs/media/examples/homogenization/fe2_plate_with_hole.png"
+ },
+ {
+  "library": "fedoo",
+  "section": "Homogenization",
+  "title": "Non-periodic homogenization with microgen",
+  "url": "https://3mah.github.io/fedoo-docs/stable/examples/homogenization/non_periodic_homogenization.html",
+  "thumbnail": "https://3mah.github.io/fedoo-docs/stable/_images/sphx_glr_non_periodic_homogenization_thumb.png"
+ },
+ {
+  "library": "fedoo",
+  "section": "Homogenization",
+  "title": "Homogenized elastic stiffness of periodic unit cells",
+  "url": "https://3mah.github.io/fedoo-docs/stable/examples/homogenization/periodic_homogenization.html",
+  "thumbnail": "https://3mah.github.io/fedoo-docs/stable/_images/sphx_glr_periodic_homogenization_thumb.png"
+ },
+ {
+  "library": "fedoo",
+  "section": "Homogenization",
+  "title": "Homogenized stiffness of a periodic cell from low-level operators",
+  "url": "https://3mah.github.io/fedoo-docs/stable/examples/homogenization/periodic_homogenization_from_scratch.html",
+  "thumbnail": "https://3mah.github.io/fedoo-docs/stable/_images/sphx_glr_periodic_homogenization_from_scratch_thumb.png"
+ },
+ {
+  "library": "fedoo",
+  "section": "Meshing",
+  "title": "Nodal Hessian recovery on a fedoo mesh",
+  "url": "https://3mah.github.io/fedoo-docs/stable/examples/mesh/hessian_recovery.html",
+  "thumbnail": "https://3mah.github.io/fedoo-docs/stable/_images/sphx_glr_hessian_recovery_thumb.png"
+ },
+ {
+  "library": "microgen",
+  "section": "Basic shapes",
+  "title": "Platonic solids",
+  "url": "https://3mah.github.io/microgen-docs/examples/BasicShapes/platonic_solids.html",
+  "thumbnail": "https://3mah.github.io/microgen-docs/_images/sphx_glr_platonic_solids_thumb.png"
+ },
+ {
+  "library": "microgen",
+  "section": "Basic shapes",
+  "title": "Basic shapes",
+  "url": "https://3mah.github.io/microgen-docs/examples/BasicShapes/shapes.html",
+  "thumbnail": "https://3mah.github.io/microgen-docs/_images/sphx_glr_shapes_thumb.png"
+ },
+ {
+  "library": "microgen",
+  "section": "Triply periodic minimal surfaces (TPMS)",
+  "title": "Spherical, cylindrical and swept frames",
+  "url": "https://3mah.github.io/microgen-docs/examples/TPMS/coordinate_frames.html",
+  "thumbnail": "https://3mah.github.io/microgen-docs/_images/sphx_glr_coordinate_frames_thumb.png"
+ },
+ {
+  "library": "microgen",
+  "section": "Triply periodic minimal surfaces (TPMS)",
+  "title": "Cylindrical gyroid",
+  "url": "https://3mah.github.io/microgen-docs/examples/TPMS/cylindrical.html",
+  "thumbnail": "https://3mah.github.io/microgen-docs/_images/sphx_glr_cylindrical_thumb.png"
+ },
+ {
+  "library": "microgen",
+  "section": "Triply periodic minimal surfaces (TPMS)",
+  "title": "Radially graded cylindrical gyroid",
+  "url": "https://3mah.github.io/microgen-docs/examples/TPMS/cylindrical_graded.html",
+  "thumbnail": "https://3mah.github.io/microgen-docs/_images/sphx_glr_cylindrical_graded_thumb.png"
+ },
+ {
+  "library": "microgen",
+  "section": "Triply periodic minimal surfaces (TPMS)",
+  "title": "Rotated cylindrical gyroid",
+  "url": "https://3mah.github.io/microgen-docs/examples/TPMS/cylindrical_rotated.html",
+  "thumbnail": "https://3mah.github.io/microgen-docs/_images/sphx_glr_cylindrical_rotated_thumb.png"
+ },
+ {
+  "library": "microgen",
+  "section": "Triply periodic minimal surfaces (TPMS)",
+  "title": "Fischer-Koch S surface",
+  "url": "https://3mah.github.io/microgen-docs/examples/TPMS/fischer_koch_s.html",
+  "thumbnail": "https://3mah.github.io/microgen-docs/_images/sphx_glr_fischer_koch_s_thumb.png"
+ },
+ {
+  "library": "microgen",
+  "section": "Triply periodic minimal surfaces (TPMS)",
+  "title": "Cell size grading",
+  "url": "https://3mah.github.io/microgen-docs/examples/TPMS/graded_cell_size.html",
+  "thumbnail": "https://3mah.github.io/microgen-docs/_images/sphx_glr_graded_cell_size_thumb.png"
+ },
+ {
+  "library": "microgen",
+  "section": "Triply periodic minimal surfaces (TPMS)",
+  "title": "Morphing between TPMS types",
+  "url": "https://3mah.github.io/microgen-docs/examples/TPMS/graded_cell_type.html",
+  "thumbnail": "https://3mah.github.io/microgen-docs/_images/sphx_glr_graded_cell_type_thumb.png"
+ },
+ {
+  "library": "microgen",
+  "section": "Triply periodic minimal surfaces (TPMS)",
+  "title": "Density grading",
+  "url": "https://3mah.github.io/microgen-docs/examples/TPMS/graded_density.html",
+  "thumbnail": "https://3mah.github.io/microgen-docs/_images/sphx_glr_graded_density_thumb.png"
+ },
+ {
+  "library": "microgen",
+  "section": "Triply periodic minimal surfaces (TPMS)",
+  "title": "Gyroid",
+  "url": "https://3mah.github.io/microgen-docs/examples/TPMS/gyroid.html",
+  "thumbnail": "https://3mah.github.io/microgen-docs/_images/sphx_glr_gyroid_thumb.png"
+ },
+ {
+  "library": "microgen",
+  "section": "Triply periodic minimal surfaces (TPMS)",
+  "title": "Gyroid infill of a mesh",
+  "url": "https://3mah.github.io/microgen-docs/examples/TPMS/infill_bunny.html",
+  "thumbnail": "https://3mah.github.io/microgen-docs/_images/sphx_glr_infill_bunny_thumb.png"
+ },
+ {
+  "library": "microgen",
+  "section": "Triply periodic minimal surfaces (TPMS)",
+  "title": "Infill graded by the distance to the surface",
+  "url": "https://3mah.github.io/microgen-docs/examples/TPMS/infill_graded_distance.html",
+  "thumbnail": "https://3mah.github.io/microgen-docs/_images/sphx_glr_infill_graded_distance_thumb.png"
+ },
+ {
+  "library": "microgen",
+  "section": "Triply periodic minimal surfaces (TPMS)",
+  "title": "Gyroid infilled by a gyroid",
+  "url": "https://3mah.github.io/microgen-docs/examples/TPMS/infill_gyroid.html",
+  "thumbnail": "https://3mah.github.io/microgen-docs/_images/sphx_glr_infill_gyroid_thumb.png"
+ },
+ {
+  "library": "microgen",
+  "section": "Triply periodic minimal surfaces (TPMS)",
+  "title": "Spherical gyroid shell",
+  "url": "https://3mah.github.io/microgen-docs/examples/TPMS/spherical.html",
+  "thumbnail": "https://3mah.github.io/microgen-docs/_images/sphx_glr_spherical_thumb.png"
+ },
+ {
+  "library": "microgen",
+  "section": "Triply periodic minimal surfaces (TPMS)",
+  "title": "Gyroid in a shell",
+  "url": "https://3mah.github.io/microgen-docs/examples/TPMS/tpms_shell.html",
+  "thumbnail": "https://3mah.github.io/microgen-docs/_images/sphx_glr_tpms_shell_thumb.png"
+ },
+ {
+  "library": "microgen",
+  "section": "Triply periodic minimal surfaces (TPMS)",
+  "title": "Spherical gyroid",
+  "url": "https://3mah.github.io/microgen-docs/examples/TPMS/tpms_sphere.html",
+  "thumbnail": "https://3mah.github.io/microgen-docs/_images/sphx_glr_tpms_sphere_thumb.png"
+ },
+ {
+  "library": "microgen",
+  "section": "Triply periodic minimal surfaces (TPMS)",
+  "title": "Available TPMS",
+  "url": "https://3mah.github.io/microgen-docs/examples/TPMS/tpms_surfaces.html",
+  "thumbnail": "https://3mah.github.io/microgen-docs/_images/sphx_glr_tpms_surfaces_thumb.png"
+ },
+ {
+  "library": "microgen",
+  "section": "Spinodoids",
+  "title": "Spinodoid",
+  "url": "https://3mah.github.io/microgen-docs/examples/Spinodoids/spinodoid.html",
+  "thumbnail": "https://3mah.github.io/microgen-docs/_images/sphx_glr_spinodoid_thumb.png"
+ },
+ {
+  "library": "microgen",
+  "section": "Lattices",
+  "title": "Custom auxetic lattice",
+  "url": "https://3mah.github.io/microgen-docs/examples/Lattices/custom_auxetic_lattice.html",
+  "thumbnail": "https://3mah.github.io/microgen-docs/_images/sphx_glr_custom_auxetic_lattice_thumb.png"
+ },
+ {
+  "library": "microgen",
+  "section": "Lattices",
+  "title": "Honeycomb",
+  "url": "https://3mah.github.io/microgen-docs/examples/Lattices/honeycomb.html",
+  "thumbnail": "https://3mah.github.io/microgen-docs/_images/sphx_glr_honeycomb_thumb.png"
+ },
+ {
+  "library": "microgen",
+  "section": "Lattices",
+  "title": "Periodic octet-truss mesh",
+  "url": "https://3mah.github.io/microgen-docs/examples/Lattices/octet_truss.html",
+  "thumbnail": "https://3mah.github.io/microgen-docs/_images/sphx_glr_octet_truss_thumb.png"
+ },
+ {
+  "library": "microgen",
+  "section": "Lattices",
+  "title": "Preset strut lattices",
+  "url": "https://3mah.github.io/microgen-docs/examples/Lattices/preset_lattices.html",
+  "thumbnail": "https://3mah.github.io/microgen-docs/_images/sphx_glr_preset_lattices_thumb.png"
+ },
+ {
+  "library": "microgen",
+  "section": "Implicit workflow",
+  "title": "Gyroid as an implicit Phase",
+  "url": "https://3mah.github.io/microgen-docs/examples/ImplicitShapes/gyroid_implicit_phase.html",
+  "thumbnail": "https://3mah.github.io/microgen-docs/_images/sphx_glr_gyroid_implicit_phase_thumb.png"
+ },
+ {
+  "library": "microgen",
+  "section": "Implicit workflow",
+  "title": "Boolean operations on implicit fields",
+  "url": "https://3mah.github.io/microgen-docs/examples/ImplicitShapes/implicit_booleans.html",
+  "thumbnail": "https://3mah.github.io/microgen-docs/_images/sphx_glr_implicit_booleans_thumb.png"
+ },
+ {
+  "library": "microgen",
+  "section": "Particle and fibre RVEs",
+  "title": "Periodic RVE of short fibres",
+  "url": "https://3mah.github.io/microgen-docs/examples/RVE/fibres_rve.html",
+  "thumbnail": "https://3mah.github.io/microgen-docs/_images/sphx_glr_fibres_rve_thumb.png"
+ },
+ {
+  "library": "microgen",
+  "section": "Particle and fibre RVEs",
+  "title": "Periodic RVE of spheres",
+  "url": "https://3mah.github.io/microgen-docs/examples/RVE/spheres_rve.html",
+  "thumbnail": "https://3mah.github.io/microgen-docs/_images/sphx_glr_spheres_rve_thumb.png"
+ },
+ {
+  "library": "microgen",
+  "section": "3D operations",
+  "title": "Rasterized ellipsoid",
+  "url": "https://3mah.github.io/microgen-docs/examples/3Doperations/raster_ellipsoid.html",
+  "thumbnail": "https://3mah.github.io/microgen-docs/_images/sphx_glr_raster_ellipsoid_thumb.png"
+ },
+ {
+  "library": "microgen",
+  "section": "3D operations",
+  "title": "Repeat a unit cell",
+  "url": "https://3mah.github.io/microgen-docs/examples/3Doperations/repeat_shape.html",
+  "thumbnail": "https://3mah.github.io/microgen-docs/_images/sphx_glr_repeat_shape_thumb.png"
+ },
+ {
+  "library": "microgen",
+  "section": "3D operations",
+  "title": "Voronoi polycrystal",
+  "url": "https://3mah.github.io/microgen-docs/examples/3Doperations/voronoi.html",
+  "thumbnail": "https://3mah.github.io/microgen-docs/_images/sphx_glr_voronoi_thumb.png"
+ },
+ {
+  "library": "microgen",
+  "section": "3D operations",
+  "title": "Voronoi gyroid",
+  "url": "https://3mah.github.io/microgen-docs/examples/3Doperations/voronoi_gyroid.html",
+  "thumbnail": "https://3mah.github.io/microgen-docs/_images/sphx_glr_voronoi_gyroid_thumb.png"
+ },
+ {
+  "library": "microgen",
+  "section": "Meshing and remeshing",
+  "title": "Level-set remeshing with mmg",
+  "url": "https://3mah.github.io/microgen-docs/examples/Mesh/mmg3d.html",
+  "thumbnail": "https://3mah.github.io/microgen-docs/_images/sphx_glr_mmg3d_thumb.png"
+ },
+ {
+  "library": "microgen",
+  "section": "Meshing and remeshing",
+  "title": "Level-set remeshing of a Voronoi mesh",
+  "url": "https://3mah.github.io/microgen-docs/examples/Mesh/mmg_voronoi.html",
+  "thumbnail": "https://3mah.github.io/microgen-docs/_images/sphx_glr_mmg_voronoi_thumb.png"
+ },
+ {
+  "library": "microgen",
+  "section": "Meshing and remeshing",
+  "title": "Periodic gyroid mesh from a STEP file",
+  "url": "https://3mah.github.io/microgen-docs/examples/Mesh/periodic_gyroid_remesh.html",
+  "thumbnail": "https://3mah.github.io/microgen-docs/_images/sphx_glr_periodic_gyroid_remesh_thumb.png"
+ },
+ {
+  "library": "microgen",
+  "section": "Meshing and remeshing",
+  "title": "Periodic remeshing",
+  "url": "https://3mah.github.io/microgen-docs/examples/Mesh/remesh.html",
+  "thumbnail": "https://3mah.github.io/microgen-docs/_images/sphx_glr_remesh_thumb.png"
+ },
+ {
+  "library": "microgen",
+  "section": "Fibres",
+  "title": "Short fibre composite",
+  "url": "https://3mah.github.io/microgen-docs/examples/Fibers/fibers.html",
+  "thumbnail": "https://3mah.github.io/microgen-docs/_images/sphx_glr_fibers_thumb.png"
+ }
+]

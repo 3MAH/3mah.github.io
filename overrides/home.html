@@ -1,0 +1,41 @@
+{% extends "main.html" %}
+
+{#- Full-screen landing hero, outside the content grid -#}
+{% block tabs %}
+  {{ super() }}
+  <section class="mah-hero" aria-labelledby="mah-hero-title">
+    <canvas class="tpms-hero__canvas mah-hero__canvas"
+            data-colors="#ee7d30,#e0474c,#3fbf3a"
+            data-fit="fill" data-scale="1" data-periods="1.5" data-opacity="0.75" data-background="#0a1428"
+            aria-label="Wireframe mesh of a triply periodic minimal surface, generated with microgen, morphing between surface families"></canvas>
+    <div class="mah-hero__inner md-grid">
+      <div class="mah-hero__content">
+        <p class="mah-hero__eyebrow">Mechanics of Heterogeneous &amp; Architectured Materials</p>
+        <h1 id="mah-hero-title" class="mah-hero__title">From microstructure<br>to simulation.</h1>
+        <p class="mah-hero__lead">
+          <strong>3MAH</strong> is an open-source stack for the mechanics of materials:
+          generate and mesh the microstructure, model the material, solve the structure —
+          in a single Python workflow.
+        </p>
+        <div class="mah-hero__libs">
+          <a class="mah-hero__lib mah-hero__lib--microgen" href="microgen/"><strong>microgen</strong><span>Microstructure &amp; meshing</span></a>
+          <a class="mah-hero__lib mah-hero__lib--fedoo" href="fedoo/"><strong>fedoo</strong><span>Nonlinear finite elements</span></a>
+          <a class="mah-hero__lib mah-hero__lib--simcoon" href="simcoon/"><strong>simcoon</strong><span>Constitutive laws &amp; micromechanics</span></a>
+        </div>
+        <p class="mah-hero__actions">
+          <a class="md-button md-button--primary" href="get-started/">Get started</a>
+          <a class="md-button" href="examples/">Browse examples</a>
+          <a class="md-button" href="https://github.com/3MAH">GitHub</a>
+        </p>
+      </div>
+    </div>
+    <span class="tpms-hero__label mah-hero__label">Gyroid</span>
+    <a class="mah-hero__scroll" href="#start" aria-label="Scroll to content">&#8964;</a>
+  </section>
+{% endblock %}
+
+{#- Hero holds the page title: render the content only (no duplicate h1, no edit button) -#}
+{% block content %}
+  <span id="start"></span>
+  {{ page.content }}
+{% endblock %}
