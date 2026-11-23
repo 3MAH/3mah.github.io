@@ -40,7 +40,7 @@ CMAP_HEAT = LinearSegmentedColormap.from_list(
 
 # Output paths — resolved relative to the script location so any clone works
 REPO = Path(__file__).resolve().parent.parent
-OUT = REPO / "assets" / "images" / "index" / "simcoon"
+OUT = REPO / "docs" / "assets" / "images" / "index" / "simcoon"
 OUT.mkdir(parents=True, exist_ok=True)
 
 DPI = 160          # 1600 / 10in => 160 dpi

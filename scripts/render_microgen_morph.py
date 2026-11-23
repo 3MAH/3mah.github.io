@@ -16,7 +16,7 @@ Differences from the reference:
 - Brand-orange microgen colormap (matches the logo / showcase styling)
   instead of the default viridis.
 
-Output: assets/images/index/microgen/microgen_morph.mp4
+Output: docs/assets/images/index/microgen/microgen_morph.mp4
 """
 
 from __future__ import annotations
@@ -45,7 +45,7 @@ pv.OFF_SCREEN = True
 pv.global_theme.allow_empty_mesh = True
 
 REPO = Path(__file__).resolve().parent.parent
-OUT = REPO / "assets" / "images" / "index" / "microgen" / "microgen_morph.mp4"
+OUT = REPO / "docs" / "assets" / "images" / "index" / "microgen" / "microgen_morph.mp4"
 OUT.parent.mkdir(parents=True, exist_ok=True)
 
 WINDOW = (1024, 768)  # matches the CSMA reference; even for libx264

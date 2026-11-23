@@ -21,7 +21,7 @@ pv.global_theme.allow_empty_mesh = True
 
 REPO = Path(__file__).resolve().parent.parent
 INPUTS = REPO / "_render_inputs"
-OUT = REPO / "assets" / "images" / "index" / "microgen"
+OUT = REPO / "docs" / "assets" / "images" / "index" / "microgen"
 OUT.mkdir(parents=True, exist_ok=True)
 
 WIDE = (1600, 1000)
@@ -111,6 +111,8 @@ def safe_pbr_kwargs(metallic=0.35, roughness=0.4):
 
 
 def shoot(plotter: pv.Plotter, path: Path, transparent=False):
+    if transparent:
+        plotter.set_background("white")  # a gradient background would stay opaque
     img = plotter.screenshot(
         filename=str(path),
         transparent_background=transparent,
@@ -221,7 +223,8 @@ def render_graded(out: Path, window_size=WIDE, square_path: Path | None = None):
     p.reset_camera(bounds=mesh.bounds)
     p.camera_position = [(4.5, -3.5, 2.8), (1.0, 0.0, 0.0), (0.0, 0.0, 1.0)]
     p.camera.zoom(1.35)
-    shoot(p, out)
+    # Stand-alone home-page card: transparent, so it reads on both themes.
+    shoot(p, out, transparent=True)
 
     # Optional second pass for the square hero
     if square_path is not None:

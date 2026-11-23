@@ -7,7 +7,7 @@ Mirrors ``simcoon/examples/identification/chaboche_cyclic_identification.py``
 cyclic uniaxial tests via differential evolution.
 
 Output:
-    assets/images/index/simcoon/simcoon_chaboche_identification.png
+    docs/assets/images/index/simcoon/simcoon_chaboche_identification.png
 
 The pure-Python ``identify.py`` and ``parameter.py`` modules are loaded
 straight from the local Simcoon source tree because the released
@@ -29,7 +29,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 REPO = Path(__file__).resolve().parent.parent
-OUT = REPO / "assets" / "images" / "index" / "simcoon"
+OUT = REPO / "docs" / "assets" / "images" / "index" / "simcoon"
 OUT.mkdir(parents=True, exist_ok=True)
 OUT_PATH = OUT / "simcoon_chaboche_identification.png"
 OUT_VIDEO = OUT / "simcoon_chaboche_identification.mp4"

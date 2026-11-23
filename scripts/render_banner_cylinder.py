@@ -1,7 +1,7 @@
 """Re-render the splash banner: cylindrical gyroid in the same light/edges
 style as the Microgen hero tile (white-to-blue, mesh visible, no PBR).
 
-Replaces assets/images/index/microgen/tpms_cylinder.png. The splash header
+Replaces docs/assets/images/index/microgen/tpms_cylinder.png. The splash header
 in index.md uses this as `overlay_image` (and also as the site-wide
 og_image), so it doubles as the social-card preview.
 """
@@ -18,7 +18,7 @@ pv.global_theme.allow_empty_mesh = True
 
 REPO = Path(__file__).resolve().parent.parent
 INPUTS = REPO / "_render_inputs"
-OUT = REPO / "assets" / "images" / "index" / "microgen" / "tpms_cylinder.png"
+OUT = REPO / "docs" / "assets" / "images" / "index" / "microgen" / "tpms_cylinder.png"
 
 WINDOW = (2600, 1300)  # wide landscape for splash header
 

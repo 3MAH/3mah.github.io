@@ -1,7 +1,7 @@
 """
 Render hero-quality fedoo simulation images for the 3mah.github.io homepage.
 
-Outputs land in assets/images/index/fedoo/ at 1600x1000 (square hero at 1200x1200).
+Outputs land in docs/assets/images/index/fedoo/ at 1600x1000 (square hero at 1200x1200).
 Each render uses SSAA, a 3-light setup, and off-screen rendering.
 
 Notes
@@ -30,7 +30,7 @@ import fedoo as fd
 
 OUT_DIR = (
     Path(__file__).resolve().parent.parent
-    / "assets" / "images" / "index" / "fedoo"
+    / "docs" / "assets" / "images" / "index" / "fedoo"
 )
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -162,6 +162,7 @@ def add_field_mesh(
     bar_title=None,
     clim=None,
     clim_percentile=None,
+    show_scalar_bar=True,
 ):
     """Add a field-colored mesh with neutral lambertian-ish shading.
 
@@ -194,6 +195,7 @@ def add_field_mesh(
         specular=specular,
         specular_power=specular_power,
         clim=clim,
+        show_scalar_bar=show_scalar_bar,
         scalar_bar_args=dict(
             title=bar_title or str(scalars),
             color=TEXT_DARK,
@@ -213,6 +215,25 @@ def add_field_mesh(
         ),
     )
     return actor
+
+
+def shoot_clear(pl, out, scalars=None, mesh=None):
+    """Save a text-free render on a transparent background.
+
+    Used for the stand-alone home-page cards: the image has no caption and no
+    colour bar, so it reads on both the light and the dark theme; the title
+    and the colour scale are written in HTML next to it (docs/index.md). The
+    range of the plotted field is printed so that the HTML scale can be kept
+    in sync.
+    """
+    if scalars is not None:
+        lo, hi = pl.mapper.scalar_range
+        print(f"   colour range of {scalars}: [{lo:.4g}, {hi:.4g}]")
+    pl.set_background("white")  # a gradient background would stay opaque
+    pl.screenshot(str(out), transparent_background=True)
+    pl.close()
+    print(f"   wrote {out}")
+    return out
 
 
 def add_caption(pl, text, color=TEXT_DARK, font_size=16):
@@ -425,23 +446,13 @@ def render_lattice_beam():
         diffuse=0.85,
         specular=0.10,
         specular_power=15,
-        scalar_bar_args=dict(
-            title=str(cand), color=TEXT_DARK, label_font_size=14,
-            title_font_size=18, n_labels=4, shadow=False, font_family="arial",
-            position_x=0.83, position_y=0.10, width=0.04, height=0.55,
-            fmt="%.1e",
-        ),
+        show_scalar_bar=False,
     )
-    add_caption(pl, "Beam lattice - nonlinear geometric bending")
     pl.view_isometric()
     pl.camera.azimuth = 30
     pl.camera.elevation = 18
     pl.camera.zoom(1.10)
-    out = OUT_DIR / "fedoo_beam_lattice.png"
-    pl.screenshot(str(out))
-    pl.close()
-    print(f"   wrote {out}")
-    return out
+    return shoot_clear(pl, OUT_DIR / "fedoo_beam_lattice.png", scalars=cand)
 
 
 def render_periodic_homog():
@@ -487,19 +498,14 @@ def render_periodic_homog():
     add_field_mesh(
         pl, pv_mesh, scalar, cmap=FEDOO_DIV,
         show_edges=True, edge_color="#23304a", line_width=0.3,
-        bar_title="sigma_yz (MPa)",
         clim_percentile=(2, 98),
+        show_scalar_bar=False,
     )
-    add_caption(pl, "Periodic homogenization - Kelvin RVE under shear EYZ")
     pl.view_isometric()
     pl.camera.azimuth = 30
     pl.camera.elevation = 22
     pl.camera.zoom(1.25)
-    out = OUT_DIR / "fedoo_periodic_homog.png"
-    pl.screenshot(str(out))
-    pl.close()
-    print(f"   wrote {out}")
-    return out
+    return shoot_clear(pl, OUT_DIR / "fedoo_periodic_homog.png", scalars=scalar)
 
 
 def render_ishape_bending():
@@ -1049,16 +1055,11 @@ def render_kelvin_raw():
         specular=0.05,
         opacity=1.0,
     )
-    add_caption(pl, "Kelvin RVE - conforming periodic mesh from Microgen")
     pl.view_isometric()
     pl.camera.azimuth = 30
     pl.camera.elevation = 22
     pl.camera.zoom(1.25)
-    out = OUT_DIR / "fedoo_kelvin_mesh.png"
-    pl.screenshot(str(out))
-    pl.close()
-    print(f"   wrote {out}")
-    return out
+    return shoot_clear(pl, OUT_DIR / "fedoo_kelvin_mesh.png")
 
 
 # Each renderer creates its own ModelingSpace and runs sequentially.

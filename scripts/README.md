@@ -1,7 +1,7 @@
 # Render scripts
 
-Generate every PNG that lives under `assets/images/index/{simcoon,fedoo,microgen}/`.
-The scripts are not run by Jekyll — they are run **once** locally, and their
+Generate every PNG that lives under `docs/assets/images/index/{simcoon,fedoo,microgen}/`.
+The scripts are not run by Zensical — they are run **once** locally, and their
 output PNGs are committed alongside the rest of the site.
 
 ## Layout
@@ -10,7 +10,7 @@ output PNGs are committed alongside the rest of the site.
 | --- | --- |
 | `render_simcoon.py` | Mori-Tanaka homogenization, directional stiffness rose, SMA loop, yield surfaces. Pure matplotlib + simcoon. Quick (< 10 s). |
 | `render_simcoon_identification.py` | Drives the new `EPCHA` Chaboche cyclic identification example merged into simcoon master — fits 7 parameters from 3 cyclic uniaxial tests via differential evolution and saves a brand-styled experiment-vs-fit plot to `simcoon_chaboche_identification.png`. Needs the simcoon source tree (defaults to `~/Documents/GitHub/simcoon`, override with `SIMCOON_REPO=…`); takes 1–2 min. |
-| `render_fedoo.py` | All `assets/images/index/fedoo/*.png` (plate with hole, Kelvin RVE periodic homog, IPC indentation, tube-compression triptych, beam lattice, shell pressure, hero square). Uses fedoo + simcoon (EPCHA / EPICP UMATs) + pyvista. |
+| `render_fedoo.py` | All `docs/assets/images/index/fedoo/*.png` (plate with hole, Kelvin RVE periodic homog, IPC indentation, tube-compression triptych, beam lattice, shell pressure, hero square). Uses fedoo + simcoon (EPCHA / EPICP UMATs) + pyvista. |
 | `render_microgen.py` | TPMS hero stack: cylinder, sphere, helix sweep, graded gyroid, surfaces grid, warm-cylinder variant. Pure pyvista, reads VTK meshes from `_render_inputs/`. |
 | `render_microgen_hero.py` | Mesh-edge close-up of the graded gyroid (`microgen_hero.png`). |
 | `render_banner_cylinder.py` | Splash banner image (`tpms_cylinder.png` — light-themed cylindrical gyroid with mesh visible). |
@@ -18,8 +18,8 @@ output PNGs are committed alongside the rest of the site.
 
 ## Inputs
 
-The microgen and fedoo renders need TPMS / lattice / Kelvin meshes — 14
-files totalling ~330 MB. They are too large for git and are kept locally
+The microgen and fedoo renders need TPMS / lattice / Kelvin meshes — 15
+files totalling ~440 MB. They are too large for git and are kept locally
 (uncommitted, gitignored) at:
 
 ```
@@ -29,17 +29,13 @@ _render_inputs/
 ├── gyroid_graded.vtk      # spatially graded gyroid
 ├── sphere_g4_tpms.vtk     # gyroid wrapped on a sphere
 ├── sweep_g7_helix.vtk     # gyroid swept along a helix
+├── tanh_0.3_2_0.5.vtk     # graded gyroid for the mesh-edge close-up
 └── surfaces_0.vtp … surfaces_8.vtp   # 9 unit-cell TPMS for the surfaces grid
 ```
 
 The meshes were generated with
 [microgen](https://3mah.github.io/microgen-docs/); the recipes are in
 its example gallery.
-
-If/when these stabilise and become worth archiving, `scripts/fetch_inputs.py`
-is ready to download them from a Zenodo deposit (set `ZENODO_RECORD` in
-that file once a record is published; the SHA-256 manifest is already
-pinned). For now, the file is dormant.
 
 ## Running
 
@@ -65,7 +61,7 @@ from earlier crashed runs are also swept on startup so the disk stays sane.
 
 ## After regenerating
 
-1. `bundle exec jekyll build` (in the `jekyll` conda env) to regenerate `_site/`.
+1. `zensical build` to regenerate `site/`.
 2. `git status` — only the changed PNGs and any source edits should appear;
-   the `_render_inputs/`, `results/`, `examples/`, `_site/` and `.fdz`
+   the `_render_inputs/`, `results/`, `examples/`, `site/` and `.fdz`
    directories are gitignored and will not show.

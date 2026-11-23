@@ -16,7 +16,7 @@ import pyvista as pv
 from scipy.spatial import Voronoi
 
 REPO = Path(__file__).resolve().parent.parent
-OUT = REPO / "assets" / "images" / "index" / "microgen" / "examples"
+OUT = REPO / "docs" / "assets" / "images" / "index" / "microgen" / "examples"
 OUT.mkdir(parents=True, exist_ok=True)
 OUT_PATH = OUT / "voronoi_polycrystal.png"
 OUT_VIDEO = OUT / "voronoi_polycrystal.mp4"

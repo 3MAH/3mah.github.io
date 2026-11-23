@@ -3,7 +3,7 @@ across space so the seamless periodicity reads visually.
 
 Used as the "periodic" half of the Microgen showcase block on the
 homepage (the "graded" half stays as the graded gyroid).
-Output: assets/images/index/microgen/microgen_periodic.png
+Output: docs/assets/images/index/microgen/microgen_periodic.png
 """
 
 from __future__ import annotations
@@ -19,7 +19,7 @@ pv.global_theme.allow_empty_mesh = True
 
 REPO = Path(__file__).resolve().parent.parent
 INPUTS = REPO / "_render_inputs"
-OUT = REPO / "assets" / "images" / "index" / "microgen" / "microgen_periodic.png"
+OUT = REPO / "docs" / "assets" / "images" / "index" / "microgen" / "microgen_periodic.png"
 
 WINDOW = (3000, 1500)
 

@@ -18,7 +18,7 @@ pv.global_theme.allow_empty_mesh = True
 
 REPO = Path(__file__).resolve().parent.parent
 INPUTS = REPO / "_render_inputs"
-OUT = REPO / "assets" / "images" / "index" / "microgen" / "microgen_hero.png"
+OUT = REPO / "docs" / "assets" / "images" / "index" / "microgen" / "microgen_hero.png"
 
 # Landscape banner aspect, suitable for a full-width showcase block.
 WINDOW = (3000, 1500)
