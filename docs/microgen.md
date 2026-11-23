@@ -34,7 +34,8 @@ hide:
 <canvas class="tpms-hero__canvas" data-theme="page" data-scale="0.9" aria-label="Wireframe mesh of a triply periodic minimal surface morphing between surface families"></canvas>
 <span class="tpms-hero__label">Gyroid</span>
 </div>
-<div class="feature__body"><p class="feature__excerpt">microgen is a Python library to build TPMS, lattices, Voronoi polycrystals and hybrid architectures from implicit fields, then mesh them (conforming, graded or periodic) for finite element analysis and 3D printing.</p>
+<div class="feature__body"><img class="lib-logo" src="/assets/images/logo_microgen/microgen_wordmark.png" alt="microgen">
+<p class="feature__excerpt">microgen is a Python library to build TPMS, lattices, Voronoi polycrystals and hybrid architectures from implicit fields, then mesh them (conforming, graded or periodic) for finite element analysis and 3D printing.</p>
 <p><a class="md-button md-button--primary" href="https://3mah.github.io/microgen-docs/">View Documentation</a> <a class="md-button" href="../examples/#microgen">Examples</a></p></div>
 </div>
 

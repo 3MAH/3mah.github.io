@@ -26,8 +26,9 @@ hide:
 # fedoo — Nonlinear Finite Element Analysis in Python
 
 <div class="feature feature--left">
-<img class="feature__media" src="/assets/images/logo_fedoo/fedoo_logo.png" alt="" loading="lazy">
-<div class="feature__body"><p class="feature__excerpt">fedoo is a Python Finite Element library, highly tunable with emphasis on model reduction (PGD, AI-based models). It balances speed and ease-of-use, and integrates a non-linear solver with tools to facilitate homogenization techniques and multiscale modelling.</p>
+<img class="feature__media lib-visual is-clear" src="/assets/images/index/fedoo/fedoo_periodic_homog.png" alt="Shear stress in a periodic Kelvin cell computed with fedoo">
+<div class="feature__body"><img class="lib-logo" src="/assets/images/logo_fedoo/fedoo_wordmark.png" alt="fedoo">
+<p class="feature__excerpt">fedoo is a Python Finite Element library, highly tunable with emphasis on model reduction (PGD, AI-based models). It balances speed and ease-of-use, and integrates a non-linear solver with tools to facilitate homogenization techniques and multiscale modelling.</p>
 <p><a class="md-button md-button--primary" href="https://3mah.github.io/fedoo-docs/stable/">View Documentation</a></p></div>
 </div>
 

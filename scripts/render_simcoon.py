@@ -584,15 +584,21 @@ def plot_hero():
     ax.set_zlim(-R, R)
     ax.view_init(elev=22, azim=42)
     ax.set_axis_off()
-    fig.patch.set_facecolor("white")
+    # transparent: the image sits directly on the page, in light and dark mode
     fig.savefig(
         OUT / "simcoon_hero.png",
         dpi=160,
         bbox_inches="tight",
         pad_inches=0.10,
-        facecolor="white",
+        transparent=True,
     )
     plt.close(fig)
+    # trim the empty margin matplotlib leaves around a 3D axes
+    from PIL import Image
+    im = Image.open(OUT / "simcoon_hero.png")
+    x0, y0, x1, y1 = im.getbbox()
+    pad = 24
+    im.crop((x0 - pad, y0 - pad, x1 + pad, y1 + pad)).save(OUT / "simcoon_hero.png", optimize=True)
     print(f"  saved simcoon_hero.png")
 
 

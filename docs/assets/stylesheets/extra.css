@@ -324,6 +324,11 @@
 .md-typeset a.example-card, .md-typeset a.example-card * { text-decoration: none; }
 .lib-grid { grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr)); }
 
+/* ---------- Library pages: visual on the left, logo above the text ---------- */
+.md-typeset .feature--left .lib-visual { width: 100%; max-width: 24rem; aspect-ratio: 1 / 1; object-fit: cover; margin: 0 auto; }
+.md-typeset .feature__body .lib-logo { display: block; align-self: flex-start; flex: none; height: 2.4rem; width: auto; max-width: 100%; margin: 0 0 1.2rem; }
+[data-md-color-scheme="slate"] .md-typeset .lib-logo--simcoon { filter: brightness(1.7) saturate(0.9); }
+
 /* ---------- Live TPMS wireframe (microgen) ---------- */
 /* Drawn on the page itself: the line colour is this element's `color`, the depth fade goes to the page background. */
 .tpms-live { position: relative; aspect-ratio: 1 / 1; max-height: 24rem; margin: 0 auto; width: 100%; color: #c2570f; }

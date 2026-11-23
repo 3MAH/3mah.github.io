@@ -27,8 +27,9 @@ hide:
 # simcoon — Constitutive Modeling & Micromechanics
 
 <div class="feature feature--left">
-<img class="feature__media" src="/assets/images/logo_simcoon/simcoon_logo_text.png" alt="" loading="lazy">
-<div class="feature__body"><p class="feature__excerpt">simcoon is a scientific library built to facilitate the analysis of mechanics of materials. It provides a C++ API with Python bindings, designed to help researchers implement modern material behavior models for Finite Element Analysis packages. Built on Armadillo and FTensor for high-performance tensor operations.</p>
+<img class="feature__media lib-visual is-clear" src="/assets/images/index/simcoon/simcoon_hero.png" alt="Directional Young's modulus of a cubic copper crystal computed with simcoon">
+<div class="feature__body"><img class="lib-logo lib-logo--simcoon" src="/assets/images/logo_simcoon/simcoon_wordmark.png" alt="simcoon">
+<p class="feature__excerpt">simcoon is a scientific library built to facilitate the analysis of mechanics of materials. It provides a C++ API with Python bindings, designed to help researchers implement modern material behavior models for Finite Element Analysis packages. Built on Armadillo and FTensor for high-performance tensor operations.</p>
 <p><a class="md-button md-button--primary" href="https://3mah.github.io/simcoon-docs/">View Documentation</a></p></div>
 </div>
 
