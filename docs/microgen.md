@@ -27,29 +27,21 @@ hide:
 - toc
 ---
 
-<div class="tpms-hero">
-<div class="tpms-hero__text">
-<h1>microgen</h1>
-<p class="tpms-hero__tagline">Microstructure generation &amp; periodic meshing</p>
-<p class="tpms-hero__lead">A Python library to build TPMS, lattices, Voronoi polycrystals and hybrid
-architectures from implicit fields, then mesh them — conforming, graded or periodic — for finite element
-analysis and 3D printing.</p>
-<p class="tpms-hero__actions">
-<a class="md-button md-button--primary" href="#install">Get started</a>
-<a class="md-button" href="https://3mah.github.io/microgen-docs/">Documentation</a>
-<a class="md-button" href="../examples/#microgen">Examples</a>
-</p>
-</div>
-<div class="tpms-hero__visual">
-<canvas class="tpms-hero__canvas" data-color="#ee7d30" aria-label="Wireframe mesh of a triply periodic minimal surface morphing between surface families"></canvas>
+# microgen — Microstructure Generation & Periodic Meshing
+
+<div class="feature feature--left">
+<div class="tpms-live">
+<canvas class="tpms-hero__canvas" data-theme="page" data-scale="0.9" aria-label="Wireframe mesh of a triply periodic minimal surface morphing between surface families"></canvas>
 <span class="tpms-hero__label">Gyroid</span>
 </div>
+<div class="feature__body"><p class="feature__excerpt">microgen is a Python library to build TPMS, lattices, Voronoi polycrystals and hybrid architectures from implicit fields, then mesh them (conforming, graded or periodic) for finite element analysis and 3D printing.</p>
+<p><a class="md-button md-button--primary" href="https://3mah.github.io/microgen-docs/">View Documentation</a> <a class="md-button" href="../examples/#microgen">Examples</a></p></div>
 </div>
 
 [![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)](https://www.python.org/)
 [![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/3MAH/microgen)
 [![build-and-test workflow](https://github.com/3MAH/microgen/actions/workflows/build-and-test.yml/badge.svg)](https://github.com/3MAH/microgen)
-[![Anaconda-Server Badge](https://anaconda.org/set3mah/microgen/badges/installer/conda.svg)](https://conda.anaconda.org/set3mah)
+[![conda version](https://img.shields.io/conda/vn/set3mah/microgen?style=for-the-badge&label=conda)](https://anaconda.org/set3mah/microgen)
 [![PyPI version](https://badge.fury.io/py/microgen.svg)](https://pypi.org/project/microgen/)
 [![Documentation](https://img.shields.io/badge/docs-microgen-blue?style=for-the-badge)](https://3mah.github.io/microgen-docs/)
 

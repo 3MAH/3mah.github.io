@@ -4,6 +4,7 @@
 // Options (data-*): colors="#a,#b,#c" (one colour per family, cycled),
 // scale (object size), align="right" (push the object right on wide screens),
 // fit="fill" (zoom so the whole mesh spans the canvas height, centred, behind the text),
+// theme="page" (colours taken from the page, follows light/dark),
 // periods (unit cells across the box), opacity (line opacity),
 // background (fog colour, should match the backdrop).
 import * as THREE from "three";
@@ -109,6 +110,16 @@ function mount(canvas) {
   const material = new THREE.MeshBasicMaterial({
     color, wireframe: true, transparent: true, opacity, fog: true,
   });
+  if (canvas.dataset.theme === "page") {
+    // follow the page: line colour from CSS `color`, fade towards the page background
+    const applyTheme = () => {
+      palette[0].set(getComputedStyle(canvas).color);
+      material.color.copy(palette[0]);
+      scene.fog.color.set(getComputedStyle(document.body).backgroundColor);
+    };
+    applyTheme();
+    new MutationObserver(applyTheme).observe(document.body, { attributes: true, attributeFilter: ["data-md-color-scheme"] });
+  }
   const mc = new MarchingCubes(RES, material, false, false, 200000);
   mc.isolation = 0;
   const group = new THREE.Group();
