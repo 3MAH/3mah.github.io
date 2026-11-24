@@ -38,6 +38,99 @@ hide:
 <p>The <strong>3MAH</strong> initiative brings together three complementary, interoperable open-source libraries: <strong>simcoon</strong> for constitutive modeling and micromechanics, <strong>fedoo</strong> for nonlinear finite element analysis, and <strong>microgen</strong> for microstructure generation and meshing. Together, they provide a complete pipeline from geometry to simulation for research in mechanics of heterogeneous and architectured materials.</p>
 </div>
 
+## From microstructure to simulation
+
+An elasto-plastic gyroid under periodic homogenization: microgen generates the unit cell and its periodic mesh, remeshed with mmg, simcoon supplies the plasticity law, fedoo applies a 2 % mean tensile strain. simcoon tensors then post-process the result: the macroscopic stress, and the tangent modulus of the cell, inverted to get the strain increment of a uniaxial stress increment, Δε = L<sub>t</sub><sup>-1</sup> : Δσ.
+
+??? example "Show the Python script and its output"
+
+    ```python
+    import fedoo as fd
+    import numpy as np
+    import pyvista as pv
+    import simcoon as sim
+    from microgen import Phase, Rve, Tpms, mesh_periodic
+    from microgen.remesh import remesh_keeping_boundaries_for_fem
+    from microgen.shape.surface_functions import gyroid
+
+    # microgen: a gyroid unit cell, meshed with matching nodes on opposite faces,
+    # then remeshed with mmg for well-shaped tetrahedra
+    cell = Phase.from_cad(Tpms(surface_function=gyroid, density=0.3, resolution=30).generate_cad())
+    cell.cad.export_step("gyroid.step")
+    mesh_periodic(
+        mesh_file="gyroid.step",
+        rve=Rve(dim=1),
+        list_phases=[cell],
+        size=0.035,
+        order=1,
+        output_file="gyroid.vtk",
+    )
+    remesh_keeping_boundaries_for_fem(
+        pv.UnstructuredGrid("gyroid.vtk"), periodic=True, hmax=0.035
+    ).save("gyroid.vtk")
+
+    # simcoon: elasto-plastic law with isotropic power-law hardening
+    #                 E      nu   alpha  sigma_y  k     m
+    props = np.array([200e3, 0.3, 1e-5, 300.0, 1000.0, 0.3])
+    material = fd.constitutivelaw.Simcoon("EPICP", props)
+
+    # fedoo: periodic homogenization of the cell under a 2 % mean tensile strain
+    fd.ModelingSpace("3D")
+    mesh = fd.Mesh.read("gyroid.vtk")
+    assembly = fd.Assembly.create(fd.weakform.StressEquilibrium(material), mesh)
+
+    pb = fd.problem.NonLinear(assembly)
+    pb.bc.add(fd.constraint.PeriodicBC("small_strain"))
+    pb.bc.add("Dirichlet", mesh.nearest_node(mesh.bounding_box.center), "Disp", 0)
+    pb.bc.add("Dirichlet", "E_xx", 0.02)
+    pb.nlsolve(dt=0.025, tmax=1)
+
+    # simcoon tensors: macroscopic stress at the end of the loading
+    volume = mesh.bounding_box.volume
+    sigma = sim.Tensor2.stress(pb.get_ext_forces("MeanStrain").ravel() / volume)
+    print(f"macroscopic von Mises stress: {sigma.mises():.1f} MPa")
+
+    # tangent modulus of the cell, then the strain increment of a uniaxial
+    # stress increment: deps = Lt^-1 : dsig
+    Lt = sim.Tensor4.stiffness(fd.homogen.get_tangent_stiffness(pb))
+    dsig = sim.Tensor2.stress([10, 0, 0, 0, 0, 0])
+    deps = Lt.inverse() @ dsig
+    print("strain increment (%):", (100 * deps.voigt).round(2))
+    print(f"uniaxial tangent modulus: {dsig.voigt[0] / deps.voigt[0]:.0f} MPa")
+
+    pb.get_results(assembly, ["Stress", "P"]).plot("P")
+    ```
+
+    The script prints:
+
+    ```text
+    macroscopic von Mises stress: 92.3 MPa
+    strain increment (%): [ 1.07 -0.4  -0.4   0.    0.   -0.  ]
+    uniaxial tangent modulus: 938 MPa
+    ```
+
+<figure class="showcase showcase--fedoo">
+  <p class="showcase__title">A full simulation framework</p>
+  <div class="showcase__grid showcase__grid--cols-3">
+    <figure class="showcase__cell">
+      <img class="showcase__img is-clear" src="/assets/images/libraries/gyroid_mesh.png" alt="Periodic tetrahedral mesh of the gyroid unit cell" loading="lazy">
+      <p class="showcase__subcaption"><strong>microgen</strong> — periodic mesh of the gyroid cell after mmg remeshing, 30 % density.</p>
+    </figure>
+    <figure class="showcase__cell">
+      <img class="showcase__img is-clear" src="/assets/images/libraries/gyroid_plastic_strain.png" alt="Equivalent plastic strain in the gyroid cell at 2 % mean strain" loading="lazy">
+      <p class="showcase__subcaption"><strong>fedoo</strong> — equivalent plastic strain at 2 % mean strain along x (dark to light: 0 to 2.5 %).</p>
+    </figure>
+    <figure class="showcase__cell">
+      <img class="showcase__img" src="/assets/images/libraries/gyroid_response.png" alt="Macroscopic stress-strain response of the gyroid cell with its tangent modulus" loading="lazy">
+      <p class="showcase__subcaption"><strong>simcoon</strong> — macroscopic response and tangent modulus L<sub>t</sub> at the end of the loading.</p>
+    </figure>
+  </div>
+</figure>
+
+At 2 % mean strain the cell carries 92 MPa, for a matrix that yields at 300 MPa. A further uniaxial stress increment of 10 MPa along x stretches the cell by 1.07 % and contracts it by 0.40 % in the two transverse directions: the tangent modulus of the cell has dropped to 0.94 GPa. The mesh has about 27 400 nodes; the images are produced with the same parameters by `scripts/render_libraries.py`.
+
+<p><a class="md-button md-button--primary" href="/libraries/">The three libraries</a> <a class="md-button" href="/get-started/">Install them</a></p>
+
 ## simcoon — Constitutive modeling & micromechanics { .brand-simcoon }
 
 <div class="feature-grid feature-grid--3">
@@ -226,16 +319,6 @@ hide:
 <p class="feature__excerpt">Blend any two TPMS surface functions with a tanh weight to walk continuously through families: <strong>gyroid → Schwarz P → Schwarz D → Neovius → Schoen IWP → Schoen FRD → Fischer-Koch S → PMY → honeycomb → Lidinoid → split P → gyroid</strong>. The animated transition exposes the underlying surface-function arithmetic of microgen.</p>
 <p><a class="md-button md-button--primary" href="https://3mah.github.io/microgen-docs/examples/TPMS/graded_cell_type.html">See example</a></p></div>
 </div>
-
-## From microstructure to simulation
-
-The same Kelvin (truncated-octahedron) unit cell is generated and meshed with **microgen**, exported as a conforming periodic mesh, then loaded directly into **fedoo** to run a periodic homogenization with **simcoon** constitutive models. One workflow, three libraries — geometry, mesh and simulation kept in lock-step.
-
-<figure class="half panel">
-  <a href="/microgen/"><img class="is-clear" src="/assets/images/index/fedoo/fedoo_kelvin_mesh.png" alt="Kelvin RVE - conforming periodic mesh from microgen"></a>
-  <a href="/fedoo/"><img class="is-clear" src="/assets/images/index/fedoo/fedoo_periodic_homog.png" alt="Kelvin RVE - periodic homogenization with fedoo"></a>
-  <figcaption>Same Kelvin unit cell — left: periodic conforming mesh from microgen; right: periodic homogenization (shear E<sub>YZ</sub>, σ<sub>YZ</sub> field, &minus;920 to +920 MPa) in fedoo.</figcaption>
-</figure>
 
 <div class="feature-grid feature-grid--2">
 <div class="feature">

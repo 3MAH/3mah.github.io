@@ -489,3 +489,6 @@
 .md-typeset .lib-card--microgen h3 { color: var(--brand-microgen); }
 .md-header__button.md-logo img { height: 1.9rem; }
 .md-header__button.md-logo img { height: 2.2rem; }
+
+/* Home page: no permalink marks next to the section titles */
+.md-main:has(#start) .md-typeset .headerlink { display: none; }

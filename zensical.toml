@@ -17,6 +17,7 @@ nav = [
   { "Home" = "index.md" },
   { "Get started" = "get-started.md" },
   { "Libraries" = [
+    "libraries/index.md",
     { "simcoon" = "simcoon.md" },
     { "fedoo" = "fedoo.md" },
     { "microgen" = "microgen.md" },
