@@ -492,3 +492,12 @@
 
 /* Home page: no permalink marks next to the section titles */
 .md-main:has(#start) .md-typeset .headerlink { display: none; }
+
+/* Small screens: keep the GitHub button in the header, icon only */
+@media screen and (max-width: 59.984375em) {
+  .md-header__source { display: block; flex-shrink: 0; width: auto; max-width: none; margin: 0 0.2rem; }
+  .md-header__source .md-source__repository { display: none; }
+  .md-header__source .md-source__icon { width: 2rem; }
+  [dir=ltr] .md-header__source .md-source__icon svg { margin-left: 0.4rem; }
+  [dir=rtl] .md-header__source .md-source__icon svg { margin-right: 0.4rem; }
+}
